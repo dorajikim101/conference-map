@@ -29,14 +29,14 @@ export function TierBadge({
       <Tooltip>
         <TooltipTrigger asChild>
           <Badge className={cn("shadow-sm", tierStyles[tier], className)}>
-            Tier {tier}
+            티어 {tier}
           </Badge>
         </TooltipTrigger>
         <TooltipContent>
           <div className="space-y-2">
             <div className="flex items-center justify-between gap-4">
-              <span className="font-medium">Final Tier {tier}</span>
-              <span className="text-xs text-slate-500">Auto {autoTier} / {score}</span>
+              <span className="font-medium">최종 티어 {tier}</span>
+              <span className="text-xs text-slate-500">자동 {autoTier} / {score}</span>
             </div>
             <ul className="space-y-1 text-xs text-slate-600">
               {reasons.map((reason) => (

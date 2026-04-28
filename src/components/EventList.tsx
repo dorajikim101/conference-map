@@ -2,10 +2,26 @@
 
 import { CalendarDays, MapPin } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
 import { CostTooltip } from "@/components/CostTooltip";
 import { TierBadge } from "@/components/TierBadge";
 import type { EventData } from "@/lib/events";
+import { eventDateRange } from "@/lib/format";
 import { cn } from "@/lib/utils";
+
+const statusLabels: Record<EventData["status"], string> = {
+  upcoming: "예정",
+  live: "LIVE",
+  completed: "완료",
+  cancelled: "취소",
+};
+
+const statusVariants: Record<EventData["status"], "outline" | "success" | "secondary" | "destructive"> = {
+  upcoming: "outline",
+  live: "success",
+  completed: "secondary",
+  cancelled: "destructive",
+};
 
 export function EventList({
   events,
@@ -25,18 +41,18 @@ export function EventList({
           </div>
           <div>
             <p className="text-sm font-semibold text-slate-950">Conference Map</p>
-            <p className="text-xs text-slate-500">Upcoming crypto events</p>
+            <p className="text-xs text-slate-500">다가오는 크립토 행사</p>
           </div>
         </div>
       </div>
       <div className="px-6 py-4">
         <div className="flex items-end justify-between">
           <div>
-            <h1 className="text-lg font-semibold text-slate-950">Upcoming</h1>
-            <p className="text-sm text-slate-500">Decision queue</p>
+            <h1 className="text-lg font-semibold text-slate-950">다가오는 행사</h1>
+            <p className="text-sm text-slate-500">의사결정 대기열</p>
           </div>
           <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">
-            {events.length} events
+            {events.length}개 행사
           </span>
         </div>
       </div>
@@ -52,6 +68,7 @@ export function EventList({
                 className={cn(
                   "relative w-full rounded-lg border bg-white p-3 text-left shadow-sm transition hover:border-slate-300 hover:shadow-md",
                   selected && "border-slate-950 bg-slate-50 shadow-md",
+                  event.status === "cancelled" && "border-red-100 bg-red-50/40 opacity-80",
                 )}
               >
                 <TierBadge
@@ -70,7 +87,12 @@ export function EventList({
                     </div>
                   </div>
                   <div className="min-w-0 flex-1 pt-1">
-                    <p className="truncate text-sm font-semibold text-slate-950">{event.name}</p>
+                    <div className="flex items-start justify-between gap-2">
+                      <p className="truncate text-sm font-semibold text-slate-950">{event.name}</p>
+                      <Badge variant={statusVariants[event.status]} className="shrink-0 text-[10px]">
+                        {statusLabels[event.status]}
+                      </Badge>
+                    </div>
                     <div className="mt-2 space-y-1.5 text-xs text-slate-500">
                       <p className="flex items-center gap-1.5">
                         <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
@@ -78,7 +100,7 @@ export function EventList({
                       </p>
                       <p className="flex items-center gap-1.5">
                         <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
-                        {event.date}
+                        {eventDateRange(event.date, event.endDate)}
                       </p>
                     </div>
                     <div className="mt-3">

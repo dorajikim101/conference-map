@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "1XP Conference Map",
-  description: "Crypto event intelligence dashboard",
+  description: "크립토 행사 인텔리전스 대시보드",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={inter.variable}>{children}</body>
     </html>
   );

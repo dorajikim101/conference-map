@@ -23,9 +23,9 @@ export function CompanySection({ event }: { event: EventData }) {
         <div className="flex items-center justify-between gap-4">
           <CardTitle className="flex items-center gap-2">
             <Building2 className="h-4 w-4 text-slate-500" aria-hidden="true" />
-            Companies and People
+            관심 기업과 담당자
           </CardTitle>
-          <span className="text-xs font-medium text-slate-500">{event.companies.length} candidates</span>
+          <span className="text-xs font-medium text-slate-500">{event.companies.length}개 후보</span>
         </div>
       </CardHeader>
       <CardContent>
@@ -48,7 +48,7 @@ export function CompanySection({ event }: { event: EventData }) {
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
                         <p className="font-medium text-slate-950">{company.name}</p>
-                        {company.isNew ? <Badge variant="success">NEW</Badge> : null}
+                        {company.isNew ? <Badge variant="success">신규</Badge> : null}
                       </div>
                       <div className="mt-1 flex flex-wrap gap-1.5">
                         {company.tags.map((tag) => (
@@ -62,7 +62,7 @@ export function CompanySection({ event }: { event: EventData }) {
                   </button>
                   <div className={cn("px-11 pb-0 transition-all", expanded ? "pb-4" : "hidden")}>
                     <div className="rounded-md bg-slate-50 p-3">
-                      <p className="text-xs font-medium uppercase tracking-normal text-slate-500">People</p>
+                      <p className="text-xs font-medium uppercase tracking-normal text-slate-500">담당자</p>
                       <p className="mt-1 text-sm text-slate-700">{company.people.join(", ")}</p>
                       <p className="mt-2 text-sm text-slate-600">{company.role}</p>
                     </div>

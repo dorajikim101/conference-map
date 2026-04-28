@@ -3,19 +3,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { EventData } from "@/lib/events";
 
 const sections = [
-  ["features", "Event character", Sparkles],
-  ["difference", "Different from others", GitCompareArrows],
-  ["pros", "Upside", CheckCircle2],
-  ["risks", "Watchouts", CircleAlert],
-  ["expectations", "Expected yield", Target],
+  ["features", "특징", Sparkles],
+  ["difference", "차별점", GitCompareArrows],
+  ["pros", "장점", CheckCircle2],
+  ["risks", "유의점", CircleAlert],
+  ["expectations", "기대 포인트", Target],
 ] as const;
 
 export function SummaryPanel({ event }: { event: EventData }) {
   return (
     <Card className="h-full">
       <CardHeader className="pb-3">
-        <CardTitle>Core Read</CardTitle>
-        <p className="text-sm text-slate-500">What matters before committing travel budget.</p>
+        <CardTitle>핵심 요약</CardTitle>
+        <p className="text-sm text-slate-500">출장 예산을 확정하기 전에 확인할 핵심 정보입니다.</p>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4 lg:grid-cols-2">

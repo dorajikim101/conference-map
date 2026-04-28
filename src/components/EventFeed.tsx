@@ -9,7 +9,7 @@ export function EventFeed({ event }: { event: EventData }) {
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2">
           <Activity className="h-4 w-4 text-slate-500" aria-hidden="true" />
-          Event Feed
+          실시간 피드
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
