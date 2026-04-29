@@ -8,6 +8,7 @@ import {
   ThumbsUp,
   AlertTriangle,
   Target,
+  ExternalLink,
 } from "lucide-react";
 import { SideEventChart, BudgetPieChart, KpiGrid } from "./EventCharts";
 
@@ -18,14 +19,14 @@ interface EventDetailProps {
 const summaryCards = [
   {
     key: "features" as const,
-    title: "이 행사의 특징",
+    title: "행사 특징",
     icon: Star,
     color: "text-blue-500",
     bg: "bg-blue-50",
   },
   {
     key: "difference" as const,
-    title: "다른 행사와 다른 점",
+    title: "차별점",
     icon: Diamond,
     color: "text-purple-500",
     bg: "bg-purple-50",
@@ -39,7 +40,7 @@ const summaryCards = [
   },
   {
     key: "risks" as const,
-    title: "유의할 점",
+    title: "유의점",
     icon: AlertTriangle,
     color: "text-amber-500",
     bg: "bg-amber-50",
@@ -55,38 +56,43 @@ const summaryCards = [
 
 export function EventDetail({ event }: EventDetailProps) {
   return (
-    <div className="flex-1 overflow-y-auto p-5 space-y-5">
+    <div className="flex-1 overflow-y-auto p-4 space-y-3">
       {/* Header */}
       <div className="flex items-center gap-2 flex-wrap">
-        <Badge variant="info" className="text-xs">선택 이벤트</Badge>
-        <Badge className="bg-blue-500 text-white border-transparent text-xs font-semibold">
+        <Badge variant="info" className="text-[10px]">선택 이벤트</Badge>
+        <Badge className="bg-blue-500 text-white border-transparent text-[10px] font-semibold">
           {event.name}
         </Badge>
         {event.status === "cancelled" && (
-          <Badge variant="destructive" className="text-xs">취소됨</Badge>
+          <Badge variant="destructive" className="text-[10px]">취소됨</Badge>
+        )}
+        {event.status === "live" && (
+          <Badge className="bg-emerald-500 text-white border-transparent text-[10px] font-semibold animate-pulse">
+            ● LIVE
+          </Badge>
         )}
       </div>
 
       {/* Summary title */}
-      <h2 className="text-lg font-bold text-slate-900">한눈에 보는 핵심 포인트</h2>
+      <h2 className="text-sm font-bold text-slate-900">한눈에 보는 핵심 포인트</h2>
 
-      {/* 5 Summary cards */}
-      <div className="grid grid-cols-1 gap-3">
-        {summaryCards.map((card) => {
+      {/* 5 Summary cards — 3 on top, 2 on bottom */}
+      <div className="grid grid-cols-3 gap-2">
+        {summaryCards.slice(0, 3).map((card) => {
           const Icon = card.icon;
-          const items = event.summary[card.key];
+          const items = event.summary[card.key].slice(0, 2);
           return (
-            <div key={card.key} className="bg-white rounded-xl border border-slate-200 p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <div className={`w-7 h-7 rounded-lg ${card.bg} flex items-center justify-center`}>
-                  <Icon size={14} className={card.color} />
+            <div key={card.key} className="bg-white rounded-lg border border-slate-200 p-2.5">
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <div className={`w-5 h-5 rounded ${card.bg} flex items-center justify-center`}>
+                  <Icon size={11} className={card.color} />
                 </div>
-                <h4 className="text-sm font-semibold text-slate-900">{card.title}</h4>
+                <h4 className="text-[11px] font-semibold text-slate-900">{card.title}</h4>
               </div>
-              <ul className="space-y-1 pl-1">
+              <ul className="space-y-0.5">
                 {items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-slate-300 shrink-0" />
+                  <li key={i} className="flex items-start gap-1.5 text-[10px] text-slate-600 leading-tight">
+                    <span className="mt-1 w-0.5 h-0.5 rounded-full bg-slate-300 shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -95,9 +101,63 @@ export function EventDetail({ event }: EventDetailProps) {
           );
         })}
       </div>
+      <div className="grid grid-cols-3 gap-2">
+        {/* Bottom row: 2 cards + Luma link card */}
+        {summaryCards.slice(3, 5).map((card) => {
+          const Icon = card.icon;
+          const items = event.summary[card.key].slice(0, 2);
+          return (
+            <div key={card.key} className="bg-white rounded-lg border border-slate-200 p-2.5">
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <div className={`w-5 h-5 rounded ${card.bg} flex items-center justify-center`}>
+                  <Icon size={11} className={card.color} />
+                </div>
+                <h4 className="text-[11px] font-semibold text-slate-900">{card.title}</h4>
+              </div>
+              <ul className="space-y-0.5">
+                {items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-1.5 text-[10px] text-slate-600 leading-tight">
+                    <span className="mt-1 w-0.5 h-0.5 rounded-full bg-slate-300 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+        {/* Side Event Luma Link */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-2.5 flex flex-col justify-between">
+          <div className="flex items-center gap-1.5 mb-1.5">
+            <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
+              <ExternalLink size={11} className="text-blue-500" />
+            </div>
+            <h4 className="text-[11px] font-semibold text-slate-900">사이드 이벤트</h4>
+          </div>
+          {event.sideEventUrl ? (
+            <a
+              href={event.sideEventUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800 bg-white px-2 py-1.5 rounded-md border border-blue-200 hover:border-blue-400 transition-colors"
+            >
+              <ExternalLink size={10} />
+              Luma에서 사이드 이벤트 보기
+            </a>
+          ) : (
+            <span className="text-[10px] text-slate-400">소규모 행사 — 링크 없음</span>
+          )}
+        </div>
+      </div>
 
-      {/* Charts row */}
-      <div className="grid grid-cols-3 gap-4">
+      {/* Cancel reason */}
+      {event.cancelReason && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-2.5 text-[11px] text-red-700">
+          ⚠️ {event.cancelReason}
+        </div>
+      )}
+
+      {/* Charts row — compact */}
+      <div className="grid grid-cols-3 gap-2">
         <SideEventChart data={event.sideEventTrend} />
         <BudgetPieChart data={event.budget} total={event.cost.total} />
         <KpiGrid data={event.kpis} />

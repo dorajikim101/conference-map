@@ -22,27 +22,27 @@ const feedTypeColors: Record<string, string> = {
 
 export function EventFeed({ feed }: EventFeedProps) {
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-4">
-      <div className="flex items-center justify-between mb-3">
-        <h4 className="text-sm font-semibold text-slate-900">실시간 이벤트 피드</h4>
-        <button className="text-xs text-blue-500 hover:text-blue-700 flex items-center gap-1">
-          더 보기 <ArrowRight size={12} />
+    <div className="bg-white rounded-lg border border-slate-200 p-3">
+      <div className="flex items-center justify-between mb-2">
+        <h4 className="text-[11px] font-semibold text-slate-900">실시간 피드</h4>
+        <button className="text-[10px] text-blue-500 hover:text-blue-700 flex items-center gap-0.5">
+          더 보기 <ArrowRight size={10} />
         </button>
       </div>
-      <div className="space-y-2.5">
+      <div className="space-y-1.5">
         {feed.map((item, i) => {
           const colorClass = feedTypeColors[item.type] || "bg-slate-100 text-slate-600";
           return (
-            <div key={i} className="flex items-start gap-2.5">
-              <div className="mt-1.5 w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+            <div key={i} className="flex items-start gap-2">
+              <div className="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${colorClass}`}>
+                <div className="flex items-center gap-1 mb-0.5">
+                  <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${colorClass}`}>
                     {item.type}
                   </span>
                 </div>
-                <p className="text-sm text-slate-700 leading-snug">{item.label}</p>
-                <span className="text-xs text-slate-400">{item.time}</span>
+                <p className="text-[10px] text-slate-700 leading-snug">{item.label}</p>
+                <span className="text-[9px] text-slate-400">{item.time}</span>
               </div>
             </div>
           );

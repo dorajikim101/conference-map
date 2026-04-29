@@ -19,35 +19,35 @@ export default function Home() {
   );
 
   return (
-    <div className="flex min-h-screen bg-slate-50">
+    <div className="flex h-screen overflow-hidden bg-slate-50">
       {/* Fixed Sidebar */}
       <Sidebar />
 
       {/* Main area (offset by sidebar width) */}
-      <div className="flex-1 ml-[240px]">
+      <div className="flex-1 ml-[240px] flex flex-col overflow-hidden">
         {/* Top bar */}
         <TopBar />
 
         {/* 3-column layout */}
-        <div className="flex" style={{ height: "calc(100vh - 64px)" }}>
+        <div className="flex flex-1 overflow-hidden">
           {/* Left: Event list */}
           <EventList events={events} selectedId={selectedId} onSelect={setSelectedId} />
 
           {/* Center: Detail */}
           <div className="flex-1 overflow-y-auto">
-            <div className="flex">
+            <div className="flex h-full">
               {/* Main detail area */}
-              <div className="flex-1 min-w-0">
+              <div className="flex-1 min-w-0 flex flex-col">
                 <EventDetail event={selectedEvent} />
 
                 {/* Company section (full-width below detail) */}
-                <div className="px-5 pb-5">
+                <div className="px-4 pb-4">
                   <CompanySection companies={selectedEvent.companies} />
                 </div>
               </div>
 
-              {/* Right sidebar */}
-              <div className="w-[360px] shrink-0 border-l border-slate-200 overflow-y-auto p-4 space-y-4 bg-white">
+              {/* Right sidebar — compact */}
+              <div className="w-[300px] shrink-0 border-l border-slate-200 overflow-y-auto p-3 space-y-3 bg-white">
                 <EventFeed feed={selectedEvent.feed} />
                 <ArchiveCard archive={selectedEvent.archive} />
                 <RecommendedActions actions={selectedEvent.actions} />

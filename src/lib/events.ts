@@ -36,6 +36,8 @@ export type EventData = {
   gradient: string;
   status: EventStatus;
   cancelReason?: string;
+  imageUrl?: string;
+  sideEventUrl?: string;
   cost: EventCost;
   summary: Record<"features" | "difference" | "pros" | "risks" | "expectations", string[]>;
   feed: { label: string; time: string; type: string }[];
@@ -70,6 +72,8 @@ const eventData: EventData[] = [
     tierReasons: ["세계 최대 비트코인 이벤트", "500+ 연사", "5,000+ 기업 참여"],
     gradient: "from-orange-100 via-white to-amber-100",
     status: "live",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/bitcoin-2026",
     cost: { flight: 1050, hotel: 1380, transport: 200, meals: 480, ticket: 899, total: 4009, note: "Pro Pass 기준. General Admission은 ~$349" },
     summary: {
       features: ["세계 최대 규모 비트코인 컨퍼런스", "채굴, 에너지, 정책, 기업 트랙 등 다양한 트랙 구성", "5,000+ 기업, 500+ 연사 참여"],
@@ -130,6 +134,8 @@ const eventData: EventData[] = [
     tierReasons: ["글로벌 최대 크립토 이벤트 시리즈", "15,000+ 참석자 예상", "4,000+ 기업"],
     gradient: "from-amber-100 via-white to-cyan-100",
     status: "cancelled",
+    imageUrl: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/dubaievents/map",
     cancelReason: "이란-중동 분쟁으로 인한 안전 문제로 2027년 4월로 연기",
     cost: { flight: 760, hotel: 1280, transport: 160, meals: 330, ticket: 799, total: 3329 },
     summary: {
@@ -191,6 +197,8 @@ const eventData: EventData[] = [
     tierReasons: ["CoinDesk 주최 플래그십", "20,000+ 참석자 예상", "100+ 국가 참여"],
     gradient: "from-sky-100 via-white to-blue-100",
     status: "upcoming",
+    imageUrl: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/miamisideevents",
     cost: { flight: 1100, hotel: 1500, transport: 180, meals: 420, ticket: 999, total: 4199, note: "Pro Pass 기준" },
     summary: {
       features: ["CoinDesk 주최 북미 최대 크립토 컨퍼런스", "크립토·금융·테크·정책 리더 20,000+ 집결", "마이애미 비치 컨벤션 센터"],
@@ -251,6 +259,7 @@ const eventData: EventData[] = [
     tierReasons: ["$15조 AUM 기관 모임", "700+ 시니어 참가자", "전용 프라이빗 포럼"],
     gradient: "from-emerald-100 via-white to-teal-100",
     status: "upcoming",
+    imageUrl: "https://images.unsplash.com/photo-1523841589499-3c66e1c78936?w=600&h=300&fit=crop",
     cost: { flight: 780, hotel: 640, transport: 140, meals: 280, ticket: 1200, total: 3040, note: "기관용 초대장 기준. 일반 참가 어려울 수 있음" },
     summary: {
       features: ["자산운용사, 은행, 규제기관이 모이는 프라이빗 포럼", "$15조 이상 AUM 대표 참석", "의도적으로 소규모·고밀도 구성"],
@@ -311,6 +320,7 @@ const eventData: EventData[] = [
     tierReasons: ["스위스 크립토 밸리 기반", "기술 중심 고밀도", "프로토콜 엔지니어 집중"],
     gradient: "from-red-100 via-white to-neutral-100",
     status: "upcoming",
+    imageUrl: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=300&fit=crop",
     cost: { flight: 850, hotel: 920, transport: 160, meals: 380, ticket: 499, total: 2809 },
     summary: {
       features: ["스위스 '크립토 밸리' 기반 기술 컨퍼런스", "프로토콜 엔지니어, 연구자, 규제자 집중", "심층 기술 대화 중심"],
@@ -358,14 +368,4 @@ const eventData: EventData[] = [
   },
 ];
 
-export const events = [...eventData].sort((a, b) => {
-  if (a.status === "cancelled" && b.status !== "cancelled") {
-    return 1;
-  }
-
-  if (a.status !== "cancelled" && b.status === "cancelled") {
-    return -1;
-  }
-
-  return a.date.localeCompare(b.date);
-});
+export const events = [...eventData].sort((a, b) => a.date.localeCompare(b.date));
