@@ -1,118 +1,83 @@
 "use client";
 
-import { CalendarDays, MapPin } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
-import { CostTooltip } from "@/components/CostTooltip";
-import { TierBadge } from "@/components/TierBadge";
 import type { EventData } from "@/lib/events";
-import { eventDateRange } from "@/lib/format";
-import { cn } from "@/lib/utils";
+import { TierBadge } from "./TierBadge";
+import { CheckCircle, MapPin, Calendar, DollarSign } from "lucide-react";
 
-const statusLabels: Record<EventData["status"], string> = {
-  upcoming: "예정",
-  live: "LIVE",
-  completed: "완료",
-  cancelled: "취소",
-};
-
-const statusVariants: Record<EventData["status"], "outline" | "success" | "secondary" | "destructive"> = {
-  upcoming: "outline",
-  live: "success",
-  completed: "secondary",
-  cancelled: "destructive",
-};
-
-export function EventList({
-  events,
-  selectedId,
-  onSelect,
-}: {
+interface EventListProps {
   events: EventData[];
   selectedId: string;
   onSelect: (id: string) => void;
-}) {
+}
+
+export function EventList({ events, selectedId, onSelect }: EventListProps) {
   return (
-    <aside className="flex h-screen min-h-0 w-[360px] shrink-0 flex-col border-r bg-white">
-      <div className="border-b px-6 py-5">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-950 text-sm font-bold text-white">
-            1XP
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-slate-950">Conference Map</p>
-            <p className="text-xs text-slate-500">다가오는 크립토 행사</p>
-          </div>
-        </div>
-      </div>
-      <div className="px-6 py-4">
-        <div className="flex items-end justify-between">
-          <div>
-            <h1 className="text-lg font-semibold text-slate-950">다가오는 행사</h1>
-            <p className="text-sm text-slate-500">의사결정 대기열</p>
-          </div>
-          <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">
-            {events.length}개 행사
-          </span>
-        </div>
-      </div>
-      <ScrollArea className="min-h-0 flex-1 px-4 pb-5">
-        <div className="space-y-3 pr-2">
+    <div className="w-[320px] shrink-0 border-r border-slate-200 bg-slate-50/50 overflow-y-auto">
+      <div className="p-4">
+        <h2 className="text-sm font-bold text-slate-900 mb-3">다가오는 주요 이벤트</h2>
+        <div className="space-y-3">
           {events.map((event) => {
-            const selected = event.id === selectedId;
+            const isSelected = event.id === selectedId;
             return (
               <button
-                type="button"
                 key={event.id}
                 onClick={() => onSelect(event.id)}
-                className={cn(
-                  "relative w-full rounded-lg border bg-white p-3 text-left shadow-sm transition hover:border-slate-300 hover:shadow-md",
-                  selected && "border-slate-950 bg-slate-50 shadow-md",
-                  event.status === "cancelled" && "border-red-100 bg-red-50/40 opacity-80",
-                )}
+                className={`w-full text-left rounded-xl overflow-hidden transition-all ${
+                  isSelected
+                    ? "ring-2 ring-blue-500 shadow-md"
+                    : "bg-white border border-slate-200 hover:shadow-sm"
+                }`}
               >
-                <TierBadge
-                  tier={event.tier}
-                  autoTier={event.autoTier}
-                  score={event.tierScore}
-                  reasons={event.tierReasons}
-                  className="absolute -left-1 -top-2"
-                />
-                <div className="flex gap-3">
-                  <div className={cn("h-20 w-20 shrink-0 rounded-md bg-linear-to-br", event.gradient)}>
-                    <div className="flex h-full items-end p-2">
-                      <span className="rounded bg-white/80 px-1.5 py-0.5 text-[10px] font-semibold text-slate-700">
-                        {event.city.slice(0, 3).toUpperCase()}
-                      </span>
+                {/* Gradient header */}
+                <div className={`relative h-20 bg-gradient-to-r ${event.gradient}`}>
+                  {isSelected && (
+                    <div className="absolute top-2 right-2">
+                      <CheckCircle size={20} className="text-blue-500 fill-white" />
                     </div>
+                  )}
+                  <div className="absolute bottom-2 left-3">
+                    <TierBadge tier={event.tier} />
                   </div>
-                  <div className="min-w-0 flex-1 pt-1">
-                    <div className="flex items-start justify-between gap-2">
-                      <p className="truncate text-sm font-semibold text-slate-950">{event.name}</p>
-                      <Badge variant={statusVariants[event.status]} className="shrink-0 text-[10px]">
-                        {statusLabels[event.status]}
-                      </Badge>
+                  {event.status === "cancelled" && (
+                    <div className="absolute top-2 left-2 bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded font-medium">
+                      취소
                     </div>
-                    <div className="mt-2 space-y-1.5 text-xs text-slate-500">
-                      <p className="flex items-center gap-1.5">
-                        <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-                        {event.city}, {event.country}
-                      </p>
-                      <p className="flex items-center gap-1.5">
-                        <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
-                        {eventDateRange(event.date, event.endDate)}
-                      </p>
+                  )}
+                  {event.status === "live" && (
+                    <div className="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                      LIVE
                     </div>
-                    <div className="mt-3">
-                      <CostTooltip cost={event.cost} />
-                    </div>
+                  )}
+                </div>
+
+                {/* Card body */}
+                <div className="p-3">
+                  <div className="font-semibold text-sm text-slate-900 mb-1.5 leading-tight">
+                    {event.name}
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-slate-500 mb-1">
+                    <MapPin size={12} />
+                    {event.city}, {event.country}
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-slate-500 mb-1.5">
+                    <Calendar size={12} />
+                    {event.date}{event.endDate ? ` ~ ${event.endDate}` : ""} ({event.days}일)
+                  </div>
+                  <div className="flex items-center gap-1 text-xs font-medium text-slate-700">
+                    <DollarSign size={12} className="text-slate-400" />
+                    예상 ${event.cost.total.toLocaleString()}
                   </div>
                 </div>
               </button>
             );
           })}
         </div>
-      </ScrollArea>
-    </aside>
+
+        <button className="w-full mt-4 py-2 text-center text-sm text-blue-500 hover:text-blue-700 font-medium flex items-center justify-center gap-1">
+          전체 이벤트 보기 <span>→</span>
+        </button>
+      </div>
+    </div>
   );
 }
