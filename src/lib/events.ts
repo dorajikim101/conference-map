@@ -72,7 +72,7 @@ const eventData: EventData[] = [
     tierReasons: ["세계 최대 비트코인 이벤트", "500+ 연사", "5,000+ 기업 참여"],
     gradient: "from-orange-100 via-white to-amber-100",
     status: "live",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/bitcoin-2026",
     cost: { flight: 1050, hotel: 1380, transport: 200, meals: 480, ticket: 899, total: 4009, note: "Pro Pass 기준. General Admission은 ~$349" },
     summary: {
@@ -259,7 +259,7 @@ const eventData: EventData[] = [
     tierReasons: ["$15조 AUM 기관 모임", "700+ 시니어 참가자", "전용 프라이빗 포럼"],
     gradient: "from-emerald-100 via-white to-teal-100",
     status: "upcoming",
-    imageUrl: "https://images.unsplash.com/photo-1523841589499-3c66e1c78936?w=600&h=300&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=600&h=300&fit=crop",
     cost: { flight: 780, hotel: 640, transport: 140, meals: 280, ticket: 1200, total: 3040, note: "기관용 초대장 기준. 일반 참가 어려울 수 있음" },
     summary: {
       features: ["자산운용사, 은행, 규제기관이 모이는 프라이빗 포럼", "$15조 이상 AUM 대표 참석", "의도적으로 소규모·고밀도 구성"],
@@ -320,7 +320,7 @@ const eventData: EventData[] = [
     tierReasons: ["스위스 크립토 밸리 기반", "기술 중심 고밀도", "프로토콜 엔지니어 집중"],
     gradient: "from-red-100 via-white to-neutral-100",
     status: "upcoming",
-    imageUrl: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=300&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop",
     cost: { flight: 850, hotel: 920, transport: 160, meals: 380, ticket: 499, total: 2809 },
     summary: {
       features: ["스위스 '크립토 밸리' 기반 기술 컨퍼런스", "프로토콜 엔지니어, 연구자, 규제자 집중", "심층 기술 대화 중심"],
