@@ -18,6 +18,9 @@ export type Company = {
   people: string[];
   role: string;
   isNew?: boolean;
+  layer?: string; // "L1" | "L2" | "Infra" | "DeFi" | "CEX" | "VC" etc.
+  tgeDone?: boolean; // TGE 완료 여부
+  tgeNote?: string; // TGE 관련 메모
 };
 
 export type EventData = {
@@ -54,6 +57,11 @@ export type EventData = {
   sideEventTrend: { label: string; value: number }[];
   actions: string[];
   companies: Company[];
+  sideEvents: {
+    count: number;
+    label: string;
+    items: { name: string; host: string; date: string; desc: string }[];
+  };
 };
 
 const eventData: EventData[] = [
@@ -113,11 +121,21 @@ const eventData: EventData[] = [
     ],
     actions: ["행사 진행 중 - 라이브 피드 모니터링", "엔터프라이즈 트랙 세션 확인", "채굴 스폰서 부스 방문 계획"],
     companies: [
-      { name: "Blockstream", tags: ["Bitcoin", "Infra"], people: ["Partnership Lead"], role: "인프라 파트너십", isNew: true },
-      { name: "Marathon Digital", tags: ["Mining"], people: ["IR Lead"], role: "채굴 시장 동향" },
-      { name: "Strike", tags: ["Payments"], people: ["BD Lead"], role: "결제 레일" },
-      { name: "Galaxy Digital", tags: ["Finance", "Mining"], people: ["Research Lead"], role: "시장 분석" },
+      { name: "Blockstream", tags: ["Bitcoin", "Infra"], people: ["Partnership Lead"], role: "인프라 파트너십", isNew: true, layer: "L1", tgeDone: false, tgeNote: "Bitcoin L1, 토큰 없음 (BTC 자체)" },
+      { name: "Marathon Digital", tags: ["Mining"], people: ["IR Lead"], role: "채굴 시장 동향", layer: "Mining", tgeDone: true, tgeNote: "MARA 상장" },
+      { name: "Strike", tags: ["Payments"], people: ["BD Lead"], role: "결제 레일", layer: "Lightning", tgeDone: false, tgeNote: "Lightning 기반, 별도 토큰 없음" },
+      { name: "Galaxy Digital", tags: ["Finance", "Mining"], people: ["Research Lead"], role: "시장 분석", layer: "Finance", tgeDone: true, tgeNote: "GLXY 상장" },
     ],
+    sideEvents: {
+      count: 180,
+      label: "사이드 이벤트",
+      items: [
+        { name: "Bitcoin Policy Summit", host: "Bitcoin Foundation", date: "2026-04-27", desc: "비트코인 정책 및 규제 포럼" },
+        { name: "Mining & Energy Summit", host: "Marathon Digital", date: "2026-04-28", desc: "채굴 인프라 및 에너지 효율성" },
+        { name: "Lightning Hackathon", host: "Strike + Voltage", date: "2026-04-27", desc: "라이트닝 네트워크 개발자 해커톤" },
+        { name: "Institutional Bitcoin Workshop", host: "Galaxy Digital", date: "2026-04-29", desc: "기관 비트코인 자산 전략" },
+      ],
+    },
   },
   {
     id: "token2049-dubai",
@@ -176,11 +194,20 @@ const eventData: EventData[] = [
     ],
     actions: ["2027년 일정 모니터링", "중동 파트너 리스트 사전 확보", "대체 행사 검토"],
     companies: [
-      { name: "OKX", tags: ["Exchange", "Sponsor"], people: ["Institutional Lead"], role: "유동성" },
-      { name: "Animoca Brands", tags: ["Gaming", "Investor"], people: ["Portfolio Lead"], role: "포트폴리오 접근" },
-      { name: "Cypher Capital", tags: ["VC", "MENA"], people: ["Managing Partner"], role: "지역 전략" },
-      { name: "Chainalysis", tags: ["Compliance", "Data"], people: ["Policy Lead"], role: "규제 시그널" },
+      { name: "OKX", tags: ["Exchange", "Sponsor"], people: ["Institutional Lead"], role: "유동성", layer: "CEX", tgeDone: true, tgeNote: "OKB 토큰" },
+      { name: "Animoca Brands", tags: ["Gaming", "Investor"], people: ["Portfolio Lead"], role: "포트폴리오 접근", layer: "VC", tgeDone: true, tgeNote: "다수 포트폴리오 TGE 완료" },
+      { name: "Cypher Capital", tags: ["VC", "MENA"], people: ["Managing Partner"], role: "지역 전략", layer: "VC", tgeDone: true, tgeNote: "펀드 자본" },
+      { name: "Chainalysis", tags: ["Compliance", "Data"], people: ["Policy Lead"], role: "규제 시그널", layer: "Infra", tgeDone: true, tgeNote: "비토큰 기업" },
     ],
+    sideEvents: {
+      count: 186,
+      label: "사이드 이벤트",
+      items: [
+        { name: "Dubai DeFi Summit", host: "OKX", date: "2026-04-29", desc: "DeFi 인프라 및 유동성 포럼" },
+        { name: "MENA Web3 Connect", host: "Cypher Capital", date: "2026-04-30", desc: "중동 Web3 생태계 네트워킹" },
+        { name: "On-chain Compliance Workshop", host: "Chainalysis", date: "2026-04-29", desc: "온체인 규제 및 컴플라이언스" },
+      ],
+    },
   },
   {
     id: "consensus-miami",
@@ -238,11 +265,27 @@ const eventData: EventData[] = [
     ],
     actions: ["5/1까지 얼리버드 등록", "기관/VC 타겟 리스트 사전 작성", "마이애미 숙박 빠르게 예약"],
     companies: [
-      { name: "Coinbase", tags: ["Exchange", "Institutional"], people: ["Institutional Head"], role: "유동성/수탁", isNew: true },
-      { name: "a16z crypto", tags: ["VC", "Research"], people: ["Investment Partner"], role: "시장 리서치" },
-      { name: "Circle", tags: ["Stablecoin", "Payments"], people: ["Policy Lead"], role: "스테이블코인 규제" },
-      { name: "Paradigm", tags: ["VC", "DeFi"], people: ["Research Partner"], role: "DeFi 전략" },
+      { name: "Monad", tags: ["L1", "Parallel EVM"], people: ["Keone Hon (CEO)", "BD Lead"], role: "병렬 EVM L1", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정 2026 H2, 아직 메인넷 전" },
+      { name: "Sui", tags: ["L1", "Move"], people: ["Evan Cheng (Co-founder)", "Ecosystem Lead"], role: "Move 기반 L1", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SUI 토큰 이미 상장" },
+      { name: "Aptos", tags: ["L1", "Move"], people: ["Avery Ching (CTO)", "Partnership Lead"], role: "Move 기반 L1", layer: "L1", tgeDone: true, tgeNote: "APT 토큰 이미 상장" },
+      { name: "Sei", tags: ["L1", "Trading"], people: ["Jay Jog (Co-founder)", "BD Lead"], role: "트레이딩 특화 L1", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SEI 토큰 이미 상장" },
+      { name: "Berachain", tags: ["L1", "Proof of Liquidity"], people: ["Smokey the Bera (Co-founder)", "Ecosystem Lead"], role: "PoL 기반 L1", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 2026 예상, 아직 메인넷 전" },
+      { name: "Celestia", tags: ["L1", "Modular DA"], people: ["Mustafa Al-Bassam (Co-founder)", "Research Lead"], role: "모듈러 DA 레이어", layer: "L1", tgeDone: true, tgeNote: "TIA 토큰 이미 상장" },
+      { name: "Coinbase", tags: ["Exchange", "Institutional"], people: ["Institutional Head"], role: "유동성/수탁", layer: "CEX", tgeDone: true, tgeNote: "상장 기업" },
+      { name: "a16z crypto", tags: ["VC", "Research"], people: ["Investment Partner"], role: "시장 리서치", layer: "VC", tgeDone: true, tgeNote: "펀드 자본" },
+      { name: "Circle", tags: ["Stablecoin", "Payments"], people: ["Policy Lead"], role: "스테이블코인 규제", layer: "Stablecoin", tgeDone: true, tgeNote: "USDC 발행" },
+      { name: "Paradigm", tags: ["VC", "DeFi"], people: ["Research Partner"], role: "DeFi 전략", layer: "VC", tgeDone: true, tgeNote: "펀드 자본" },
     ],
+    sideEvents: {
+      count: 250,
+      label: "사이드 이벤트",
+      items: [
+        { name: "Builder Village", host: "a16z crypto", date: "2026-05-05", desc: "크립토 빌더 대상 프라이빗 네트워킹" },
+        { name: "L1 Summit", host: "Monad + Berachain", date: "2026-05-06", desc: "차세대 L1 프로토콜 비교 및 파트너십" },
+        { name: "DeFi Night Miami", host: "Paradigm", date: "2026-05-05", desc: "DeFi 빌더 및 투자자 미팅" },
+        { name: "Stablecoin Summit", host: "Circle", date: "2026-05-06", desc: "스테이블코인 규제 및 결제 레일" },
+      ],
+    },
   },
   {
     id: "daf-abu-dhabi",
@@ -299,11 +342,19 @@ const eventData: EventData[] = [
     ],
     actions: ["초대장 수령 여부 확인", "기관 타겟 리스트 사전 공유", "중동 규제 브리핑 준비"],
     companies: [
-      { name: "ADGM", tags: ["Regulator", "Abu Dhabi"], people: ["CEO"], role: "규제 프레임워크", isNew: true },
-      { name: "BlackRock Digital", tags: ["Asset Manager"], people: ["Digital Assets Head"], role: "기관 자본" },
-      { name: "FalconX", tags: ["Broker", "Institutional"], people: ["Institutional Sales"], role: "유동성" },
-      { name: "Mubadala", tags: ["Sovereign Fund"], people: ["Tech Investment Lead"], role: "국부펀드 파트너십" },
+      { name: "ADGM", tags: ["Regulator", "Abu Dhabi"], people: ["CEO"], role: "규제 프레임워크", isNew: true, layer: "Regulator", tgeDone: true, tgeNote: "규제기관" },
+      { name: "BlackRock Digital", tags: ["Asset Manager"], people: ["Digital Assets Head"], role: "기관 자본", layer: "TradFi", tgeDone: true, tgeNote: "BUIDL 펀드 운용" },
+      { name: "FalconX", tags: ["Broker", "Institutional"], people: ["Institutional Sales"], role: "유동성", layer: "Broker", tgeDone: true, tgeNote: "비토큰 기업" },
+      { name: "Mubadala", tags: ["Sovereign Fund"], people: ["Tech Investment Lead"], role: "국부펀드 파트너십", layer: "Sovereign Fund", tgeDone: true, tgeNote: "국부펀드" },
     ],
+    sideEvents: {
+      count: 15,
+      label: "사이드 이벤트",
+      items: [
+        { name: "ADGM RegTech Forum", host: "ADGM", date: "2026-05-13", desc: "중동 디지털 자산 규제 포럼" },
+        { name: "Institutional DeFi Roundtable", host: "BlackRock + FalconX", date: "2026-05-13", desc: "기관 DeFi 채택 라운드테이블" },
+      ],
+    },
   },
   {
     id: "crypto-valley-2026",
@@ -360,11 +411,19 @@ const eventData: EventData[] = [
     ],
     actions: ["기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
     companies: [
-      { name: "Ethereum Foundation", tags: ["Protocol", "Research"], people: ["Researcher"], role: "프로토콜 개발" },
-      { name: "Sygnum Bank", tags: ["Banking", "Crypto"], people: ["Digital Assets Lead"], role: "기관 은행" },
-      { name: "SEBA Bank", tags: ["Banking", "Custody"], people: ["Custody Head"], role: "수탁 솔루션" },
-      { name: "Zug Cantonal Office", tags: ["Regulator"], people: ["Digital Policy Lead"], role: "규제 인사이트" },
+      { name: "Ethereum Foundation", tags: ["Protocol", "Research"], people: ["Researcher"], role: "프로토콜 개발", layer: "L1", tgeDone: true, tgeNote: "ETH" },
+      { name: "Sygnum Bank", tags: ["Banking", "Crypto"], people: ["Digital Assets Lead"], role: "기관 은행", layer: "Banking", tgeDone: true, tgeNote: "비토큰 기업" },
+      { name: "SEBA Bank", tags: ["Banking", "Custody"], people: ["Custody Head"], role: "수탁 솔루션", layer: "Banking", tgeDone: true, tgeNote: "비토큰 기업" },
+      { name: "Zug Cantonal Office", tags: ["Regulator"], people: ["Digital Policy Lead"], role: "규제 인사이트", layer: "Regulator", tgeDone: true, tgeNote: "규제기관" },
     ],
+    sideEvents: {
+      count: 12,
+      label: "사이드 이벤트",
+      items: [
+        { name: "Interop Workshop", host: "Ethereum Foundation", date: "2026-05-28", desc: "인터오퍼러빌리티 기술 워크숍" },
+        { name: "Swiss Crypto Regulation Briefing", host: "Zug Cantonal Office", date: "2026-05-29", desc: "스위스 크립토 규제 업데이트" },
+      ],
+    },
   },
 ];
 

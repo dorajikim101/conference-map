@@ -10,6 +10,7 @@ import { EventFeed } from "@/components/EventFeed";
 import { ArchiveCard } from "@/components/ArchiveCard";
 import { RecommendedActions } from "@/components/RecommendedActions";
 import { CompanySection } from "@/components/CompanySection";
+import { SideEventsPanel } from "@/components/SideEventsPanel";
 
 export default function Home() {
   const [selectedId, setSelectedId] = useState(events[0].id);
@@ -39,6 +40,15 @@ export default function Home() {
               {/* Main detail area */}
               <div className="flex-1 min-w-0 flex flex-col">
                 <EventDetail event={selectedEvent} />
+
+                {/* Side events panel */}
+                <div className="px-4 pb-2">
+                  <SideEventsPanel
+                    count={selectedEvent.sideEvents.count}
+                    label={selectedEvent.sideEvents.label}
+                    items={selectedEvent.sideEvents.items}
+                  />
+                </div>
 
                 {/* Company section (full-width below detail) */}
                 <div className="px-4 pb-4">
