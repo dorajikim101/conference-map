@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Noto Sans KR", var(--font-noto-sans-kr), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(222 47% 11%);
   --color-muted: hsl(210 40% 96%);

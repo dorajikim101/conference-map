@@ -81,29 +81,28 @@ export function CompanySection({ companies }: CompanySectionProps) {
   }, [companies, search, activeTab]);
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-5">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-base font-bold text-slate-900">관심 기업 / 만날 사람</h3>
+    <section className="min-h-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-3">
+      <div className="mb-2 flex items-center justify-between">
+        <h3 className="text-[15px] font-black text-slate-950">관심 기업 / 만날 사람</h3>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1 text-[10px] text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+          <div className="flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-[10px] font-bold text-indigo-600">
             <Layers size={10} />
             L1 우선 정렬
           </div>
-          <div className="flex items-center gap-1 text-[10px] text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
+          <div className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-1 text-[10px] font-bold text-amber-600">
             <Rocket size={10} />
             TGE 전
           </div>
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="flex items-center gap-1 mb-4">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+            className={`h-6 rounded-md px-3 text-[11px] font-bold transition-colors ${
               activeTab === tab
                 ? tab === "L1"
                   ? "bg-indigo-500 text-white"
@@ -116,35 +115,33 @@ export function CompanySection({ companies }: CompanySectionProps) {
             {tab}
           </button>
         ))}
-      </div>
-
-      {/* Search + Add */}
-      <div className="flex items-center gap-2 mb-4">
-        <div className="flex-1 relative">
+        </div>
+        <div className="flex items-center gap-2">
+        <div className="relative w-[260px]">
           <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
-            placeholder="기업명 또는 태그 검색..."
+            placeholder="기업 또는 인물 검색"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full h-8 pl-8 pr-3 rounded-lg border border-slate-200 bg-slate-50 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-300"
+            className="h-8 w-full rounded-lg border border-slate-200 bg-white pl-8 pr-3 text-[12px] outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-500/10"
           />
         </div>
-        <button className="flex items-center gap-1 px-3 h-8 bg-blue-500 text-white text-xs font-medium rounded-lg hover:bg-blue-600 transition-colors">
+        <button className="flex h-8 items-center gap-1 rounded-lg border border-blue-100 bg-white px-3 text-[12px] font-bold text-blue-600 transition-colors hover:bg-blue-50">
           <Plus size={14} />
           관심 추가
         </button>
+        </div>
       </div>
 
-      {/* Table */}
-      <div className="overflow-hidden rounded-lg border border-slate-200">
+      <div className="max-h-[210px] overflow-y-auto rounded-lg border border-slate-200">
         <table className="w-full">
           <thead>
-            <tr className="bg-slate-50">
-              <th className="text-left text-xs font-medium text-slate-500 px-3 py-2.5">기업명</th>
-              <th className="text-left text-xs font-medium text-slate-500 px-3 py-2.5">분류</th>
-              <th className="text-left text-xs font-medium text-slate-500 px-3 py-2.5">주요 인물</th>
-              <th className="text-left text-xs font-medium text-slate-500 px-3 py-2.5">역할</th>
+            <tr className="sticky top-0 z-[1] bg-slate-50">
+              <th className="px-3 py-2 text-left text-[11px] font-bold text-slate-500">기업명</th>
+              <th className="px-3 py-2 text-left text-[11px] font-bold text-slate-500">분류</th>
+              <th className="px-3 py-2 text-left text-[11px] font-bold text-slate-500">주요 인물</th>
+              <th className="px-3 py-2 text-left text-[11px] font-bold text-slate-500">역할</th>
             </tr>
           </thead>
           <tbody>
@@ -159,9 +156,9 @@ export function CompanySection({ companies }: CompanySectionProps) {
                     : ""
                 }`}
               >
-                <td className="px-3 py-2.5">
+                <td className="px-3 py-2">
                   <div className="flex items-center gap-1.5 flex-wrap">
-                    <span className="text-sm font-semibold text-slate-900">{company.name}</span>
+                    <span className="text-[12px] font-black text-slate-900">{company.name}</span>
                     {company.isNew && (
                       <span className="text-[10px] font-medium bg-blue-500 text-white px-1.5 py-0.5 rounded">
                         NEW
@@ -181,10 +178,10 @@ export function CompanySection({ companies }: CompanySectionProps) {
                     )}
                   </div>
                   {company.tgeNote && (
-                    <span className="text-[9px] text-slate-400 mt-0.5 block">{company.tgeNote}</span>
+                    <span className="mt-0.5 block truncate text-[9px] text-slate-400">{company.tgeNote}</span>
                   )}
                 </td>
-                <td className="px-3 py-2.5">
+                <td className="px-3 py-2">
                   <div className="flex flex-wrap gap-1">
                     {company.tags.map((tag) => (
                       <span
@@ -198,18 +195,18 @@ export function CompanySection({ companies }: CompanySectionProps) {
                     ))}
                   </div>
                 </td>
-                <td className="px-3 py-2.5">
+                <td className="px-3 py-2">
                   <div className="space-y-0.5">
                     {company.people.map((person, i) => (
-                      <div key={i} className="flex items-center gap-1 text-xs text-slate-600">
+                      <div key={i} className="flex items-center gap-1 text-[11px] text-slate-600">
                         <User size={10} className="text-slate-400" />
                         {person}
                       </div>
                     ))}
                   </div>
                 </td>
-                <td className="px-3 py-2.5">
-                  <div className="flex items-center gap-1 text-xs text-slate-500">
+                <td className="px-3 py-2">
+                  <div className="flex items-center gap-1 text-[11px] text-slate-500">
                     <Briefcase size={10} className="text-slate-400" />
                     {company.role}
                   </div>
@@ -222,6 +219,6 @@ export function CompanySection({ companies }: CompanySectionProps) {
           <div className="py-8 text-center text-sm text-slate-400">검색 결과가 없습니다</div>
         )}
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,166 +2,104 @@
 
 import type { EventData } from "@/lib/events";
 import { Badge } from "./ui/badge";
-import {
-  Star,
-  Diamond,
-  ThumbsUp,
-  AlertTriangle,
-  Target,
-  ExternalLink,
-} from "lucide-react";
-import { SideEventChart, BudgetPieChart, KpiGrid } from "./EventCharts";
+import { AlertTriangle, Diamond, ExternalLink, Star, Target, ThumbsUp } from "lucide-react";
+import { BudgetPieChart, KpiGrid, SideEventChart } from "./EventCharts";
 
 interface EventDetailProps {
   event: EventData;
 }
 
 const summaryCards = [
-  {
-    key: "features" as const,
-    title: "행사 특징",
-    icon: Star,
-    color: "text-blue-500",
-    bg: "bg-blue-50",
-  },
-  {
-    key: "difference" as const,
-    title: "차별점",
-    icon: Diamond,
-    color: "text-purple-500",
-    bg: "bg-purple-50",
-  },
-  {
-    key: "pros" as const,
-    title: "장점",
-    icon: ThumbsUp,
-    color: "text-emerald-500",
-    bg: "bg-emerald-50",
-  },
-  {
-    key: "risks" as const,
-    title: "유의점",
-    icon: AlertTriangle,
-    color: "text-amber-500",
-    bg: "bg-amber-50",
-  },
-  {
-    key: "expectations" as const,
-    title: "기대 포인트",
-    icon: Target,
-    color: "text-blue-500",
-    bg: "bg-sky-50",
-  },
+  { key: "features" as const, title: "이 행사의 특징", icon: Star, color: "text-blue-600", bg: "bg-blue-50" },
+  { key: "difference" as const, title: "다른 행사와 다른 점", icon: Diamond, color: "text-violet-600", bg: "bg-violet-50" },
+  { key: "pros" as const, title: "장점", icon: ThumbsUp, color: "text-emerald-600", bg: "bg-emerald-50" },
+  { key: "risks" as const, title: "유의할 점", icon: AlertTriangle, color: "text-orange-600", bg: "bg-orange-50" },
+  { key: "expectations" as const, title: "여기서 기대할 수 있는 것", icon: Target, color: "text-blue-600", bg: "bg-sky-50" },
 ];
 
 export function EventDetail({ event }: EventDetailProps) {
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-3">
-      {/* Header */}
-      <div className="flex items-center gap-2 flex-wrap">
-        <Badge variant="info" className="text-[10px]">선택 이벤트</Badge>
-        <Badge className="bg-blue-500 text-white border-transparent text-[10px] font-semibold">
+    <section className="shrink-0 rounded-xl border border-slate-200 bg-white p-3">
+      <div className="mb-3 flex items-center gap-2">
+        <Badge variant="secondary" className="h-6 rounded-md bg-slate-100 px-2 text-[10px] font-bold text-slate-700">
+          선택 이벤트
+        </Badge>
+        <Badge className="h-6 rounded-md border border-slate-200 bg-white px-2 text-[10px] font-bold text-slate-800">
           {event.name}
         </Badge>
         {event.status === "cancelled" && (
-          <Badge variant="destructive" className="text-[10px]">취소됨</Badge>
+          <Badge variant="destructive" className="h-6 rounded-md px-2 text-[10px] font-bold">
+            취소됨
+          </Badge>
         )}
         {event.status === "live" && (
-          <Badge className="bg-emerald-500 text-white border-transparent text-[10px] font-semibold animate-pulse">
-            ● LIVE
+          <Badge className="h-6 rounded-md border-transparent bg-emerald-500 px-2 text-[10px] font-bold text-white">
+            LIVE
           </Badge>
         )}
       </div>
 
-      {/* Summary title */}
-      <h2 className="text-sm font-bold text-slate-900">한눈에 보는 핵심 포인트</h2>
+      <h2 className="mb-3 text-[18px] font-black tracking-tight text-slate-950">한눈에 보는 핵심 포인트</h2>
 
-      {/* 5 Summary cards — 3 on top, 2 on bottom */}
       <div className="grid grid-cols-3 gap-2">
-        {summaryCards.slice(0, 3).map((card) => {
+        {summaryCards.map((card) => {
           const Icon = card.icon;
-          const items = event.summary[card.key].slice(0, 2);
           return (
-            <div key={card.key} className="bg-white rounded-lg border border-slate-200 p-2.5">
-              <div className="flex items-center gap-1.5 mb-1.5">
-                <div className={`w-5 h-5 rounded ${card.bg} flex items-center justify-center`}>
-                  <Icon size={11} className={card.color} />
-                </div>
-                <h4 className="text-[11px] font-semibold text-slate-900">{card.title}</h4>
+            <div key={card.key} className="min-h-[92px] rounded-lg border border-slate-200 bg-white p-3">
+              <div className="mb-2 flex items-center gap-2">
+                <span className={`flex h-6 w-6 items-center justify-center rounded-md ${card.bg}`}>
+                  <Icon size={15} className={card.color} />
+                </span>
+                <h3 className={`text-[13px] font-black ${card.color}`}>{card.title}</h3>
               </div>
-              <ul className="space-y-0.5">
-                {items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-1.5 text-[10px] text-slate-600 leading-tight">
-                    <span className="mt-1 w-0.5 h-0.5 rounded-full bg-slate-300 shrink-0" />
-                    {item}
+              <ul className="space-y-1">
+                {event.summary[card.key].slice(0, 3).map((item) => (
+                  <li key={item} className="flex gap-1.5 text-[11px] leading-[1.45] text-slate-700">
+                    <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-slate-900" />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           );
         })}
-      </div>
-      <div className="grid grid-cols-3 gap-2">
-        {/* Bottom row: 2 cards + Luma link card */}
-        {summaryCards.slice(3, 5).map((card) => {
-          const Icon = card.icon;
-          const items = event.summary[card.key].slice(0, 2);
-          return (
-            <div key={card.key} className="bg-white rounded-lg border border-slate-200 p-2.5">
-              <div className="flex items-center gap-1.5 mb-1.5">
-                <div className={`w-5 h-5 rounded ${card.bg} flex items-center justify-center`}>
-                  <Icon size={11} className={card.color} />
-                </div>
-                <h4 className="text-[11px] font-semibold text-slate-900">{card.title}</h4>
-              </div>
-              <ul className="space-y-0.5">
-                {items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-1.5 text-[10px] text-slate-600 leading-tight">
-                    <span className="mt-1 w-0.5 h-0.5 rounded-full bg-slate-300 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
-        {/* Side Event Luma Link */}
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-2.5 flex flex-col justify-between">
-          <div className="flex items-center gap-1.5 mb-1.5">
-            <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
-              <ExternalLink size={11} className="text-blue-500" />
-            </div>
-            <h4 className="text-[11px] font-semibold text-slate-900">사이드 이벤트</h4>
+
+        <div className="min-h-[92px] rounded-lg border border-blue-100 bg-blue-50/50 p-3">
+          <div className="mb-2 flex items-center gap-2">
+            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-white">
+              <ExternalLink size={15} className="text-blue-600" />
+            </span>
+            <h3 className="text-[13px] font-black text-blue-700">사이드 이벤트 링크</h3>
           </div>
+          <p className="mb-2 text-[11px] leading-snug text-slate-600">
+            {event.sideEvents.count.toLocaleString()}개 {event.sideEvents.label} 후보를 확인하고 우선순위를 정리하세요.
+          </p>
           {event.sideEventUrl ? (
             <a
               href={event.sideEventUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800 bg-white px-2 py-1.5 rounded-md border border-blue-200 hover:border-blue-400 transition-colors"
+              className="inline-flex h-7 items-center gap-1.5 rounded-md border border-blue-200 bg-white px-2 text-[11px] font-bold text-blue-600 hover:border-blue-400"
             >
-              <ExternalLink size={10} />
-              Luma에서 사이드 이벤트 보기
+              Luma 보기 <ExternalLink size={11} />
             </a>
           ) : (
-            <span className="text-[10px] text-slate-400">소규모 행사 — 링크 없음</span>
+            <span className="text-[11px] font-semibold text-slate-400">링크 없음</span>
           )}
         </div>
       </div>
 
-      {/* Cancel reason */}
       {event.cancelReason && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-2.5 text-[11px] text-red-700">
-          ⚠️ {event.cancelReason}
+        <div className="mt-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-[11px] font-semibold text-red-700">
+          {event.cancelReason}
         </div>
       )}
 
-      {/* Charts row — compact */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="mt-2 grid grid-cols-[1fr_1fr_1.05fr] gap-2">
         <SideEventChart data={event.sideEventTrend} />
         <BudgetPieChart data={event.budget} total={event.cost.total} />
-        <KpiGrid data={event.kpis} />
+        <KpiGrid data={event.kpis} event={event} />
       </div>
-    </div>
+    </section>
   );
 }

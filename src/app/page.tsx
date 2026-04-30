@@ -20,50 +20,37 @@ export default function Home() {
   );
 
   return (
-    <div className="flex h-screen overflow-hidden bg-slate-50">
-      {/* Fixed Sidebar */}
+    <div className="flex h-screen overflow-hidden bg-[#fbfcfe] text-slate-900">
       <Sidebar />
 
-      {/* Main area (offset by sidebar width) */}
-      <div className="flex-1 ml-[240px] flex flex-col overflow-hidden">
-        {/* Top bar */}
+      <div className="ml-[240px] flex min-w-0 flex-1 flex-col overflow-hidden">
         <TopBar />
 
-        {/* 3-column layout */}
-        <div className="flex flex-1 overflow-hidden">
-          {/* Left: Event list */}
+        <div className="flex min-h-0 flex-1 overflow-hidden">
           <EventList events={events} selectedId={selectedId} onSelect={setSelectedId} />
 
-          {/* Center: Detail */}
-          <div className="flex-1 overflow-y-auto">
-            <div className="flex h-full">
-              {/* Main detail area */}
-              <div className="flex-1 min-w-0 flex flex-col">
+          <main className="min-w-0 flex-1 overflow-hidden">
+            <div className="grid h-full grid-cols-[minmax(620px,1fr)_300px] gap-2 p-2 pl-3">
+              <div className="flex min-w-0 flex-col gap-2 overflow-y-auto">
                 <EventDetail event={selectedEvent} />
 
-                {/* Side events panel */}
-                <div className="px-4 pb-2">
+                <div className="grid shrink-0 grid-cols-[minmax(0,1fr)_280px] gap-2 overflow-hidden">
+                  <CompanySection companies={selectedEvent.companies} />
                   <SideEventsPanel
                     count={selectedEvent.sideEvents.count}
                     label={selectedEvent.sideEvents.label}
                     items={selectedEvent.sideEvents.items}
                   />
                 </div>
-
-                {/* Company section (full-width below detail) */}
-                <div className="px-4 pb-4">
-                  <CompanySection companies={selectedEvent.companies} />
-                </div>
               </div>
 
-              {/* Right sidebar — compact */}
-              <div className="w-[300px] shrink-0 border-l border-slate-200 overflow-y-auto p-3 space-y-3 bg-white">
+              <aside className="min-h-0 space-y-2 overflow-y-auto">
                 <EventFeed feed={selectedEvent.feed} />
                 <ArchiveCard archive={selectedEvent.archive} />
                 <RecommendedActions actions={selectedEvent.actions} />
-              </div>
+              </aside>
             </div>
-          </div>
+          </main>
         </div>
       </div>
     </div>

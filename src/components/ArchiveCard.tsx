@@ -1,7 +1,7 @@
 "use client";
 
 import type { EventData } from "@/lib/events";
-import { ArrowRight, Users, CalendarDays, Building2, Tv, FileText } from "lucide-react";
+import { ArrowRight, Building2, CalendarDays, Tv, Users } from "lucide-react";
 
 interface ArchiveCardProps {
   archive: EventData["archive"];
@@ -10,43 +10,50 @@ interface ArchiveCardProps {
 export function ArchiveCard({ archive }: ArchiveCardProps) {
   const stats = [
     { icon: Users, label: "참석자", value: archive.attendees },
-    { icon: CalendarDays, label: "사이드 이벤트", value: String(archive.sideEvents) },
-    { icon: Building2, label: "스폰서", value: String(archive.sponsors) },
-    { icon: Tv, label: "미디어", value: String(archive.media) },
+    { icon: CalendarDays, label: "사이드 이벤트", value: `${archive.sideEvents}건` },
+    { icon: Building2, label: "스폰서", value: `${archive.sponsors}+` },
+    { icon: Tv, label: "주요 미디어", value: `${archive.media}건` },
   ];
 
   return (
-    <div className="bg-white rounded-lg border border-slate-200 p-3">
-      <h4 className="text-[11px] font-semibold text-slate-900 mb-2">
-        아카이브 ({archive.year})
-      </h4>
+    <section className="rounded-xl border border-slate-200 bg-white p-4">
+      <h3 className="text-[15px] font-black text-slate-950">지난 아카이브 ({archive.year})</h3>
+      <h4 className="mt-4 text-[14px] font-black text-blue-600">TOKEN2049 Dubai {archive.year}</h4>
 
-      <div className="grid grid-cols-2 gap-1.5 mb-2">
+      <div className="mt-4 grid grid-cols-4 gap-2">
         {stats.map((stat) => {
           const Icon = stat.icon;
           return (
-            <div key={stat.label} className="flex items-center gap-1.5 bg-slate-50 rounded px-2 py-1.5">
-              <Icon size={12} className="text-slate-400" />
-              <div>
-                <div className="text-[9px] text-slate-400">{stat.label}</div>
-                <div className="text-[11px] font-semibold text-slate-800">{stat.value}</div>
-              </div>
+            <div key={stat.label} className="text-center">
+              <Icon size={18} className="mx-auto mb-2 text-blue-500" />
+              <div className="text-[9px] font-semibold leading-3 text-slate-500">{stat.label}</div>
+              <div className="mt-1 whitespace-nowrap text-[14px] font-black text-slate-950">{stat.value}</div>
             </div>
           );
         })}
       </div>
 
-      <div className="flex items-start gap-1.5 mb-2">
-        <FileText size={12} className="text-slate-400 mt-0.5 shrink-0" />
-        <div>
-          <div className="text-[9px] text-slate-400 mb-0.5">핵심 메모</div>
-          <p className="text-[10px] text-slate-600 leading-relaxed">{archive.note}</p>
-        </div>
+      <div className="mt-5">
+        <h5 className="text-[12px] font-black text-blue-600">핵심 메모</h5>
+        <ul className="mt-3 space-y-2 text-[11px] leading-5 text-slate-600">
+          <li className="flex gap-1.5">
+            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
+            단기 시딩 타겟팅이 효과적이었음
+          </li>
+          <li className="flex gap-1.5">
+            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
+            스폰서 +1:1미팅, 사이드 이벤트 +15% 증가
+          </li>
+          <li className="flex gap-1.5">
+            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
+            {archive.note}
+          </li>
+        </ul>
       </div>
 
-      <button className="text-[10px] text-blue-500 hover:text-blue-700 flex items-center gap-0.5">
-        아카이브 보기 <ArrowRight size={10} />
+      <button className="mx-auto mt-5 flex items-center gap-1 text-[13px] font-black text-blue-600 hover:text-blue-700">
+        아카이브 보기 <ArrowRight size={15} />
       </button>
-    </div>
+    </section>
   );
 }
