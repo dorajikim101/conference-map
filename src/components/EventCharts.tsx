@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import type { EventData } from "@/lib/events";
 import { Building2, CalendarDays, Handshake, Users } from "lucide-react";
 
@@ -41,34 +42,90 @@ export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) 
 export function BudgetPieChart({ data, total }: { data: EventData["budget"]; total: number }) {
   const sum = data.reduce((acc, item) => acc + item.value, 0);
   let cursor = 0;
-  const stops = data
-    .map((item, index) => {
-      const start = cursor;
-      const end = cursor + (item.value / sum) * 100;
-      cursor = end;
-      const color = BUDGET_COLORS[index % BUDGET_COLORS.length];
-      return `${color} ${start}% ${end}%`;
-    })
-    .join(", ");
+  const segments = data.map((item, index) => {
+    const start = cursor;
+    const end = cursor + (item.value / sum) * 100;
+    cursor = end;
+    const color = BUDGET_COLORS[index % BUDGET_COLORS.length];
+    const percent = sum > 0 ? Math.round((item.value / sum) * 100) : 0;
+    return { label: item.label, value: item.value, percent, color, start, end };
+  });
+  const stops = segments.map((s) => `${s.color} ${s.start}% ${s.end}%`).join(", ");
+
+  // Tooltip state
+  const [hovered, setHovered] = useState<number | null>(null);
+  const pieRef = useRef<HTMLDivElement>(null);
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+
+  const handlePieMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!pieRef.current) return;
+    const rect = pieRef.current.getBoundingClientRect();
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const dx = e.clientX - rect.left - cx;
+    const dy = e.clientY - rect.top - cy;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const outerR = cx;
+    const innerR = 31;
+    if (dist < innerR || dist > outerR) {
+      setHovered(null);
+      return;
+    }
+    let angle = Math.atan2(dy, dx) * (180 / Math.PI);
+    if (angle < 0) angle += 360;
+    const hoveredIdx = segments.findIndex((s) => angle >= s.start && angle < s.end);
+    setHovered(hoveredIdx >= 0 ? hoveredIdx : null);
+    setTooltipPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
 
   return (
     <div className="h-[190px] rounded-lg border border-slate-200 bg-white p-3">
       <h4 className="mb-2 text-[13px] font-black text-blue-700">예산 비중 (USD)</h4>
       <div className="flex h-[138px] items-center gap-3">
-        <div
-          className="relative h-[112px] w-[112px] shrink-0 rounded-full"
-          style={{ background: `conic-gradient(${stops})` }}
-        >
-          <div className="absolute inset-[31px] flex flex-col items-center justify-center rounded-full bg-white">
-            <span className="text-[12px] font-black text-slate-900">${total.toLocaleString()}</span>
-            <span className="text-[9px] font-semibold text-slate-400">총 비용</span>
+        <div className="relative">
+          <div
+            ref={pieRef}
+            className="relative h-[112px] w-[112px] shrink-0 rounded-full"
+            style={{ background: `conic-gradient(${stops})`, cursor: "pointer" }}
+            onMouseMove={handlePieMove}
+            onMouseLeave={() => setHovered(null)}
+          >
+            <div className="absolute inset-[31px] flex flex-col items-center justify-center rounded-full bg-white">
+              <span className="text-[12px] font-black text-slate-900">${total.toLocaleString()}</span>
+              <span className="text-[9px] font-semibold text-slate-400">총 비용</span>
+            </div>
           </div>
+          {hovered !== null && (
+            <div
+              className="pointer-events-none absolute z-10 rounded-lg border border-slate-200 bg-slate-900 px-2.5 py-1.5 text-white shadow-lg"
+              style={{
+                left: Math.min(tooltipPos.x, 80),
+                bottom: 120,
+                transform: "translateX(-50%)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <div className="flex items-center gap-1.5">
+                <span
+                  className="inline-block h-2 w-2 rounded-full"
+                  style={{ backgroundColor: segments[hovered].color }}
+                />
+                <span className="text-[11px] font-bold">{segments[hovered].label}</span>
+              </div>
+              <div className="mt-0.5 text-[12px] font-black">
+                ${segments[hovered].value.toLocaleString()} ({segments[hovered].percent}%)
+              </div>
+            </div>
+          )}
         </div>
         <div className="min-w-0 flex-1 space-y-1.5">
           {data.map((item, index) => {
             const percent = sum > 0 ? Math.round((item.value / sum) * 100) : 0;
             return (
-              <div key={item.label} className="grid grid-cols-[8px_1fr_auto] items-center gap-1.5 text-[10px]">
+              <div
+                key={item.label}
+                className={`grid grid-cols-[8px_1fr_auto] items-center gap-1.5 rounded px-1 py-0.5 text-[10px] transition-colors ${hovered === index ? "bg-blue-50" : ""}`}
+              >
                 <span className="h-2 w-2 rounded-full" style={{ backgroundColor: BUDGET_COLORS[index % BUDGET_COLORS.length] }} />
                 <span className="truncate font-semibold text-slate-600">{item.label}</span>
                 <span className="font-bold text-slate-700">{percent}% (${item.value.toLocaleString()})</span>
