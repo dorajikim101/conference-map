@@ -230,7 +230,7 @@ const eventData: EventData[] = [
     tierScore: 93,
     tierReasons: ["CoinDesk 주최 플래그십", "20,000+ 참석자 예상", "100+ 국가 참여"],
     gradient: "from-sky-100 via-white to-blue-100",
-    status: "upcoming",
+    status: "live",
     imageUrl: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/miamisideevents",
     website: "https://consensus.coindesk.com/",
@@ -271,6 +271,7 @@ const eventData: EventData[] = [
       { label: "2023", value: 160 },
       { label: "2024", value: 210 },
       { label: "2025", value: 250 },
+      { label: "2026", value: 300 },
     ],
     actions: ["5/1까지 얼리버드 등록", "기관/VC 타겟 리스트 사전 작성", "마이애미 숙박 빠르게 예약"],
     companies: [
@@ -288,13 +289,17 @@ const eventData: EventData[] = [
       { name: "Paradigm", tags: ["VC", "DeFi"], people: ["Research Partner"], role: "DeFi 전략", layer: "VC", tgeDone: true, tgeNote: "펀드 자본" },
     ],
     sideEvents: {
-      count: 250,
+      count: 300,
       label: "사이드 이벤트",
       items: [
-        { name: "Builder Village", host: "a16z crypto", date: "2026-05-05", desc: "크립토 빌더 대상 프라이빗 네트워킹" },
-        { name: "L1 Summit", host: "Monad + Berachain", date: "2026-05-06", desc: "차세대 L1 프로토콜 비교 및 파트너십" },
-        { name: "DeFi Night Miami", host: "Paradigm", date: "2026-05-05", desc: "DeFi 빌더 및 투자자 미팅" },
-        { name: "Stablecoin Summit", host: "Circle", date: "2026-05-06", desc: "스테이블코인 규제 및 결제 레일" },
+        { name: "Solana Accelerate USA", host: "Solana Foundation", date: "2026-05-05", desc: "솔라나 생태계 빌더·기관 투자자 컨퍼런스 (Miami Beach Convention Center)" },
+        { name: "Sui Live", host: "Sui + Walrus Foundation + Alphafi", date: "2026-05-06", desc: "Sui & Walrus 생태계 라이브 이벤트 (Faena Forum)" },
+        { name: "South of Consensus", host: "PlaceholderMM", date: "2026-05-07", desc: "토큰 창립자·코어 운영진 프라이빗 이브닝 (Miami Beach, 초대자 한정)" },
+        { name: "Tezos Breakfast Club", host: "Tezos", date: "2026-05-06", desc: "Tezos 생태계 브렉퍼스트 네트워킹 (Avalon By Day)" },
+        { name: "NEAR: Engineering Sovereignty", host: "NEAR Foundation", date: "2026-05-05", desc: "에이전트 시대의 주권 엔지니어링 (City Center)" },
+        { name: "QuillAudits Security Roundtable", host: "QuillAudits", date: "2026-05-06", desc: "블록체인 보안 라운드테이블" },
+        { name: "Liquid Assets Happy Hour", host: "Figure", date: "2026-05-06", desc: "RWA House 칵테일 네트워킹 (City Center, 230+ RSVP)" },
+        { name: "VNTR Investor Forum Miami", host: "Yuri Rabinovich & Gaurav Sharma", date: "2026-05-07", desc: "초대자 한정 투자자 포럼 ($2,000)" },
       ],
     },
   },
@@ -385,6 +390,7 @@ const eventData: EventData[] = [
     gradient: "from-red-100 via-white to-neutral-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/CVC26",
     website: "https://cryptovalleyconference.com/",
     cost: { flight: 850, hotel: 920, transport: 160, meals: 380, ticket: 499, total: 2809 },
     summary: {
@@ -423,6 +429,7 @@ const eventData: EventData[] = [
       { label: "2023", value: 8 },
       { label: "2024", value: 10 },
       { label: "2025", value: 12 },
+      { label: "2026", value: 15 },
     ],
     actions: ["기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
     companies: [
@@ -432,11 +439,14 @@ const eventData: EventData[] = [
       { name: "Zug Cantonal Office", tags: ["Regulator"], people: ["Digital Policy Lead"], role: "규제 인사이트", layer: "Regulator", tgeDone: true, tgeNote: "규제기관" },
     ],
     sideEvents: {
-      count: 12,
+      count: 15,
       label: "사이드 이벤트",
       items: [
-        { name: "Interop Workshop", host: "Ethereum Foundation", date: "2026-05-28", desc: "인터오퍼러빌리티 기술 워크숍" },
-        { name: "Swiss Crypto Regulation Briefing", host: "Zug Cantonal Office", date: "2026-05-29", desc: "스위스 크립토 규제 업데이트" },
+        { name: "CVC Sunset Boat Cruise", host: "Crypto Valley Association", date: "2026-05-28", desc: "전통적인 Lake Zug 선셋 보트 크루즈 — 네트워킹 하이라이트" },
+        { name: "VIP Dinner at Villa Villette", host: "CVA", date: "2026-05-28", desc: "초대자 한정 VIP 디너 — 스위스 규제·기관 스테이크홀더" },
+        { name: "Interop Workshop", host: "Ethereum Foundation", date: "2026-05-29", desc: "인터오퍼러빌리티 기술 워크숍" },
+        { name: "Swiss Crypto Regulation Briefing", host: "Zug Cantonal Office", date: "2026-05-29", desc: "스위스 크립토 규제 업데이트 — Swiss National Bank 참여" },
+        { name: "Masterclass: Tokenization & RWA", host: "Lucerne University", date: "2026-05-28", desc: "실물 자산 토큰화 마스터클래스" },
       ],
     },
   },
@@ -494,7 +504,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 5 },
       { label: "2025", value: 7 },
-      { label: "2026", value: 8 },
+      { label: "2026", value: 5 },
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 빌더 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -506,11 +516,14 @@ const eventData: EventData[] = [
       { name: "Story Protocol", tags: ["IP", "L1"], people: ["BD Lead"], role: "IP 인프라", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정" },
     ],
     sideEvents: {
-      count: 8,
+      count: 5,
       label: "사이드 이벤트",
       items: [
-        { name: "Builder Meetup", host: "KryptoPlanet", date: "2026-04-16", desc: "크립토 빌더 네트워킹 밋업" },
-        { name: "AI x Crypto Workshop", host: "NEAR Protocol", date: "2026-04-17", desc: "AI와 크립토 융합 워크숍" },
+        { name: "BuidlHack 2026 Builder Day", host: "KBWA + BNB Chain + Near AI", date: "2026-04-14", desc: "총상금 $26,000 규모 글로벌 해커톤 빌더 데이" },
+        { name: "AI & Infrastructure Conference", host: "KBWA", date: "2026-04-15", desc: "Korea Buidl Week 내 AI·인프라 컨퍼런스" },
+        { name: "Finance Summit", host: "KBWA", date: "2026-04-15", desc: "금융·디지털자산 관련 서밋 프로그램" },
+        { name: "CIS 2026", host: "KBWA", date: "2026-04-17", desc: "BUIDL Asia 이후 4/17-19 진행되는 연계 프로그램" },
+        { name: "BuidlHack Final Presentations", host: "KBWA", date: "2026-04-18", desc: "해커톤 최종 발표 및 빌더 쇼케이스" },
       ],
     },
   },
@@ -565,9 +578,9 @@ const eventData: EventData[] = [
       { label: "현지비", value: 320 },
     ],
     sideEventTrend: [
-      { label: "2023", value: 15 },
       { label: "2024", value: 20 },
       { label: "2025", value: 25 },
+      { label: "2026", value: 4 },
     ],
     actions: ["얼리버드 등록", "터키 시장 타겟 리스트 작성", "현지 파트너 사전 컨택"],
     companies: [
@@ -577,11 +590,13 @@ const eventData: EventData[] = [
       { name: "Avalanche", tags: ["L1", "Subnet"], people: ["Ecosystem Lead"], role: "L1 파트너십", layer: "L1", tgeDone: true, tgeNote: "AVAX 토큰" },
     ],
     sideEvents: {
-      count: 25,
+      count: 4,
       label: "사이드 이벤트",
       items: [
-        { name: "DeFi Turkey", host: "BtcTurk", date: "2026-06-02", desc: "터키 DeFi 생태계 포럼" },
-        { name: "Web3 Gaming Summit", host: "Avalanche", date: "2026-06-03", desc: "Web3 게임 개발자 서밋" },
+        { name: "Istanbul Institutional Markets Summit", host: "Istanbul Blockchain Week", date: "2026-06-02", desc: "정책입안자·규제기관·금융기관 대상 폐쇄형 기관 포럼" },
+        { name: "Blockdown Music Festival", host: "Blockdown + IBW", date: "2026-06-02", desc: "이스탄불 대표 음악 베뉴에서 열리는 Web3 음악·문화 파티" },
+        { name: "KOL Meet-and-Greets", host: "Istanbul Blockchain Week", date: "2026-06-03", desc: "글로벌 Web3 KOL과의 네트워킹·미디어 라운지 프로그램" },
+        { name: "Main Summit Networking Lounge", host: "Istanbul Blockchain Week", date: "2026-06-02", desc: "전시·키노트·패널과 연결되는 공식 네트워킹 라운지" },
       ],
     },
   },
@@ -636,9 +651,9 @@ const eventData: EventData[] = [
       { label: "현지비", value: 500 },
     ],
     sideEventTrend: [
-      { label: "2023", value: 20 },
       { label: "2024", value: 28 },
       { label: "2025", value: 35 },
+      { label: "2026", value: 24 },
     ],
     actions: ["얼리버드 25% 할인 등록", "캐나다 규제 브리핑 준비", "북미 타겟 파트너 사전 리스트"],
     companies: [
@@ -648,11 +663,14 @@ const eventData: EventData[] = [
       { name: "DFINITY", tags: ["L1", "ICP"], people: ["Ecosystem Lead"], role: "L1 파트너십", layer: "L1", tgeDone: true, tgeNote: "ICP 토큰" },
     ],
     sideEvents: {
-      count: 35,
+      count: 24,
       label: "사이드 이벤트",
       items: [
-        { name: "ETH Toronto", host: "Ethereum Foundation", date: "2026-07-21", desc: "토론토 이더리움 개발자 모임" },
-        { name: "DeFi Canada", host: "ChainSafe", date: "2026-07-22", desc: "캐나다 DeFi 생태계 서밋" },
+        { name: "Canada Crypto Week 2026", host: "Blockchain Futurist Conference", date: "2026-07-20", desc: "7/20-26 진행되는 캐나다 크립토 위크 — 수십 개 생태계 이벤트 모집" },
+        { name: "Future of AI Experience", host: "Blockchain Futurist Conference", date: "2026-07-22", desc: "라이브 데모·전문가 패널·인터랙티브 세션·로봇 쇼케이스" },
+        { name: "Cabana Pool Bar Networking", host: "Blockchain Futurist Conference", date: "2026-07-21", desc: "REBEL/Cabana Pool Bar 야외 카바나 중심 네트워킹" },
+        { name: "Community Partner Events", host: "150+ Web3 Community Partners", date: "2026-07-20", desc: "캐나다 Web3 커뮤니티 파트너들이 주도하는 주간 사이드 이벤트" },
+        { name: "Web3/AI Event Hosting Program", host: "Futurist Events Team", date: "2026-07-20", desc: "주최 측이 초대장·물류·마케팅을 지원하는 공식 사이드 이벤트 프로그램" },
       ],
     },
   },
@@ -710,7 +728,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 0 },
       { label: "2025", value: 60 },
-      { label: "2026", value: 80 },
+      { label: "2026", value: 3 },
     ],
     actions: ["GA 티켓 조기 구매", "아시아 파트너 사전 리스트", "홍콩 숙박 조기 예약"],
     companies: [
@@ -720,12 +738,12 @@ const eventData: EventData[] = [
       { name: "Lightning Labs", tags: ["Lightning", "Infra"], people: ["CTO"], role: "라이트닝 인프라", layer: "Infra", tgeDone: false, tgeNote: "비트코인 L2" },
     ],
     sideEvents: {
-      count: 80,
+      count: 3,
       label: "사이드 이벤트",
       items: [
-        { name: "Bitcoin Asia Hackathon", host: "Bitcoin Magazine", date: "2026-08-26", desc: "비트코인 개발자 해커톤" },
-        { name: "Asian Mining Forum", host: "Bitmain", date: "2026-08-27", desc: "아시아 채굴 산업 포럼" },
-        { name: "Institutional Bitcoin Summit", host: "HashKey Group", date: "2026-08-28", desc: "기관 비트코인 자산 서밋" },
+        { name: "Whale Night", host: "Bitcoin Asia", date: "2026-08-27", desc: "Whale Pass 포함 VIP 네트워킹 나이트" },
+        { name: "Official After Party", host: "Bitcoin Asia", date: "2026-08-28", desc: "스탠드얼론 티켓 제공 공식 애프터파티 — DJ·라이브 엔터테인먼트" },
+        { name: "Deal Flow Zone & Networking Lounge", host: "Bitcoin Asia", date: "2026-08-27", desc: "GA Plus 이상 대상 1:1 비즈니스 미팅·네트워킹 공간" },
       ],
     },
   },
@@ -782,9 +800,9 @@ const eventData: EventData[] = [
       { label: "현지비", value: 230 },
     ],
     sideEventTrend: [
-      { label: "2023", value: 70 },
       { label: "2024", value: 95 },
-      { label: "2025", value: 120 },
+      { label: "2025", value: 780 },
+      { label: "2026", value: 1 },
     ],
     actions: ["얼리버드 티켓 구매", "기관 서밋 초대장 확인", "사이드 이벤트 호스팅 검토"],
     companies: [
@@ -796,12 +814,10 @@ const eventData: EventData[] = [
       { name: "Maelstrom", tags: ["VC", "Investment"], people: ["Arthur Hayes (CIO)"], role: "투자", layer: "VC", tgeDone: true, tgeNote: "BitMEX 창업자 펀드" },
     ],
     sideEvents: {
-      count: 120,
+      count: 1,
       label: "사이드 이벤트",
       items: [
-        { name: "Upbit Institutional Summit", host: "Upbit", date: "2026-09-29", desc: "초대자 한정 기관 서밋" },
-        { name: "DeFi Seoul", host: "Hyperliquid Labs", date: "2026-09-30", desc: "DeFi 빌더·투자자 네트워킹" },
-        { name: "K-Web3 Night", host: "FactBlock", date: "2026-10-01", desc: "한국 Web3 문화·엔터테인먼트 나이트" },
+        { name: "Upbit Institutional Summit", host: "Upbit + FactBlock", date: "2026-09-29", desc: "KBW2026 개막 전 초대자 한정 기관 서밋 — 자본시장·정책·규제 논의" },
       ],
     },
   },
@@ -968,6 +984,7 @@ const eventData: EventData[] = [
     gradient: "from-emerald-100 via-white to-yellow-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=300&fit=crop",
+    sideEventUrl: "https://www.seablockchainweek.org/side-events",
     website: "https://seablockchainweek.com/",
     cost: { flight: 500, hotel: 450, transport: 80, meals: 150, ticket: 0, total: 1180, note: "일반 패스 무료! 항공+숙박만 부담" },
     summary: {
@@ -1003,9 +1020,9 @@ const eventData: EventData[] = [
       { label: "현지비", value: 230 },
     ],
     sideEventTrend: [
-      { label: "2023", value: 20 },
       { label: "2024", value: 30 },
       { label: "2025", value: 40 },
+      { label: "2026", value: 7 },
     ],
     actions: ["무료 일반 패스 등록", "동남아 파트너 리스트 작성", "방콕 숙박 조기 예약"],
     companies: [
@@ -1017,11 +1034,16 @@ const eventData: EventData[] = [
       { name: "Google", tags: ["Tech", "Cloud"], people: ["Iñaki Moreno Girona (Strategic Partnerships)"], role: "클라우드/인프라", layer: "Tech", tgeDone: true, tgeNote: "비토큰 기업" },
     ],
     sideEvents: {
-      count: 40,
+      count: 7,
       label: "사이드 이벤트",
       items: [
-        { name: "Thai Regulator Roundtable", host: "TDA", date: "2026-05-20", desc: "태국 디지털 자산 규제 라운드테이블" },
-        { name: "RWA 2.0 Workshop", host: "Libeara", date: "2026-05-21", desc: "실물 자산 토큰화 워크숍" },
+        { name: "ROAD TO SENSUS: BKK EDITION", host: "ContributionDAO", date: "2026-05-18", desc: "SEABW 공식 Luma 등록 커뮤니티 이벤트 (Khwaeng Thung Phaya Thai, 67+ RSVP)" },
+        { name: "Bitkub x Block Street: Vision Day", host: "Bitkub", date: "2026-05-19", desc: "Bitkub 주최 비전·네트워킹 데이 (ZillaSpace)" },
+        { name: "TOKENISED BANGKOK", host: "UVECON.VC & Connecting The Dots By DTC Group", date: "2026-05-20", desc: "토큰화/RWA 중심 방콕 사이드 이벤트 (Khwaeng Bang Rak)" },
+        { name: "2nd Unofficial Solana and Friends Meetup, Bangkok Edition", host: "OnlyFounders + Superteam Thailand", date: "2026-05-21", desc: "Solana 생태계 비공식 밋업 (Bangkok, 68+ RSVP)" },
+        { name: "RWA × DePIN × Infra: The Bangkok Sessions", host: "K N + Hashcut + Keeping Up With Crypto", date: "2026-05-22", desc: "RWA, DePIN, 인프라 주제 SEABW 사이드 이벤트" },
+        { name: "Bitkub Bitcoin Pizza Day 2026 Powered by Zircuit", host: "Bitkub + Zircuit", date: "2026-05-22", desc: "Bitcoin Pizza Day 커뮤니티 이벤트 (FYI Center, 85+ RSVP)" },
+        { name: "Collectible Con (Bangkok)", host: "The Concept Labs + Foksi + BammBamm", date: "2026-05-23", desc: "컬렉터블·NFT 커뮤니티 컨벤션 (True Digital Park)" },
       ],
     },
   },
@@ -1041,6 +1063,7 @@ const eventData: EventData[] = [
     gradient: "from-slate-100 via-white to-red-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/webx.sideevents",
     website: "https://webx-crypto.com/",
     cost: { flight: 350, hotel: 700, transport: 80, meals: 200, ticket: 300, total: 1630, note: "일반 패스 기준" },
     summary: {
@@ -1076,9 +1099,9 @@ const eventData: EventData[] = [
       { label: "현지비", value: 280 },
     ],
     sideEventTrend: [
-      { label: "2023", value: 30 },
       { label: "2024", value: 55 },
       { label: "2025", value: 80 },
+      { label: "2026", value: 3 },
     ],
     actions: ["2026 날짜 발표 모니터링", "일본 파트너 사전 리스트", "항공권 조기 예약"],
     companies: [
@@ -1090,11 +1113,12 @@ const eventData: EventData[] = [
       { name: "Startale Group", tags: ["Infra", "Japan"], people: ["Sota (CEO)"], role: "Web3 인프라", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "일본 Web3 인프라" },
     ],
     sideEvents: {
-      count: 80,
+      count: 3,
       label: "사이드 이벤트",
       items: [
-        { name: "Japan Web3 Policy Forum", host: "CoinPost", date: "2026-08-01", desc: "일본 Web3 정책 포럼" },
-        { name: "DeFi Tokyo", host: "Uniswap Labs", date: "2026-08-02", desc: "DeFi 개발자 모임" },
+        { name: "WebX 2026 Official Afterparty", host: "CoinPost / WebX Committee", date: "2026-07-13", desc: "WebX 검색 결과와 Luma 캘린더에 확인되는 공식 애프터파티" },
+        { name: "VIP-only Activities", host: "CoinPost / WebX Committee", date: "2026-07-14", desc: "VIP 패스 대상 비공개 네트워킹·전용 액티비티" },
+        { name: "WebX 2026 @Tokyo Luma Calendar", host: "CoinPost", date: "2026-07-13", desc: "CoinPost 운영 공식 Luma 캘린더 기반 사이드 이벤트 허브" },
       ],
     },
   },
@@ -1152,7 +1176,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 6 },
       { label: "2025", value: 8 },
-      { label: "2026", value: 10 },
+      { label: "2026", value: 0 },
     ],
     actions: ["6/4-5 참석 등록", "10% 할인코드(OnlyBS) 확인", "비트코인 커뮤니티 네트워킹 준비"],
     companies: [
@@ -1161,10 +1185,9 @@ const eventData: EventData[] = [
       { name: "Seoul Economic Daily", tags: ["Media", "Korea"], people: ["CEO"], role: "미디어 파트너", layer: "Media", tgeDone: true, tgeNote: "한국 경제 미디어" },
     ],
     sideEvents: {
-      count: 10,
+      count: 0,
       label: "사이드 이벤트",
       items: [
-        { name: "Bitcoin Socratic Seminar Seoul", host: "Seoul Bitcoin Meetup", date: "2026-09-01", desc: "비트코인 기술 심층 토론" },
       ],
     },
   },
