@@ -83,6 +83,15 @@
 - 비자/입국 규정 업데이트
 - venue 운영 정보 업데이트
 
+### 4.3.1 사이드 이벤트 리서치 필수 규칙
+이벤트를 추가하거나 업데이트할 때는 사이드 이벤트를 반드시 교차 검증한다.
+
+1. 공식 홈페이지에서 side events / community events / agenda / schedule 페이지 확인
+2. Luma Crypto 허브(`https://luma.com/crypto`)와 행사별 Luma 캘린더 확인
+3. 웹 검색으로 공식 홈페이지와 Luma에 없는 이벤트 보완
+
+세부 절차와 병합 규칙은 `docs/side-events-workflow.md`를 따른다.
+
 ### 4.4 지난 아카이브 카드
 작년 동일 이벤트 1개만 기본 노출
 포함 항목:
