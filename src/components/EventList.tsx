@@ -132,12 +132,18 @@ export function EventList({ events, selectedId, onSelect }: EventListProps) {
           const isPast = event.date < today || isCompleted;
           const distance = Math.abs(idx - focusedIndex);
 
-          // 거리에 따른 연하게 표시
+          // 거리에 따른 연하게 표시 — 과거는 점진적, 미래는 마지막 항목만 힌트
           let opacity = "opacity-100";
-          if (distance >= 4) opacity = "opacity-30";
-          else if (distance >= 3) opacity = "opacity-50";
-          else if (distance >= 2) opacity = "opacity-70";
-          else if (distance >= 1) opacity = "opacity-85";
+          if (idx < focusedIndex) {
+            // 과거 방향: 점진적 페이드
+            if (distance >= 4) opacity = "opacity-30";
+            else if (distance >= 3) opacity = "opacity-50";
+            else if (distance >= 2) opacity = "opacity-70";
+            else if (distance >= 1) opacity = "opacity-85";
+          } else if (idx > focusedIndex) {
+            // 미래 방향: 리스트 마지막 항목만 살짝 흐리게 ("더 아래 있어요" 힌트)
+            if (idx === sorted.length - 1) opacity = "opacity-55";
+          }
 
           return (
             <div
