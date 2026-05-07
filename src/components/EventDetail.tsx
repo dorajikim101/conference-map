@@ -2,7 +2,7 @@
 
 import type { EventData } from "@/lib/events";
 import { Badge } from "./ui/badge";
-import { AlertTriangle, Diamond, ExternalLink, Star, Target, ThumbsUp } from "lucide-react";
+import { AlertTriangle, Diamond, ExternalLink, Globe, Star, Target, ThumbsUp } from "lucide-react";
 import { BudgetPieChart, KpiGrid, SideEventChart } from "./EventCharts";
 
 interface EventDetailProps {
@@ -20,13 +20,24 @@ const summaryCards = [
 export function EventDetail({ event }: EventDetailProps) {
   return (
     <section className="shrink-0 rounded-xl border border-slate-200 bg-white p-3">
-      <div className="mb-3 flex items-center gap-2">
+      <div className="mb-3 flex items-center gap-2 flex-wrap">
         <Badge variant="secondary" className="h-6 rounded-md bg-slate-100 px-2 text-[10px] font-bold text-slate-700">
           선택 이벤트
         </Badge>
         <Badge className="h-6 rounded-md border border-slate-200 bg-white px-2 text-[10px] font-bold text-slate-800">
           {event.name}
         </Badge>
+        {event.website && (
+          <a
+            href={event.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-6 items-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-2 text-[10px] font-bold text-blue-600 hover:border-blue-400 hover:bg-blue-100 transition-colors"
+          >
+            <Globe size={11} />
+            공식 웹사이트 <ExternalLink size={9} />
+          </a>
+        )}
         {event.status === "cancelled" && (
           <Badge variant="destructive" className="h-6 rounded-md px-2 text-[10px] font-bold">
             취소됨

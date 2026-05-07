@@ -12,8 +12,13 @@ import { RecommendedActions } from "@/components/RecommendedActions";
 import { CompanySection } from "@/components/CompanySection";
 import { SideEventsPanel } from "@/components/SideEventsPanel";
 
+// 오늘 날짜 이후 첫 non-cancelled 이벤트
+const today = "2026-05-04";
+const nextEvent = events.find((e) => e.date >= today && e.status !== "cancelled");
+const initialId = nextEvent?.id ?? events[0].id;
+
 export default function Home() {
-  const [selectedId, setSelectedId] = useState(events[0].id);
+  const [selectedId, setSelectedId] = useState(initialId);
   const selectedEvent = useMemo(
     () => events.find((event) => event.id === selectedId) ?? events[0],
     [selectedId],

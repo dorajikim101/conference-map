@@ -18,7 +18,7 @@ export function ArchiveCard({ archive }: ArchiveCardProps) {
   return (
     <section className="rounded-xl border border-slate-200 bg-white p-4">
       <h3 className="text-[15px] font-black text-slate-950">지난 아카이브 ({archive.year})</h3>
-      <h4 className="mt-4 text-[14px] font-black text-blue-600">TOKEN2049 Dubai {archive.year}</h4>
+      <h4 className="mt-4 text-[14px] font-black text-blue-600">{archive.eventTitle}</h4>
 
       <div className="mt-4 grid grid-cols-4 gap-2">
         {stats.map((stat) => {
@@ -36,18 +36,12 @@ export function ArchiveCard({ archive }: ArchiveCardProps) {
       <div className="mt-5">
         <h5 className="text-[12px] font-black text-blue-600">핵심 메모</h5>
         <ul className="mt-3 space-y-2 text-[11px] leading-5 text-slate-600">
-          <li className="flex gap-1.5">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
-            단기 시딩 타겟팅이 효과적이었음
-          </li>
-          <li className="flex gap-1.5">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
-            스폰서 +1:1미팅, 사이드 이벤트 +15% 증가
-          </li>
-          <li className="flex gap-1.5">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
-            {archive.note}
-          </li>
+          {archive.notes.map((note, i) => (
+            <li key={i} className="flex gap-1.5">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
+              {note}
+            </li>
+          ))}
         </ul>
       </div>
 
