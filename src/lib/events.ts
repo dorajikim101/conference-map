@@ -123,6 +123,7 @@ const eventData: EventData[] = [
       { label: "2023", value: 110 },
       { label: "2024", value: 155 },
       { label: "2025", value: 180 },
+      { label: "2026", value: 180 },
     ],
     actions: ["행사 진행 중 - 라이브 피드 모니터링", "엔터프라이즈 트랙 세션 확인", "채굴 스폰서 부스 방문 계획"],
     companies: [
@@ -177,11 +178,11 @@ const eventData: EventData[] = [
     archive: {
       year: "2025",
       attendees: "15K+",
-      sideEvents: 186,
+      sideEvents: 500,
       sponsors: 210,
       media: 88,
       eventTitle: "TOKEN2049 Dubai 2025",
-      notes: ["자본, 거래소, 시장 구조, 중동 정책 대화에 강점", "186개 사이드 이벤트, 기관 참여 높음"],
+      notes: ["자본, 거래소, 시장 구조, 중동 정책 대화에 강점", "500+ 사이드 이벤트, 기관 참여 높음"],
     },
     kpis: [
       { label: "미팅 적합도", value: "높음", detail: "자본/거래소" },
@@ -197,7 +198,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 90 },
       { label: "2024", value: 150 },
-      { label: "2025", value: 186 },
+      { label: "2025", value: 500 },
+      { label: "2026", value: 0 },
     ],
     actions: ["2027년 일정 모니터링", "중동 파트너 리스트 사전 확보", "대체 행사 검토"],
     companies: [
@@ -357,6 +359,7 @@ const eventData: EventData[] = [
       { label: "2023", value: 8 },
       { label: "2024", value: 12 },
       { label: "2025", value: 15 },
+      { label: "2026", value: 15 },
     ],
     actions: ["초대장 수령 여부 확인", "기관 타겟 리스트 사전 공유", "중동 규제 브리핑 준비"],
     companies: [
@@ -482,7 +485,7 @@ const eventData: EventData[] = [
       { label: "Sofitel Seoul에서 개최", time: "2026-04-15", type: "운영" },
     ],
     archive: {
-      year: "2026",
+      year: "2025",
       attendees: "1,000+",
       sideEvents: 8,
       sponsors: 30,
@@ -504,7 +507,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 5 },
       { label: "2025", value: 7 },
-      { label: "2026", value: 5 },
+      { label: "2026", value: 8 },
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 빌더 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -653,7 +656,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 28 },
       { label: "2025", value: 35 },
-      { label: "2026", value: 24 },
+      { label: "2026", value: 16 },
     ],
     actions: ["얼리버드 25% 할인 등록", "캐나다 규제 브리핑 준비", "북미 타겟 파트너 사전 리스트"],
     companies: [
@@ -785,11 +788,11 @@ const eventData: EventData[] = [
     archive: {
       year: "2025",
       attendees: "13,000+",
-      sideEvents: 120,
+      sideEvents: 780,
       sponsors: 150,
       media: 80,
       eventTitle: "Korea Blockchain Week 2025",
-      notes: ["아시아 최대 크립토 행사", "Web3, AI, RWA, 규제가 핵심 주제", "13,000+ 참석자, Arthur Hayes 등 연사"],
+      notes: ["아시아 최대 크립토 행사", "Web3, AI, RWA, 규제가 핵심 주제", "13,000+ 참석자, 780+ 사이드 이벤트, Arthur Hayes 등 연사"],
     },
     kpis: [
       { label: "미팅 적합도", value: "매우 높음", detail: "아시아/전 분야" },
@@ -856,7 +859,7 @@ const eventData: EventData[] = [
       { label: "한화투자증권 CSO 기조연설", time: "2026-04-17", type: "연사" },
     ],
     archive: {
-      year: "2026",
+      year: "2025",
       attendees: "3,000+",
       sideEvents: 10,
       sponsors: 50,
@@ -952,6 +955,7 @@ const eventData: EventData[] = [
       { label: "2023", value: 100 },
       { label: "2024", value: 150 },
       { label: "2025", value: 200 },
+      { label: "2026", value: 200 },
     ],
     actions: ["행사 종료 — 참관 결과 정리", "홍콩 파트너 후속", "2027 일정 모니터링"],
     companies: [
@@ -1309,7 +1313,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 35 },
       { label: "2025", value: 50 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 55 },
     ],
     actions: ["티켓 조기 구매", "유럽 비트코인 파트너 리스트 작성", "프라하 숙박 예약"],
     companies: [],
@@ -1370,7 +1374,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 15 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 17 },
     ],
     actions: ["티켓 구매 검토", "베를린 파트너 리스트 작성"],
     companies: [],
@@ -1431,7 +1435,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 30 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 34 },
     ],
     actions: ["서밋 티켓 구매 검토", "네덜란드 기관 파트너 리스트 작성"],
     companies: [],
@@ -1492,7 +1496,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 40 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 45 },
     ],
     actions: ["티켓 구매 검토", "일본 파트너 리스트 작성", "교토 숙박 예약"],
     companies: [],
@@ -1552,7 +1556,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 20 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 23 },
     ],
     actions: ["항공편 비용 모니터링", "남미 파트너 리스트 작성"],
     companies: [],
@@ -1613,7 +1617,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 15 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 17 },
     ],
     actions: ["얼리버드 티켓 검토", "발리 항공편 모니터링"],
     companies: [],
@@ -1673,7 +1677,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2025", value: 5 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 6 },
     ],
     actions: ["해커톤 참가 신청 모니터링"],
     companies: [],
@@ -1716,11 +1720,11 @@ const eventData: EventData[] = [
     archive: {
       year: "2025",
       eventTitle: "TOKEN2049 Singapore 2025",
-      attendees: "15,000+",
-      sideEvents: 200,
-      sponsors: 220,
+      attendees: "25,000+",
+      sideEvents: 1000,
+      sponsors: 500,
       media: 100,
-      notes: ["세계 최대 크립토 이벤트", "아시아 자본·거래소 집결"],
+      notes: ["세계 최대 크립토 이벤트", "25,000+ 참석자, 1,000+ 사이드 이벤트, 500+ 스폰서"],
     },
     kpis: [
       { label: "미팅 적합도", value: "매우 높음", detail: "전 분야" },
@@ -1736,8 +1740,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 120 },
       { label: "2024", value: 170 },
-      { label: "2025", value: 200 },
-      { label: "2026", value: 0 },
+      { label: "2025", value: 1000 },
+      { label: "2026", value: 1150 },
     ],
     actions: ["티켓 사전 구매 검토", "싱가포르 숙박 조기 예약", "기관/VC 타겟 리스트 작성"],
     companies: [],
@@ -1801,7 +1805,7 @@ const eventData: EventData[] = [
       { label: "2022", value: 80 },
       { label: "2023", value: 100 },
       { label: "2024", value: 150 },
-      { label: "2026", value: 0 },
+      { label: "2026", value: 170 },
     ],
     actions: ["티켓 사전 구매 검토", "인도 비자 확인", "뭄바이 숙박 조기 예약"],
     companies: [],
@@ -1998,6 +2002,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 15 },
       { label: "2025", value: 20 },
+      { label: "2026", value: 23 },
     ],
     actions: ["얼리버드 티켓 등록", "유럽 파트너 리스트 준비", "MiCA 규제 브리핑"],
     companies: [],
@@ -2060,6 +2065,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 10 },
       { label: "2025", value: 15 },
+      { label: "2026", value: 17 },
     ],
     actions: ["베뉴 확정 모니터링", "얼리버드 티켓 등록", "유럽 비트코인 파트너 리스트"],
     companies: [],
@@ -2190,6 +2196,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2024", value: 20 },
       { label: "2025", value: 30 },
+      { label: "2026", value: 35 },
     ],
     actions: ["슈퍼 얼리버드 등록", "두바이 호텔 사전 예약", "투자자 미팅 리스트 준비"],
     companies: [],
@@ -2252,6 +2259,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
+      { label: "2025", value: 8 },
+      { label: "2026", value: 10 },
     ],
     actions: ["얼리버드 티켓 등록", "아부다비 호텔 사전 예약", "MENA 파트너 리스트 준비"],
     companies: [],
