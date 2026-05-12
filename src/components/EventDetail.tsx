@@ -80,7 +80,7 @@ export function EventDetail({ event }: EventDetailProps) {
             <span className="flex h-6 w-6 items-center justify-center rounded-md bg-white">
               <ExternalLink size={15} className="text-blue-600" />
             </span>
-            <h3 className="text-[13px] font-black text-blue-700">사이드 이벤트 링크</h3>
+            <h3 className="text-[13px] font-black text-blue-700">사이드 이벤트</h3>
           </div>
           <p className="mb-2 text-[11px] leading-snug text-slate-600">
             {event.sideEvents.count.toLocaleString()}개 {event.sideEvents.label} 후보를 확인하고 우선순위를 정리하세요.
@@ -92,7 +92,7 @@ export function EventDetail({ event }: EventDetailProps) {
               rel="noopener noreferrer"
               className="inline-flex h-7 items-center gap-1.5 rounded-md border border-blue-200 bg-white px-2 text-[11px] font-bold text-blue-600 hover:border-blue-400"
             >
-              Luma 보기 <ExternalLink size={11} />
+              {event.sideEventUrl.includes('luma.com') ? 'Luma' : '공식'} 보기 <ExternalLink size={11} />
             </a>
           ) : (
             <span className="text-[11px] font-semibold text-slate-400">링크 없음</span>

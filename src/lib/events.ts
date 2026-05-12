@@ -42,6 +42,7 @@ export type EventData = {
   cancelReason?: string;
   imageUrl?: string;
   sideEventUrl?: string;
+  sideEventSourceUrl?: string;
   website?: string;
   cost: EventCost;
   summary: Record<"features" | "difference" | "pros" | "risks" | "expectations", string[]>;
@@ -63,7 +64,7 @@ export type EventData = {
   sideEvents: {
     count: number;
     label: string;
-    items: { name: string; host: string; date: string; desc: string }[];
+    items: { name: string; host: string; date: string; desc: string; url?: string }[];
   };
 };
 
@@ -298,7 +299,7 @@ const eventData: EventData[] = [
       count: 500,
       label: "사이드 이벤트 (공식 기준)",
       items: [
-        { name: "Brunch & Beats with Ashbury at Consensus 2026", host: "Ashbury Legal", date: "2026-05-06", desc: "1 Hotel South Beach — 549+ RSVP (Luma ConsensusMiami2026)" },
+        { name: "Brunch & Beats with Ashbury at Consensus 2026", host: "Ashbury Legal", date: "2026-05-06", desc: "1 Hotel South Beach — 549+ RSVP (Luma ConsensusMiami2026)", url: "https://luma.com/ConsensusMiami2026?k=c" },
         { name: "Liquid Assets Happy Hour | Cocktails & Convo at RWA House", host: "Victoria Mariscal & Drew/Figure", date: "2026-05-06", desc: "RWA House 칵테일 네트워킹 (City Center, 230+ RSVP)" },
         { name: "Stablecoin Sunrise Run Club", host: "Borderless.xyz & Kevin Lehtiniitty", date: "2026-05-06", desc: "The Shelborne By Proper — 190+ RSVP" },
         { name: "Payments by the Beach | Happy Hour by Omninal", host: "Omninal", date: "2026-05-06", desc: "South Beach — 184+ RSVP" },
@@ -996,6 +997,7 @@ const eventData: EventData[] = [
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=300&fit=crop",
     sideEventUrl: "https://www.seablockchainweek.org/side-events",
+    sideEventSourceUrl: "https://luma.com/SEABW_Official",
     website: "https://seablockchainweek.com/",
     cost: { flight: 500, hotel: 450, transport: 80, meals: 150, ticket: 0, total: 1180, note: "일반 패스 무료! 항공+숙박만 부담" },
     summary: {
@@ -1046,16 +1048,25 @@ const eventData: EventData[] = [
       { name: "Google", tags: ["Tech", "Cloud"], people: ["Iñaki Moreno Girona (Strategic Partnerships)"], role: "클라우드/인프라", layer: "Tech", tgeDone: true, tgeNote: "비토큰 기업" },
     ],
     sideEvents: {
-      count: 7,
+      count: 16,
       label: "사이드 이벤트",
       items: [
-        { name: "ROAD TO SENSUS: BKK EDITION", host: "ContributionDAO", date: "2026-05-18", desc: "SEABW 공식 Luma 등록 커뮤니티 이벤트 (Khwaeng Thung Phaya Thai, 67+ RSVP)" },
-        { name: "Bitkub x Block Street: Vision Day", host: "Bitkub", date: "2026-05-19", desc: "Bitkub 주최 비전·네트워킹 데이 (ZillaSpace)" },
-        { name: "TOKENISED BANGKOK", host: "UVECON.VC & Connecting The Dots By DTC Group", date: "2026-05-20", desc: "토큰화/RWA 중심 방콕 사이드 이벤트 (Khwaeng Bang Rak)" },
-        { name: "2nd Unofficial Solana and Friends Meetup, Bangkok Edition", host: "OnlyFounders + Superteam Thailand", date: "2026-05-21", desc: "Solana 생태계 비공식 밋업 (Bangkok, 68+ RSVP)" },
-        { name: "RWA × DePIN × Infra: The Bangkok Sessions", host: "K N + Hashcut + Keeping Up With Crypto", date: "2026-05-22", desc: "RWA, DePIN, 인프라 주제 SEABW 사이드 이벤트" },
-        { name: "Bitkub Bitcoin Pizza Day 2026 Powered by Zircuit", host: "Bitkub + Zircuit", date: "2026-05-22", desc: "Bitcoin Pizza Day 커뮤니티 이벤트 (FYI Center, 85+ RSVP)" },
-        { name: "Collectible Con (Bangkok)", host: "The Concept Labs + Foksi + BammBamm", date: "2026-05-23", desc: "컬렉터블·NFT 커뮤니티 컨벤션 (True Digital Park)" },
+        { name: "AI DEMO DAY: BKK Builders Edition", host: "APE X CRYPTO, OnlyFounders", date: "2026-05-18", desc: "AI 데모 데이 빌더스 에디션 — 426+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "The Alternative Asset Class: RWA Edition", host: "Binance TH Academy", date: "2026-05-18", desc: "RWA 대체 자산 에디션 @Conrad Bangkok — 92+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "ROAD TO SENSUS: BKK EDITION", host: "ContributionDAO", date: "2026-05-18", desc: "SEABW 공식 커뮤니티 이벤트 — 124+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "Bitkub x Block Street: Vision Day", host: "Bitkub", date: "2026-05-19", desc: "Bitkub 주최 비전·네트워킹 데이 @ZillaSpace — 214+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "TOKENISED BANGKOK", host: "UVECON.VC & DTC Group", date: "2026-05-20", desc: "토큰화/RWA 중심 방콕 사이드 이벤트", url: "https://luma.com/SEABW_Official" },
+        { name: "SEABW2026 SPEAKER & VIP Night", host: "SEABW Official", date: "2026-05-20", desc: "초대자 한정 VIP 나이트 — Sold Out", url: "https://luma.com/SEABW_Official" },
+        { name: "2nd Unofficial Solana and Friends Meetup, Bangkok Edition", host: "OnlyFounders + Superteam Thailand", date: "2026-05-21", desc: "Solana 생태계 비공식 밋업 — 106+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "BUILDERS CAPITAL NIGHT X BLOCK:LOUNGE", host: "9 CAT Group", date: "2026-05-21", desc: "공식 SEABW 2026 사이드 이벤트 @Escape Bangkok", url: "https://luma.com/SEABW_Official" },
+        { name: "BINANCE TH Pizza Day 🍕", host: "BINANCE TH", date: "2026-05-22", desc: "바이낸스 TH 피자 데이 @SKYVIEW Hotel — 234+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "RWA × DePIN × Infra: The Bangkok Sessions", host: "Hashcut + Keeping Up With Crypto", date: "2026-05-22", desc: "RWA, DePIN, 인프라 주제 SEABW 사이드 이벤트 — 109+ RSVP", url: "https://luma.com/hwpzdegr" },
+        { name: "Bitkub Bitcoin Pizza Day 2026 Powered by Zircuit", host: "Bitkub + Zircuit", date: "2026-05-22", desc: "Bitcoin Pizza Day 커뮤니티 이벤트 @FYI Center — 153+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "Collectible Con (Bangkok)", host: "The Concept Labs + Foksi + BammBamm", date: "2026-05-23", desc: "컬렉터블·NFT 커뮤니티 컨벤션 @True Digital Park — 35+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "Agentiq.Finance: From Prompt to Production", host: "Marek Michalski", date: "2026-05-20", desc: "AI 에이전트 파이낸스 SEABW 에디션 @Arcadia Barcade — Free", url: "https://luma.com/SEABW_Official" },
+        { name: "Prediction Markets Rooftop Meetup", host: "Shard Bet", date: "2026-05-21", desc: "예측 시장 루프탑 밋업 @TRIBE Sky Beach Club — 28+ RSVP", url: "https://luma.com/SEABW_Official" },
+        { name: "AI Future Ready", host: "Airova", date: "2026-05-19", desc: "AI 퓨처 레디 @SCBX NEXT TECH", url: "https://luma.com/SEABW_Official" },
+        { name: "Blockconnect, Bangkok 🇹🇭", host: "Buildify", date: "2026-05-20", desc: "블록커넥트 방콕 에디션", url: "https://luma.com/SEABW_Official" },
       ],
     },
   },
@@ -1219,7 +1230,7 @@ const eventData: EventData[] = [
     gradient: "from-green-100 via-white to-red-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/ethmilan2026?k=c",
     website: "https://ethmilan.xyz/",
     cost: { flight: 750, hotel: 780, transport: 120, meals: 300, ticket: 350, total: 2300 },
     summary: {
@@ -1281,7 +1292,7 @@ const eventData: EventData[] = [
     gradient: "from-orange-100 via-white to-red-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/btc-prague?k=c",
     website: "https://btcprague.com/",
     cost: { flight: 750, hotel: 680, transport: 130, meals: 280, ticket: 499, total: 2339 },
     summary: {
@@ -1344,7 +1355,7 @@ const eventData: EventData[] = [
     gradient: "from-gray-100 via-white to-yellow-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/web3-summit?k=c",
     website: "https://web3summit.com/",
     cost: { flight: 700, hotel: 650, transport: 120, meals: 280, ticket: 399, total: 2149 },
     summary: {
@@ -1405,7 +1416,7 @@ const eventData: EventData[] = [
     gradient: "from-orange-100 via-white to-blue-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/dutchblockchainweek?k=c",
     website: "https://dutchblockchainweek.com/",
     cost: { flight: 700, hotel: 850, transport: 120, meals: 320, ticket: 599, total: 2589 },
     summary: {
@@ -1466,7 +1477,7 @@ const eventData: EventData[] = [
     gradient: "from-red-100 via-white to-pink-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/ivs?k=c",
     website: "https://ivs.events/",
     cost: { flight: 350, hotel: 650, transport: 100, meals: 250, ticket: 400, total: 1750 },
     summary: {
@@ -1527,7 +1538,7 @@ const eventData: EventData[] = [
     gradient: "from-green-100 via-white to-yellow-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/blockchain-rio?k=c",
     website: "https://blockchainrio.com.br/",
     cost: { flight: 1200, hotel: 600, transport: 100, meals: 200, ticket: 350, total: 2450 },
     summary: {
@@ -1587,7 +1598,7 @@ const eventData: EventData[] = [
     gradient: "from-cyan-100 via-white to-green-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/coinfest-asia?k=c",
     website: "https://coinfest.asia/",
     cost: { flight: 550, hotel: 400, transport: 80, meals: 150, ticket: 299, total: 1479 },
     summary: {
@@ -1648,7 +1659,7 @@ const eventData: EventData[] = [
     gradient: "from-amber-100 via-white to-green-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1529260830199-42c24126f198?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/ethrome?k=c",
     website: "https://ethrome.org/",
     cost: { flight: 750, hotel: 680, transport: 120, meals: 280, ticket: 0, total: 1830, note: "해커톤 참가비 무료 예상" },
     summary: {
@@ -1708,7 +1719,7 @@ const eventData: EventData[] = [
     gradient: "from-purple-100 via-white to-cyan-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/token2049?k=c",
     website: "https://www.token2049.com/",
     cost: { flight: 550, hotel: 1100, transport: 120, meals: 300, ticket: 799, total: 2869 },
     summary: {
@@ -1772,7 +1783,7 @@ const eventData: EventData[] = [
     gradient: "from-indigo-100 via-white to-violet-100",
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&h=300&fit=crop",
-    sideEventUrl: "https://luma.com/crypto",
+    sideEventUrl: "https://luma.com/devcon?k=c",
     website: "https://devcon.org/",
     cost: { flight: 650, hotel: 600, transport: 100, meals: 180, ticket: 200, total: 1730, note: "일반 티켓 기준 추정" },
     summary: {

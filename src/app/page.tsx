@@ -45,6 +45,7 @@ export default function Home() {
                     count={selectedEvent.sideEvents.count}
                     label={selectedEvent.sideEvents.label}
                     items={selectedEvent.sideEvents.items}
+                    sourceUrl={selectedEvent.sideEventSourceUrl}
                   />
                 </div>
               </div>
