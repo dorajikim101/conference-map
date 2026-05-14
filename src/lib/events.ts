@@ -1151,7 +1151,7 @@ const eventData: EventData[] = [
     status: "upcoming",
     isDomestic: true,
     imageUrl: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=600&h=300&fit=crop",
-    website: "https://bitcoinseoul.kr/",
+    website: "https://bitcoin-seoul.kr/",
     cost: { flight: 0, hotel: 0, transport: 50, meals: 80, ticket: 100, total: 230, note: "국내 행사. 항공/숙박 불필요" },
     summary: {
       features: ["한국 비트코인 전문 컨퍼런스", "정책·금융·인권·기술 교차 논의", "비트코인 커뮤니티 집결지"],
