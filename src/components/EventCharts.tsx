@@ -12,28 +12,65 @@ export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) 
   const growthRate = prevValue > 0 ? (((latestValue - prevValue) / prevValue) * 100).toFixed(0) : "0";
   const max = Math.max(...data.map((item) => item.value), 1);
 
+  const chartW = 280;
+  const chartH = 80;
+  const padX = 30;
+  const padY = 12;
+  const innerW = chartW - padX * 2;
+  const innerH = chartH - padY * 2;
+
+  const points = data.map((item, i) => ({
+    x: padX + (data.length > 1 ? (i / (data.length - 1)) * innerW : innerW / 2),
+    y: padY + innerH - (item.value / max) * innerH,
+    ...item,
+  }));
+
+  const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
+  const areaPath = `${linePath} L ${points[points.length - 1].x} ${padY + innerH} L ${points[0].x} ${padY + innerH} Z`;
+
   return (
     <div className="h-[190px] rounded-lg border border-slate-200 bg-white p-3">
       <h4 className="mb-2 text-[13px] font-black text-blue-700">사이드 이벤트 성장 추이</h4>
-      <div className="flex h-[108px] items-end gap-3 border-b border-slate-100 px-2">
-        {data.map((item) => (
-          <div key={item.label} className="flex flex-1 flex-col items-center justify-end gap-1">
-            <span className="text-[10px] font-bold text-slate-700">{item.value}</span>
-            <div
-              className="w-full max-w-[28px] rounded-t-md bg-blue-500"
-              style={{ height: `${Math.max((item.value / max) * 74, 12)}px` }}
+      <div className="flex justify-center">
+        <svg width={chartW} height={chartH} viewBox={`0 0 ${chartW} ${chartH}`} className="h-[80px] w-auto">
+          {/* grid lines */}
+          {[0.25, 0.5, 0.75].map((ratio) => (
+            <line
+              key={ratio}
+              x1={padX}
+              y1={padY + innerH * (1 - ratio)}
+              x2={chartW - padX}
+              y2={padY + innerH * (1 - ratio)}
+              stroke="#e2e8f0"
+              strokeWidth={0.5}
+              strokeDasharray="3 3"
             />
-          </div>
-        ))}
-      </div>
-      <div className="mt-1 flex justify-around text-[10px] font-semibold text-slate-500">
-        {data.map((item) => (
-          <span key={item.label}>{item.label}</span>
-        ))}
+          ))}
+          {/* baseline */}
+          <line x1={padX} y1={padY + innerH} x2={chartW - padX} y2={padY + innerH} stroke="#cbd5e1" strokeWidth={0.5} />
+          {/* area fill */}
+          <path d={areaPath} fill="url(#areaGrad)" opacity={0.15} />
+          <defs>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#3B82F6" />
+              <stop offset="100%" stopColor="#3B82F6" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          {/* line */}
+          <path d={linePath} fill="none" stroke="#3B82F6" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+          {/* dots + labels */}
+          {points.map((p) => (
+            <g key={p.label}>
+              <circle cx={p.x} cy={p.y} r={3.5} fill="#3B82F6" stroke="#fff" strokeWidth={1.5} />
+              <text x={p.x} y={p.y - 6} textAnchor="middle" className="text-[10px]" fill="#334155" fontWeight={700}>{p.value}</text>
+              <text x={p.x} y={padY + innerH + 12} textAnchor="middle" className="text-[10px]" fill="#64748b" fontWeight={600}>{p.label}</text>
+            </g>
+          ))}
+        </svg>
       </div>
       <div className="mt-1 flex items-end gap-2">
         <span className="text-[20px] font-black text-emerald-600">▲ {growthRate}%</span>
-        <span className="pb-1 text-[11px] font-semibold text-slate-500">전년 대비 예상 성장률</span>
+        <span className="pb-1 text-[11px] font-semibold text-slate-500">전년 대비 성장률</span>
       </div>
     </div>
   );

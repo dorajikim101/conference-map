@@ -123,8 +123,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 110 },
       { label: "2024", value: 155 },
-      { label: "2025", value: 180 },
-      { label: "2026", value: 180 },
+      { label: "2025", value: 180 }
     ],
     actions: ["행사 진행 중 - 라이브 피드 모니터링", "엔터프라이즈 트랙 세션 확인", "채굴 스폰서 부스 방문 계획"],
     companies: [
@@ -199,8 +198,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 90 },
       { label: "2024", value: 150 },
-      { label: "2025", value: 500 },
-      { label: "2026", value: 0 },
+      { label: "2025", value: 500 }
     ],
     actions: ["2027년 일정 모니터링", "중동 파트너 리스트 사전 확보", "대체 행사 검토"],
     companies: [
@@ -275,8 +273,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 160 },
       { label: "2024", value: 210 },
-      { label: "2025", value: 250 },
-      { label: "2026", value: 500 },
+      { label: "2025", value: 250 }
     ],
     actions: ["행사 종료 — 주요 미팅 결과 정리", "2027 Consensus Miami (5/4-6) 일정 확인", "기관 파트너십 후속 미팅 진행"],
     companies: [
@@ -363,8 +360,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 8 },
       { label: "2024", value: 12 },
-      { label: "2025", value: 15 },
-      { label: "2026", value: 15 },
+      { label: "2025", value: 15 }
     ],
     actions: ["초대장 수령 여부 확인", "기관 타겟 리스트 사전 공유", "중동 규제 브리핑 준비"],
     companies: [
@@ -436,8 +432,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 8 },
       { label: "2024", value: 10 },
-      { label: "2025", value: 12 },
-      { label: "2026", value: 15 },
+      { label: "2025", value: 12 }
     ],
     actions: ["기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
     companies: [
@@ -511,8 +506,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 7 },
-      { label: "2026", value: 8 },
+      { label: "2025", value: 7 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 빌더 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -587,8 +581,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 20 },
-      { label: "2025", value: 25 },
-      { label: "2026", value: 4 },
+      { label: "2025", value: 25 }
     ],
     actions: ["얼리버드 등록", "터키 시장 타겟 리스트 작성", "현지 파트너 사전 컨택"],
     companies: [
@@ -660,8 +653,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 28 },
-      { label: "2025", value: 35 },
-      { label: "2026", value: 16 },
+      { label: "2025", value: 35 }
     ],
     actions: ["얼리버드 25% 할인 등록", "캐나다 규제 브리핑 준비", "북미 타겟 파트너 사전 리스트"],
     companies: [
@@ -738,8 +730,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 0 },
-      { label: "2025", value: 60 },
-      { label: "2026", value: 3 },
+      { label: "2025", value: 60 }
     ],
     actions: ["GA 티켓 조기 구매", "아시아 파트너 사전 리스트", "홍콩 숙박 조기 예약"],
     companies: [
@@ -812,8 +803,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 95 },
-      { label: "2025", value: 780 },
-      { label: "2026", value: 1 },
+      { label: "2025", value: 780 }
     ],
     actions: ["얼리버드 티켓 구매", "기관 서밋 초대장 확인", "사이드 이벤트 호스팅 검토"],
     companies: [
@@ -885,8 +875,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 },
-      { label: "2026", value: 10 },
+      { label: "2025", value: 8 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 투자자 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -959,8 +948,7 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 100 },
       { label: "2024", value: 150 },
-      { label: "2025", value: 200 },
-      { label: "2026", value: 200 },
+      { label: "2025", value: 200 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "홍콩 파트너 후속", "2027 일정 모니터링"],
     companies: [
@@ -1035,8 +1023,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 30 },
-      { label: "2025", value: 40 },
-      { label: "2026", value: 7 },
+      { label: "2025", value: 40 }
     ],
     actions: ["무료 일반 패스 등록", "동남아 파트너 리스트 작성", "방콕 숙박 조기 예약", "사이드 이벤트 RSVP 마감 전 등록"],
     companies: [
@@ -1123,17 +1110,19 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 55 },
-      { label: "2025", value: 80 },
-      { label: "2026", value: 3 },
+      { label: "2025", value: 80 }
     ],
     actions: ["2026 날짜 발표 모니터링", "일본 파트너 사전 리스트", "항공권 조기 예약"],
     companies: [
-      { name: "0G (Zero Gravity)", tags: ["L1", "AI", "DA"], people: ["Team"], role: "⭐ AI 네이티브 L1 — 밸리데이터 모집 중", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전, 밸리데이터 모집" },
-      { name: "GenLayer", tags: ["L1", "AI", "LLM Consensus"], people: ["Team"], role: "⭐ LLM 기반 컨센서스 L1 — 테스트넷", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전, 밸리데이터 모집" },
-      { name: "CoinPost", tags: ["Media", "Organizer"], people: ["CEO"], role: "주최사", layer: "Media", tgeDone: true, tgeNote: "일본 최대 크립토 미디어" },
-      { name: "SBI Holdings", tags: ["Finance", "Japan"], people: ["Yoshitaka Kitao (CEO)"], role: "일본 금융", layer: "TradFi", tgeDone: true, tgeNote: "일본 대형 금융" },
-      { name: "Uniswap Labs", tags: ["DeFi", "Global"], people: ["Hayden Adams (Founder)"], role: "DeFi 인프라", isNew: true, layer: "DeFi", tgeDone: true, tgeNote: "UNI 토큰" },
-      { name: "Startale Group", tags: ["Infra", "Japan"], people: ["Sota (CEO)"], role: "Web3 인프라", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "일본 Web3 인프라" },
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI", "DA"], people: ["Michael Heinrich (CEO)"], role: "⭐ AI 네이티브 L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "GenLayer", tags: ["L1", "AI", "LLM Consensus"], people: ["José Sánchez (CEO)"], role: "⭐ LLM 컨센서스 L1", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Solana Foundation", tags: ["L1", "Solana"], people: ["Lily Liu (President)"], role: "Solana — APAC 확장", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SOL" },
+      { name: "CoinPost", tags: ["Media", "Organizer"], people: ["CEO"], role: "주최사", layer: "Media", tgeDone: true, tgeNote: "일본 크립토 미디어" },
+      { name: "SBI Holdings", tags: ["Finance", "Japan"], people: ["Yoshitaka Kitao (CEO)"], role: "일본 대형 금융", layer: "TradFi", tgeDone: true, tgeNote: "일본 상장" },
+      { name: "Uniswap Labs", tags: ["DeFi", "Global"], people: ["Hayden Adams (Founder)"], role: "DeFi 인프라", isNew: true, layer: "DeFi", tgeDone: true, tgeNote: "UNI" },
+      { name: "Sony Block Solutions Labs", tags: ["L2", "Japan"], people: ["Team"], role: "⭐ Sony Soneium L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Startale Group", tags: ["Infra", "Japan"], people: ["Sota Watanabe (CEO)"], role: "Web3 인프라", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "ASTR" },
+      { name: "Berachain", tags: ["L1", "DeFi"], people: ["Smokey The Bera (Co-Founder)"], role: "⭐ PoL L1 — 아시아 확장", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정" },
     ],
     sideEvents: {
       count: 3,
@@ -1198,8 +1187,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 6 },
-      { label: "2025", value: 8 },
-      { label: "2026", value: 0 },
+      { label: "2025", value: 8 }
     ],
     actions: ["6/4-5 참석 등록", "10% 할인코드(OnlyBS) 확인", "비트코인 커뮤니티 네트워킹 준비"],
     companies: [
@@ -1265,11 +1253,14 @@ const eventData: EventData[] = [
       { label: "현지비", value: 420 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 10 },
-      { label: "2026", value: 0 },
+      { label: "2025", value: 10 }
     ],
     actions: ["티켓 구매 검토", "유럽 이더리움 파트너 리스트 작성"],
-    companies: [],
+    companies: [
+      { name: "Ethereum Foundation", tags: ["L1", "Ethereum"], people: ["Vitalik Buterin (Co-Founder)"], role: "이더리움 코어", layer: "L1", tgeDone: true, tgeNote: "ETH" },
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Michael Heinrich (CEO)"], role: "⭐ AI 네이티브 L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "MegaETH", tags: ["L2", "EVM"], people: ["Lei Wu (Co-Founder)"], role: "⭐ 실시간 EVM L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma 등재, 상세 미공개",
@@ -1328,11 +1319,13 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 35 },
-      { label: "2025", value: 50 },
-      { label: "2026", value: 55 },
+      { label: "2025", value: 50 }
     ],
     actions: ["티켓 조기 구매", "유럽 비트코인 파트너 리스트 작성", "프라하 숙박 예약"],
-    companies: [],
+    companies: [
+      { name: "Trezor", tags: ["Hardware", "Bitcoin"], people: ["Matej Žilák (CEO)"], role: "하드웨어 지갑 — 체코", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "체코" },
+      { name: "Braiins", tags: ["Mining", "Bitcoin"], people: ["Jan Čapek (CEO)"], role: "비트코인 채굴 — 체코", isNew: true, layer: "Mining", tgeDone: true, tgeNote: "체코 채굴" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1389,11 +1382,13 @@ const eventData: EventData[] = [
       { label: "현지비", value: 400 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 15 },
-      { label: "2026", value: 17 },
+      { label: "2025", value: 15 }
     ],
     actions: ["티켓 구매 검토", "베를린 파트너 리스트 작성"],
-    companies: [],
+    companies: [
+      { name: "Gnosis", tags: ["Ethereum", "Infra"], people: ["Martin Köppelmann (Co-Founder)"], role: "이더리움 인프라 — 베를린", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "GNO" },
+      { name: "Polkadot", tags: ["L1", "Web3 Foundation"], people: ["Gavin Wood (Founder)"], role: "L1 프로토콜 — 베를린 오피스", isNew: true, layer: "L1", tgeDone: true, tgeNote: "DOT" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1450,11 +1445,13 @@ const eventData: EventData[] = [
       { label: "현지비", value: 440 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 30 },
-      { label: "2026", value: 34 },
+      { label: "2025", value: 30 }
     ],
     actions: ["서밋 티켓 구매 검토", "네덜란드 기관 파트너 리스트 작성"],
-    companies: [],
+    companies: [
+      { name: "Polygon", tags: ["L2", "Ethereum"], people: ["Sandeep Nailwal (Co-Founder)"], role: "이더리움 L2", isNew: true, layer: "L2", tgeDone: true, tgeNote: "POL" },
+      { name: "Chainlink", tags: ["Oracle", "Infra"], people: ["Sergey Nazarov (Co-Founder)"], role: "오라클 인프라", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "LINK" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1511,11 +1508,14 @@ const eventData: EventData[] = [
       { label: "현지비", value: 350 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 40 },
-      { label: "2026", value: 45 },
+      { label: "2025", value: 40 }
     ],
     actions: ["티켓 구매 검토", "일본 파트너 리스트 작성", "교토 숙박 예약"],
-    companies: [],
+    companies: [
+      { name: "Sony Block Solutions Labs", tags: ["L2", "Japan"], people: ["Team"], role: "⭐ Sony Soneium L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Startale Group", tags: ["Infra", "Japan"], people: ["Sota Watanabe (CEO)"], role: "Astar Network", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "ASTR" },
+      { name: "SBI Holdings", tags: ["Finance", "Japan"], people: ["Yoshitaka Kitao (CEO)"], role: "일본 대형 금융", isNew: true, layer: "TradFi", tgeDone: true, tgeNote: "일본 상장" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1571,11 +1571,13 @@ const eventData: EventData[] = [
       { label: "현지비", value: 300 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 20 },
-      { label: "2026", value: 23 },
+      { label: "2025", value: 20 }
     ],
     actions: ["항공편 비용 모니터링", "남미 파트너 리스트 작성"],
-    companies: [],
+    companies: [
+      { name: "Mercado Bitcoin", tags: ["Exchange", "Brazil"], people: ["Reinaldo Rabelo (CEO)"], role: "브라질 최대 거래소", isNew: true, layer: "CEX", tgeDone: true, tgeNote: "브라질" },
+      { name: "Ripio", tags: ["Exchange", "LatAm"], people: ["Sebastián Serrano (CEO)"], role: "LatAm 크립토 플랫폼", isNew: true, layer: "CEX", tgeDone: true, tgeNote: "LatAm" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1632,11 +1634,13 @@ const eventData: EventData[] = [
       { label: "현지비", value: 230 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 15 },
-      { label: "2026", value: 17 },
+      { label: "2025", value: 15 }
     ],
     actions: ["얼리버드 티켓 검토", "발리 항공편 모니터링"],
-    companies: [],
+    companies: [
+      { name: "Pintu", tags: ["Exchange", "Indonesia"], people: ["Jeth Soetoyo (CEO)"], role: "인도네시아 크립토 거래소", isNew: true, layer: "CEX", tgeDone: true, tgeNote: "인도네시아" },
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Team"], role: "⭐ AI L1 — 동남아 진출", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1692,11 +1696,13 @@ const eventData: EventData[] = [
       { label: "현지비", value: 400 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 5 },
-      { label: "2026", value: 6 },
+      { label: "2025", value: 5 }
     ],
     actions: ["해커톤 참가 신청 모니터링"],
-    companies: [],
+    companies: [
+      { name: "Ethereum Foundation", tags: ["L1"], people: ["Vitalik Buterin (Co-Founder)"], role: "이더리움 코어", layer: "L1", tgeDone: true, tgeNote: "ETH" },
+      { name: "MegaETH", tags: ["L2", "EVM"], people: ["Lei Wu (Co-Founder)"], role: "⭐ 실시간 EVM L2", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1756,11 +1762,20 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 120 },
       { label: "2024", value: 170 },
-      { label: "2025", value: 1000 },
-      { label: "2026", value: 1150 },
+      { label: "2025", value: 1000 }
     ],
     actions: ["티켓 사전 구매 검토", "싱가포르 숙박 조기 예약", "기관/VC 타겟 리스트 작성"],
-    companies: [],
+    companies: [
+      { name: "Solana Foundation", tags: ["L1", "Solana"], people: ["Lily Liu (President)", "Dan Albert (Exec Director)"], role: "Solana 생태계 — 밸리데이터 직접 타겟", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SOL" },
+      { name: "Jupiter", tags: ["DeFi", "Solana"], people: ["Meow (Founder)"], role: "Solana 최대 DEX", isNew: true, layer: "DeFi", tgeDone: true, tgeNote: "JUP" },
+      { name: "Magic Eden", tags: ["NFT", "Solana"], people: ["Zhuoxun Yin (CEO)"], role: "NFT 마켓플레이스", isNew: true, layer: "Marketplace", tgeDone: true, tgeNote: "ME" },
+      { name: "Phantom", tags: ["Wallet", "Solana"], people: ["Brandon Millman (CEO)"], role: "Solana 지갑 — 인프라 파트너", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "비토큰" },
+      { name: "Berachain", tags: ["L1", "DeFi"], people: ["Smokey The Bera (Co-Founder)"], role: "⭐ PoL L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정" },
+      { name: "Monad", tags: ["L1", "EVM"], people: ["Keone Hon (CEO)"], role: "⭐ 병렬 EVM L1 — TGE 전", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정 2026 H2" },
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Michael Heinrich (CEO)"], role: "⭐ AI L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Initia", tags: ["L1", "Modular"], people: ["Stan Liu (Co-Founder)"], role: "⭐ 모듈러 롤업 L1", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Animoca Brands", tags: ["Gaming", "VC"], people: ["Yat Siu (Chairman)"], role: "글로벌 Web3 VC", layer: "VC", tgeDone: true, tgeNote: "다수 포트폴리오" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1820,11 +1835,16 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2022", value: 80 },
       { label: "2023", value: 100 },
-      { label: "2024", value: 150 },
-      { label: "2026", value: 170 },
+      { label: "2024", value: 150 }
     ],
     actions: ["티켓 사전 구매 검토", "인도 비자 확인", "뭄바이 숙박 조기 예약"],
-    companies: [],
+    companies: [
+      { name: "Ethereum Foundation", tags: ["L1", "Ethereum"], people: ["Vitalik Buterin (Co-Founder)", "Danny Ryan (Researcher)"], role: "이더리움 코어", isNew: true, layer: "L1", tgeDone: true, tgeNote: "ETH" },
+      { name: "Consensys", tags: ["Infra", "Ethereum"], people: ["Joe Lubin (Founder & CEO)"], role: "MetaMask/Infura — 이더리움 인프라", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "MetaMask" },
+      { name: "MegaETH", tags: ["L2", "EVM"], people: ["Lei Wu (Co-Founder)"], role: "⭐ 실시간 EVM L2 — 밸리데이터", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Polygon", tags: ["L2", "Ethereum"], people: ["Sandeep Nailwal (Co-Founder)"], role: "이더리움 L2 — 인도 출신", isNew: true, layer: "L2", tgeDone: true, tgeNote: "POL" },
+      { name: "Morph", tags: ["L2", "zkEVM"], people: ["Cecilia Hsueh (CEO)"], role: "⭐ zkEVM L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
@@ -1884,7 +1904,10 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [],
     actions: ["행사 종료 — 주요 미팅 결과 정리", "베트남 파트너십 후속 진행", "SEABW 방콕 (5/18) 연계 탐색"],
-    companies: [],
+    companies: [
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Team"], role: "⭐ AI L1 — 동남아 진출", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Hashed", tags: ["VC", "Korea"], people: ["Simon Kim (CEO)"], role: "한국 VC — 베트남 진출", isNew: true, layer: "VC", tgeDone: true, tgeNote: "한국 VC" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 미공개",
@@ -1944,8 +1967,7 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 },
-      { label: "2026", value: 3 },
+      { label: "2025", value: 8 }
     ],
     actions: ["티켓 사전 구매 — 프리미엄 가격", "파리 호텔 조기 예약", "StableDay 세션 참석 계획"],
     companies: [
@@ -2017,11 +2039,14 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 15 },
-      { label: "2025", value: 20 },
-      { label: "2026", value: 23 },
+      { label: "2025", value: 20 }
     ],
     actions: ["얼리버드 티켓 등록", "유럽 파트너 리스트 준비", "MiCA 규제 브리핑"],
-    companies: [],
+    companies: [
+      { name: "Berachain", tags: ["L1", "DeFi"], people: ["Smokey The Bera (Co-Founder)"], role: "⭐ PoL L1 — 유럽 강세", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정" },
+      { name: "Circle", tags: ["Stablecoin", "Finance"], people: ["Jeremy Allaire (CEO)"], role: "USDC — MiCA 대응", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "USDC" },
+      { name: "Morph", tags: ["L2", "zkEVM"], people: ["Cecilia Hsueh (CEO)"], role: "⭐ zkEVM L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 미공개",
@@ -2080,11 +2105,13 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 10 },
-      { label: "2025", value: 15 },
-      { label: "2026", value: 17 },
+      { label: "2025", value: 15 }
     ],
     actions: ["베뉴 확정 모니터링", "얼리버드 티켓 등록", "유럽 비트코인 파트너 리스트"],
-    companies: [],
+    companies: [
+      { name: "Blockstream", tags: ["Bitcoin", "Infra"], people: ["Adam Back (CEO)"], role: "비트코인 인프라 리더", isNew: true, layer: "L1", tgeDone: false, tgeNote: "Bitcoin" },
+      { name: "Lightning Labs", tags: ["Bitcoin", "Lightning"], people: ["Elizabeth Stark (CEO)"], role: "라이트닝 인프라", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "Lightning" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 미공개",
@@ -2144,11 +2171,14 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 8 },
-      { label: "2025", value: 12 },
-      { label: "2026", value: 15 },
+      { label: "2025", value: 12 }
     ],
     actions: ["호주 비자 확인", "얼리버드 티켓 등록", "시드니 호텔 조기 예약"],
-    companies: [],
+    companies: [
+      { name: "Swyftx", tags: ["Exchange", "Australia"], people: ["Jason Titman (CEO)"], role: "호주 크립토 거래소", isNew: true, layer: "CEX", tgeDone: true, tgeNote: "호주" },
+      { name: "DigitalX", tags: ["Fund", "Australia"], people: ["Lisa Wade (CEO)"], role: "호주 크립토 펀드", isNew: true, layer: "VC", tgeDone: true, tgeNote: "ASX 상장" },
+      { name: "Solana Foundation", tags: ["L1", "Solana"], people: ["Lily Liu (President)"], role: "Solana — APAC 확장", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SOL" },
+    ],
     sideEvents: {
       count: 15,
       label: "사이드 이벤트",
@@ -2211,11 +2241,16 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 20 },
-      { label: "2025", value: 30 },
-      { label: "2026", value: 35 },
+      { label: "2025", value: 30 }
     ],
     actions: ["슈퍼 얼리버드 등록", "두바이 호텔 사전 예약", "투자자 미팅 리스트 준비"],
-    companies: [],
+    companies: [
+      { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Michael Heinrich (CEO)"], role: "⭐ AI L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "GenLayer", tags: ["L1", "AI"], people: ["José Sánchez (CEO)"], role: "⭐ LLM 컨센서스 L1", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Berachain", tags: ["L1", "DeFi"], people: ["Smokey The Bera (Co-Founder)"], role: "⭐ PoL L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 예정" },
+      { name: "Solana Foundation", tags: ["L1"], people: ["Lily Liu (President)"], role: "Solana 생태계", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SOL" },
+      { name: "DWF Labs", tags: ["MM", "VC"], people: ["Andrei Grachev (Managing Partner)"], role: "마켓메이커/VC — 두바이 기반", isNew: true, layer: "VC", tgeDone: true, tgeNote: "두바이" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 미공개",
@@ -2275,15 +2310,168 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 },
-      { label: "2026", value: 10 },
+      { label: "2025", value: 8 }
     ],
     actions: ["얼리버드 티켓 등록", "아부다비 호텔 사전 예약", "MENA 파트너 리스트 준비"],
-    companies: [],
+    companies: [
+      { name: "Phoenix Group", tags: ["Mining", "MENA"], people: ["Munaf Ali (CEO)"], role: "MENA 채굴 — 아부다비 기반", isNew: true, layer: "Mining", tgeDone: true, tgeNote: "ADX 상장" },
+      { name: "Roland Berger", tags: ["Consulting", "MENA"], people: ["Partner"], role: "MENA Web3 자문", isNew: true, layer: "Consulting", tgeDone: true, tgeNote: "컨설팅" },
+      { name: "ADGM", tags: ["Regulator", "Abu Dhabi"], people: ["Arif Al Muhairbi (CEO)"], role: "아부다비 디지털 자산 규제", isNew: true, layer: "Regulator", tgeDone: true, tgeNote: "규제기관" },
+    ],
     sideEvents: {
       count: 0,
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-12-07", desc: "사이드 이벤트 미공개" }],
+    },
+  },
+  {
+    id: "solana-breakpoint-2026",
+    name: "Solana Breakpoint 2026",
+    city: "London",
+    country: "United Kingdom",
+    date: "2026-11-15",
+    endDate: "2026-11-17",
+    days: 3,
+    venue: "Olympia London",
+    tier: "S",
+    autoTier: "S",
+    tierScore: 90,
+    tierReasons: ["Solana 플래그십 컨퍼런스", "런던 올림피아 3일 행사", "J.P. Morgan, Goldman Sachs, BlackRock 참여"],
+    gradient: "from-violet-100 via-white to-purple-100",
+    status: "upcoming",
+    imageUrl: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/BP-SideEvents",
+    website: "https://solana.com/breakpoint",
+    cost: { flight: 850, hotel: 1200, transport: 150, meals: 380, ticket: 799, total: 3379 },
+    summary: {
+      features: ["Solana 재단 주최 플래그십 연례 컨퍼런스", "런던 올림피아 3일 개최 — 최초 유럽 에디션", "J.P. Morgan, Goldman Sachs, BlackRock, State Street, Citigroup 프로덕션 자본 배포"],
+      difference: ["Solana 유일 — 다른 L1 없음", "Internet Capital Markets 테마", "Hacker House London (11/1-14) 사전 행사"],
+      pros: ["Solana 생태계 최고 네트워킹", "기관 참여 사상 최고 — 전통 금융 대거 참여", "런던 글로벌 금융 허브"],
+      risks: ["Solana 외 프로토콜 관련성 없음", "런던 11월 날씨", "프리미엄 패스 가격"],
+      expectations: ["Solana 밸리데이터 직접 미팅", "인터넷 캐피탈 마켓 트렌드", "기관 DeFi 인사이트"],
+    },
+    feed: [
+      { label: "런던 올림피아 베뉴 확정 — 최초 유럽 에디션", time: "2026-04-28", type: "공지" },
+      { label: "Hacker House London: Nov 1-14", time: "2026-05-01", type: "사이드" },
+      { label: "사이드 이벤트 호스트 신청 오픈", time: "2026-04-30", type: "사이드" },
+    ],
+    archive: {
+      year: "2025",
+      attendees: "6,000+",
+      sideEvents: 80,
+      sponsors: 120,
+      media: 60,
+      eventTitle: "Solana Breakpoint 2025 (Singapore)",
+      notes: ["Solana 플래그십 — 싱가포르에서 6,000+ 참석", "J.P. Morgan, BlackRock 등 전통 금융 첫 대거 참여"],
+    },
+    kpis: [
+      { label: "미팅 적합도", value: "매우 높음", detail: "Solana/밸리데이터" },
+      { label: "아카이브 성장", value: "+30%", detail: "기관 참여 YoY" },
+      { label: "업데이트 주기", value: "14일", detail: "60일 이내" },
+    ],
+    budget: [
+      { label: "항공권", value: 850 },
+      { label: "숙박", value: 1200 },
+      { label: "티켓", value: 799 },
+      { label: "현지비", value: 530 },
+    ],
+    sideEventTrend: [
+      { label: "2023", value: 40 },
+      { label: "2024", value: 60 },
+      { label: "2025", value: 80 }
+    ],
+    actions: ["티켓 사전 구매 — 24시간 한정 할인 확인", "런던 호텔 조기 예약", "Solana 밸리데이터 타겟 리스트 작성", "Hacker House 참가 검토"],
+    companies: [
+      { name: "Solana Foundation", tags: ["L1", "Solana"], people: ["Lily Liu (President)", "Dan Albert (Exec Director)", "Emon Motamedi (Breakpoint Lead)"], role: "Solana 재단 — 밸리데이터 파트너십 직접 논의", isNew: true, layer: "L1", tgeDone: true, tgeNote: "SOL" },
+      { name: "Jito", tags: ["Solana", "MEV", "Infra"], people: ["Lucas Bruder (CEO)", "Zano Sherwani (COO)"], role: "Solana MEV — 밸리데이터 핵심 인프라", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "JTO" },
+      { name: "Helius", tags: ["Solana", "RPC", "Infra"], people: ["Mert Mumtaz (CEO)"], role: "Solana RPC — 밸리데이터 인프라", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "인프라 기업" },
+      { name: "Marinade Finance", tags: ["Solana", "Staking"], people: ["Maksim Zhdanov (Co-Founder)"], role: "Solana 스테이킹 — 밸리데이터 리레이션", isNew: true, layer: "DeFi", tgeDone: true, tgeNote: "MNDE" },
+      { name: "Triton", tags: ["Solana", "RPC", "Infra"], people: ["Garry Krug (CEO)"], role: "Solana RPC/밸리데이터 인프라", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "인프라 기업" },
+      { name: "Jupiter", tags: ["DeFi", "Solana"], people: ["Meow (Founder)"], role: "Solana 최대 DEX — 생태계 리더", isNew: true, layer: "DeFi", tgeDone: true, tgeNote: "JUP" },
+      { name: "Phantom", tags: ["Wallet", "Solana"], people: ["Brandon Millman (CEO)"], role: "Solana 지갑", isNew: true, layer: "Infra", tgeDone: false, tgeNote: "비토큰" },
+      { name: "Magic Eden", tags: ["NFT", "Solana"], people: ["Zhuoxun Yin (CEO)"], role: "NFT 마켓플레이스", isNew: true, layer: "Marketplace", tgeDone: true, tgeNote: "ME" },
+      { name: "Pyth Network", tags: ["Oracle", "Solana"], people: ["Mike Cahill (CEO)"], role: "오라클 인프라 — Solana 생태계", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "PYTH" },
+      { name: "J.P. Morgan (Onyx)", tags: ["TradFi", "Solana"], people: ["Tyrone Lobban (Head of Onyx Digital Assets)"], role: "전통 금융 — Solana 프로덕션 배포", isNew: true, layer: "TradFi", tgeDone: true, tgeNote: "JPM" },
+    ],
+    sideEvents: {
+      count: 100,
+      label: "사이드 이벤트",
+      items: [
+        { name: "Solana Hacker House London", host: "Solana Foundation", date: "2026-11-01", desc: "2주간 개발자 부트캠프 — Breakpoint 전" },
+        { name: "Breakpoint Community Day", host: "Solana Foundation", date: "2026-11-17", desc: "커뮤니티 데이" },
+      ],
+    },
+  },
+  {
+    id: "ethcc-9-2026",
+    name: "EthCC[9] 2026",
+    city: "Cannes",
+    country: "France",
+    date: "2026-03-30",
+    endDate: "2026-04-02",
+    days: 4,
+    venue: "Palais des Festivals et des Congrès",
+    tier: "S",
+    autoTier: "S",
+    tierScore: 89,
+    tierReasons: ["유럽 최대 이더리움 개발자 컨퍼런스", "6,500+ 참석자", "Palais des Festivals 4일"],
+    gradient: "from-indigo-100 via-white to-blue-100",
+    status: "completed",
+    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=300&fit=crop",
+    sideEventUrl: "https://luma.com/ethcc9",
+    website: "https://ethcc.io/",
+    cost: { flight: 850, hotel: 950, transport: 130, meals: 350, ticket: 350, total: 2630, note: "일반 패스 €95~" },
+    summary: {
+      features: ["유럽 최대·최장수 이더리움 커뮤니티 컨퍼런스", "칸 영화제 베뉴 Palais des Festivals", "6,500+ 빌더·연구자·창업가, 4일 행사"],
+      difference: ["개발자·빌더 중심 — 컨퍼런스+워크숍+해커톤", "EthVC 스타트업 트랙", "유럽 규제(MiCA) 직접 논의"],
+      pros: ["이더리움 빌더 최고 밀도", "칸 프리미엄 베뉴", "유럽 Web3 네트워킹 최적"],
+      risks: ["이더리움 전용", "칸 호텔 비쌈", "3-4월 칸 날씨"],
+      expectations: ["이더리움 로드맵 업데이트", "L2/ZK 기술 동향", "유럽 규제 인사이트"],
+    },
+    feed: [
+      { label: "행사 종료 (Day 4)", time: "2026-04-02", type: "완료" },
+      { label: "EthVC 스타트업 피칭 완료", time: "2026-04-01", type: "스타트업" },
+      { label: "Vitalik 기조연설", time: "2026-03-30", type: "연사" },
+    ],
+    archive: {
+      year: "2026",
+      attendees: "6,500+",
+      sideEvents: 120,
+      sponsors: 100,
+      media: 50,
+      eventTitle: "EthCC[9] 2026",
+      notes: ["유럽 최대 이더리움 행사 — 칸 Palais des Festivals", "6,500+ 참석, 120+ 사이드 이벤트", "EthVC 스타트업 트랙 포함"],
+    },
+    kpis: [
+      { label: "미팅 적합도", value: "매우 높음", detail: "ETH/빌더" },
+      { label: "아카이브 성장", value: "+10%", detail: "참석자 YoY" },
+      { label: "상태", value: "종료", detail: "3/30-4/2" },
+    ],
+    budget: [
+      { label: "항공권", value: 850 },
+      { label: "숙박", value: 950 },
+      { label: "티켓", value: 350 },
+      { label: "현지비", value: 480 },
+    ],
+    sideEventTrend: [
+      { label: "2023", value: 60 },
+      { label: "2024", value: 80 },
+      { label: "2025", value: 100 }
+    ],
+    actions: ["행사 종료 — 주요 미팅 결과 정리", "Ethereum 빌더 후속 미팅", "2027 EthCC[10] 일정 모니터링"],
+    companies: [
+      { name: "Ethereum Foundation", tags: ["L1", "Ethereum"], people: ["Vitalik Buterin (Co-Founder)"], role: "이더리움 코어", layer: "L1", tgeDone: true, tgeNote: "ETH" },
+      { name: "MegaETH", tags: ["L2", "EVM"], people: ["Lei Wu (Co-Founder)"], role: "⭐ 실시간 EVM L2 — TGE 전", isNew: true, layer: "L2", tgeDone: false, tgeNote: "TGE 전" },
+      { name: "Scroll", tags: ["L2", "zkEVM"], people: ["Ye Zhang (Co-Founder)"], role: "zkEVM L2", isNew: true, layer: "L2", tgeDone: true, tgeNote: "SCR" },
+      { name: "Starknet", tags: ["L2", "ZK"], people: ["Eli Ben-Sasson (President, StarkWare)"], role: "ZK L2", isNew: true, layer: "L2", tgeDone: true, tgeNote: "STRK" },
+    ],
+    sideEvents: {
+      count: 120,
+      label: "사이드 이벤트",
+      items: [
+        { name: "EthVC Startup Track", host: "EthCC", date: "2026-04-01", desc: "스타트업 피칭 트랙" },
+        { name: "ZK Research Day", host: "StarkWare + Scroll", date: "2026-03-31", desc: "ZK 연구 워크숍" },
+      ],
     },
   },
 ];
