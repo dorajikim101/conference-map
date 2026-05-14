@@ -66,6 +66,11 @@ export type EventData = {
     label: string;
     items: { name: string; host: string; date: string; desc: string; url?: string }[];
   };
+  keynoteSpeakers?: {
+    names: string[];
+    insight?: string;
+  };
+  sponsorInsight?: string;
 };
 
 const eventData: EventData[] = [
@@ -142,6 +147,11 @@ const eventData: EventData[] = [
         { name: "Institutional Bitcoin Workshop", host: "Galaxy Digital", date: "2026-04-29", desc: "기관 비트코인 자산 전략" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Michael Saylor (Strategy)", "Cynthia Lummis (상원의원)", "Jack Dorsey (Block)", "Vivek Ramaswamy", "Marathon Digital CEO", "Strike CEO Jack Mallers"],
+      insight: "정책·채굴·기관 세 축이 균형 — 비트코인의 '국가 전략자산' 담론이 본격화",
+    },
+    sponsorInsight: "Strategy·Marathon Digital·Strike가 골드 티어 — 기관+채굴+결제 삼각 구성이 비트코인 전방위 확장 시그널",
   },
   {
     id: "token2049-dubai",
@@ -216,6 +226,11 @@ const eventData: EventData[] = [
         { name: "On-chain Compliance Workshop", host: "Chainalysis", date: "2026-04-29", desc: "온체인 규제 및 컴플라이언스" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Alex Svanevik (Nansen)", "Sandbox CEO", "OKX CEO", "Animoca Brands CEO"],
+      insight: "중동 자본+아시아 거래소+글로벌 프로토콜 혼합 — Dubai 크립토 허브 포지셔닝",
+    },
+    sponsorInsight: "OKX 타이틀 스폰서 + 중동 VC(Cypher Capital) 대거 참여 — 중동 자본 Web3 유입 가속",
   },
   {
     id: "consensus-miami",
@@ -306,6 +321,11 @@ const eventData: EventData[] = [
         { name: "South of Consensus — Miami 2026", host: "PlaceholderMM", date: "2026-05-07", desc: "Mid-Beach — 토큰 창립자 프라이빗 이브닝 (Waitlist)" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["CFTC 의장 Michael Selig", "상원의원 Ashley Moody", "Evan Cheng (Sui)", "Hayden Adams (Uniswap)", "a16z 파트너"],
+      insight: "규제당국 수장 + 전통금융 첫 스폰서 + 크립토 빌더 동시 등장 — '제도권 안의 크립토' 전환점",
+    },
+    sponsorInsight: "Morgan Stanley·JPMorgan 첫 크립토 스폰서 — 월스트리트 본격 진입 선언. Coinbase·Circle 기관 인프라 대거 포진",
   },
   {
     id: "daf-abu-dhabi",
@@ -377,6 +397,11 @@ const eventData: EventData[] = [
         { name: "Institutional DeFi Roundtable", host: "BlackRock + FalconX", date: "2026-05-13", desc: "기관 DeFi 채택 라운드테이블" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["ADGM CEO", "BlackRock Digital Assets Head", "Mubadala 투자 총괄"],
+      insight: "글로벌 국부펀드+자산운용사 주축 — $15조+ AUM 대표가 모이는 폐쇄형 기관 포럼",
+    },
+    sponsorInsight: "BlackRock Digital·Mubadala·FalconX 등 $1조+ AUM 플레이어 라인업 — 자본 밀도 크립토 행사 중 최상위",
   },
   {
     id: "crypto-valley-2026",
@@ -452,6 +477,11 @@ const eventData: EventData[] = [
         { name: "Masterclass: Tokenization & RWA", host: "Lucerne University", date: "2026-05-28", desc: "실물 자산 토큰화 마스터클래스" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Ethereum Foundation 연구진", "Sygnum Bank CEO", "Zug 주청 규제 담당"],
+      insight: "스위스 연방·은행·프로토콜 한자리 — 유럽 크립토 규제 프론티어",
+    },
+    sponsorInsight: "Sygnum·SEBA 은행 메인 스폰서 — 크립토 네이티브 은행 '스위스 모델' 시연장",
   },
   {
     id: "buidl-asia-2026",
@@ -528,6 +558,11 @@ const eventData: EventData[] = [
         { name: "BuidlHack Final Presentations", host: "KBWA", date: "2026-04-18", desc: "해커톤 최종 발표 및 빌더 쇼케이스" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Illia Polosukhin (NEAR CEO)", "EigenLayer DevRel", "OpenGradient Team", "Kite AI Team"],
+      insight: "AI×크립토 교차 특화 — 온체인 ML·AI 컨센서스 등 기술 심도 높은 연사진",
+    },
+    sponsorInsight: "BNB Chain·NEAR·EigenLayer 등 인프라 중심 — AI+크립토 교차 검증 특화 스폰서 구성",
   },
   {
     id: "istanbul-blockchain-week-2026",
@@ -600,6 +635,11 @@ const eventData: EventData[] = [
         { name: "Main Summit Networking Lounge", host: "Istanbul Blockchain Week", date: "2026-06-02", desc: "전시·키노트·패널과 연결되는 공식 네트워킹 라운지" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["EAK Digital CEO", "BtcTurk CEO", "Avalanche 생태계 리드"],
+      insight: "터키 로컬 거래소+글로벌 L1 파트너 — 지역 채택과 글로벌 확장 교차점",
+    },
+    sponsorInsight: "BtcTurk·Paribu(터키 Top 2 거래소) + Avalanche — 로컬 거래소 중심 지역 밀착형",
   },
   {
     id: "blockchain-futurist-2026",
@@ -676,6 +716,11 @@ const eventData: EventData[] = [
         { name: "Shefi Morning Social @ BFC", host: "Blockchain Futurist Conference Week & Lalla", date: "2026-07-21", desc: "Rebel — Shefi 커뮤니티 모닝 소셜" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Ethereum Foundation 연구진", "ChainSafe CEO", "DFINITY 생태계 리드"],
+      insight: "캐나다 ETH 커뮤니티 핵심 — 기술 심도와 규제 논의 균형",
+    },
+    sponsorInsight: "Coinsquare·ChainSafe·DFINITY — 캐나다 Web3 인프라 생태계 집약",
   },
   {
     id: "bitcoin-asia-2026",
@@ -748,6 +793,11 @@ const eventData: EventData[] = [
         { name: "Deal Flow Zone & Networking Lounge", host: "Bitcoin Asia", date: "2026-08-27", desc: "GA Plus 이상 대상 1:1 비즈니스 미팅·네트워킹 공간" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Bitcoin Foundation 대표", "아시아 채굴 기업 CEO진"],
+      insight: "Bitcoin Conference 아시아 첫 상륙 — 홍콩 크립토 허브 재확인",
+    },
+    sponsorInsight: "BTC Inc. 공식 프랜차이즈 — 본행사가 직접 운영하는 아시아 에디션",
   },
   {
     id: "kbw-2026",
@@ -821,6 +871,11 @@ const eventData: EventData[] = [
         { name: "Upbit Institutional Summit", host: "Upbit + FactBlock", date: "2026-09-29", desc: "KBW2026 개막 전 초대자 한정 기관 서밋 — 자본시장·정책·규제 논의" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Arthur Hayes (BitMEX 창립자)", "Hashed CEO Sunghoon Kim", "Factblock CEO"],
+      insight: "아시아 크립토 영향력 1세대+한국 Web3 빌더 — 한국 시장의 글로벌 연결고리",
+    },
+    sponsorInsight: "Hashed·Factblock 공동 주최 + Upbit(Dunamu) 생태계 — 한국 크립토 자본·미디어·거래소 삼위일체",
   },
   {
     id: "cis-2026",
@@ -893,6 +948,11 @@ const eventData: EventData[] = [
         { name: "Retail Festival", host: "CIS", date: "2026-04-18", desc: "일반 투자자 대상 페스티벌" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["KBWA 관계자", "국내 기관 투자자"],
+      insight: "BUIDL Week 연계 — 기관 투자 관점의 크립토 접근",
+    },
+    sponsorInsight: "Korea BUIDL Week 생태계 내 위치 — 기관+리테일 혼합 구성",
   },
   {
     id: "hk-web3-festival-2026",
@@ -967,6 +1027,11 @@ const eventData: EventData[] = [
         { name: "Solana Breakpoint HK", host: "Solana Foundation", date: "2026-04-22", desc: "솔라나 개발자 모임" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["홍콩 정부 Web3 담당", "Wanxiang Blockchain CEO", "HashKey CEO"],
+      insight: "홍콩 정부 주도 Web3 정책+중국 자본+글로벌 프로토콜 — 50,000+ 참석 아시아 최대",
+    },
+    sponsorInsight: "홍콩 정부기관+Wanxiang+HashKey — 정부·자본·인프라 3각 구성이 홍콩 Web3 전략 축소판",
   },
   {
     id: "seabw-2026",
@@ -1056,6 +1121,11 @@ const eventData: EventData[] = [
         { name: "Blockconnect, Bangkok 🇹🇭", host: "Buildify", date: "2026-05-20", desc: "블록커넥트 방콕 에디션", url: "https://luma.com/SEABW_Official" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Vitalik Buterin (Ethereum)", "Hashed CEO", "ShardLab 대표"],
+      insight: "Vitalik 참석+동남아 지역 빌더 — Agentic Economy·RWA 2.0 핵심 테마",
+    },
+    sponsorInsight: "Hashed·ShardLab 공동 주최 — 한국 자본이 동남아 Web3 허브 직접 빌드",
   },
   {
     id: "webx-2026-tokyo",
@@ -1133,6 +1203,11 @@ const eventData: EventData[] = [
         { name: "WebX 2026 @Tokyo Luma Calendar", host: "CoinPost", date: "2026-07-13", desc: "CoinPost 운영 공식 Luma 캘린더 기반 사이드 이벤트 허브" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["이시바 총리 (전년 참석)", "CZ (Binance)", "Arthur Hayes", "CoinPost CEO"],
+      insight: "일본 총리+글로벌 크립토 CEO — 국가 차원 Web3 채택 시그널",
+    },
+    sponsorInsight: "CoinPost 주최 + Sony·SBI 등 일본 대기업 — 일본식 정부·대기업·미디어 3각 체제",
   },
   {
     id: "bitcoin-seoul-2026",
@@ -1201,6 +1276,11 @@ const eventData: EventData[] = [
       items: [
       ],
     },
+    keynoteSpeakers: {
+      names: ["Preston Pysh", "Dennis Porter", "안도걸 의원", "CK 옹 (SBI 디지털마켓츠)"],
+      insight: "한국 정치인+글로벌 비트코인 인플루언서 — 한국 비트코인 정책 논의 구체화",
+    },
+    sponsorInsight: "서울경제신문 주최 — 전통 미디어가 비트코인 행사 주도하는 한국 특유 패턴",
   },
   {
     id: "ethmilan-2026",
@@ -1266,6 +1346,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma 등재, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["Ethereum Italia 커뮤니티 리더"],
+      insight: "이탈리아 ETH 커뮤니티 중심 — 유럽 지역 이더리움 채택 교두보",
+    },
+    sponsorInsight: "로컬 이더리움 커뮤니티 주도 — 규모는 작으나 유럽 ETH 생태계 풀뿌리 역할",
   },
   {
     id: "btc-prague-2026",
@@ -1331,6 +1416,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["Jack Dorsey (Block)", "Adam Back (Blockstream)", "체코 규제당국"],
+      insight: "250+ 연사 유럽 최대 비트코인 집회 — 기술·정책·채굴 3트랙",
+    },
+    sponsorInsight: "Blockstream·Trezor·체코 채굴 기업 — 하드웨어+채굴 인프라 중심 '오비트코이너' 구성",
   },
   {
     id: "web3-summit-2026",
@@ -1394,6 +1484,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["Gavin Wood (Polkadot)", "Web3 Foundation 관계자"],
+      insight: "Polkadot 생태계 중심 Web3 비전 — 베를린 크로스체인 인터오퍼러빌리티 논의",
+    },
+    sponsorInsight: "Web3 Foundation·Polkadot 생태계 메인 — 특정 프로토콜 중심이나 Web3 전반 아젠다 포괄",
   },
   {
     id: "dutch-blockchain-week-2026",
@@ -1457,6 +1552,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["네덜란드 규제당국", "Polygon·Chainlink 유럽 리드"],
+      insight: "유럽 B2B 블록체인 — MiCA 준수·기관 채택 집중",
+    },
+    sponsorInsight: "Polygon·Chainlink 등 이더리움 인프라 메인 — 유럽 기관 중심 기술 검증 장",
   },
   {
     id: "ivs-2026",
@@ -1521,6 +1621,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["일본 스타트업 CEO진", "크립토 트랙 연사"],
+      insight: "일본 최대 스타트업 컨퍼런스 크립토 트랙 포함 — Web3가 일본 스타트업 생태계에 정착",
+    },
+    sponsorInsight: "일본 VC·대기업 CVC 메인 스폰서 — Web3 아닌 전반적 스타트업 생태계 지원 구조",
   },
   {
     id: "blockchain-rio-2026",
@@ -1583,6 +1688,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["브라질 중앙은행 관계자", "남미 Web3 창업자진"],
+      insight: "남미 최대 블록체인 행사 — Pix·DREX 등 브라질 디지털 금융+Web3 결합",
+    },
+    sponsorInsight: "브라질 로컬 거래소+은행+정부 — 남미 특유의 정부 주도 디지털 금융+Web3 하이브리드",
   },
   {
     id: "coinfest-asia-2026",
@@ -1646,6 +1756,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["발리 Web3 커뮤니티 리더"],
+      insight: "발리 크립토 페스티벌 — 커뮤니티 중심 비격식 네트워킹",
+    },
+    sponsorInsight: "로컬·글로벌 Web3 커뮤니티 공동 주최 — 캐주얼 네트워킹 최적화 규모",
   },
   {
     id: "ethrome-2026",
@@ -1708,6 +1823,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["이더리움 이탈리아 빌더진"],
+      insight: "이더리움 빌더 해커톤 — 기술 구현 중심 실무 행사",
+    },
+    sponsorInsight: "Ethereum 커뮤니티 기반 — 소규모지만 기술 밀도 높은 이탈리아 ETH 생태계 집결",
   },
   {
     id: "token2049-singapore-2026",
@@ -1781,6 +1901,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["글로벌 거래소 CEO진", "a16z·Paradigm 파트너"],
+      insight: "세계 최대 크립토 이벤트 — 25,000+ 참석, 거래소·VC·프로토콜 CEO 대거 참석",
+    },
+    sponsorInsight: "OKX·Binance·Bybit 등 거대 거래소 타이틀 + a16z·Paradigm — 자본+거래+인프라 집결",
   },
   {
     id: "devcon-8-mumbai",
@@ -1850,6 +1975,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 — Luma Launching Soon, 상세 미공개",
       items: [],
     },
+    keynoteSpeakers: {
+      names: ["Vitalik Buterin", "Ethereum Foundation 핵심 연구진"],
+      insight: "이더리움 개발자 최대 집결 — EF 직접 큐레이션 기술 중심 연사진",
+    },
+    sponsorInsight: "Ethereum Foundation 직접 운영 — 상업 스폰서보다 프로토콜 기여자 중심 순수 기술 행사",
   },
   {
     id: "conviction-2026",
@@ -1913,6 +2043,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-05-08", desc: "사이드 이벤트 미공개" }],
     },
+    keynoteSpeakers: {
+      names: ["베트남 정부 디지털 자산 담당", "동남아 Web3 창업가"],
+      insight: "베트남 정부 공식 인정 포럼 — Resolution 05 기반 디지털 자산 경제 정책 논의",
+    },
+    sponsorInsight: "베트남 정부기관+로컬 기업 — 국가 차원 크립토 규제 프레임워크 논의 독보적 포지션",
   },
   {
     id: "proof-of-talk-2026",
@@ -1985,6 +2120,11 @@ const eventData: EventData[] = [
         { name: "Executive Roundtables", host: "Proof of Talk", date: "2026-06-02", desc: "경영진 라운드테이블 워크숍" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Web3 CEO·C-suite 90%"],
+      insight: "C-suite 참여율 90% — 실제 의사결정권자만 모이는 초청제 포럼",
+    },
+    sponsorInsight: "초청제 운영 스폰서도 C-suite 중심 — 의사결정권자 밀도 크립토 행사 중 최고",
   },
   {
     id: "ebc-barcelona-2026",
@@ -2052,6 +2192,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-09-16", desc: "사이드 이벤트 미공개" }],
     },
+    keynoteSpeakers: {
+      names: ["MiCA 규제 전문가", "유럽 블록체인 CEO진"],
+      insight: "MiCA 규제 논의 최전선 — 유럽 기관·규제당국 참여 높음",
+    },
+    sponsorInsight: "유럽 금융기관+블록체인 기업 — MiCA 시대 규제 준수형 Web3 스폰서 구성",
   },
   {
     id: "bitcoin-amsterdam-2026",
@@ -2117,6 +2262,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-11-05", desc: "사이드 이벤트 미공개" }],
     },
+    keynoteSpeakers: {
+      names: ["유럽 비트코인 인플루언서", "채굴 기업 CEO진"],
+      insight: "유럽 비트코인 핵심 행사 — 채굴·인프라·커뮤니티 집중",
+    },
+    sponsorInsight: "Bitcoin Conference 공식 유럽 에디션 — Blockstream 등 인프라 골드 스폰서",
   },
   {
     id: "aus-crypto-con-2026",
@@ -2188,6 +2338,11 @@ const eventData: EventData[] = [
         { name: "Workshops & Bootcamps", host: "Australian Crypto Convention", date: "2026-11-28", desc: "워크숍 및 부트캠프" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["호주 ASIC 규제당국", "호주 Web3 CEO진"],
+      insight: "남반구 최대 크립토 행사 — 호주 규제 환경 개선과 성장세 맞물려 확대",
+    },
+    sponsorInsight: "호주 로컬 거래소+규제 준수 기업 — 남반구에서 가장 빠르게 성장하는 규제 친화적 시장",
   },
   {
     id: "blockchain-life-2026",
@@ -2256,6 +2411,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-12-01", desc: "사이드 이벤트 미공개" }],
     },
+    keynoteSpeakers: {
+      names: ["130개국 크립토 CEO진", "200+ 연사"],
+      insight: "글로벌 Top 2 크립토 포럼 — 130개국 참석 연사 200+",
+    },
+    sponsorInsight: "Binance·Bybit 등 거대 거래소 + 러시아·CIS 자본 — 동유럽·아시아 중심 자본 밀도 높은 구성",
   },
   {
     id: "bitcoin-mena-2026",
@@ -2323,6 +2483,11 @@ const eventData: EventData[] = [
       label: "사이드 이벤트 미공개",
       items: [{ name: "Side events not yet announced", host: "TBA", date: "2026-12-07", desc: "사이드 이벤트 미공개" }],
     },
+    keynoteSpeakers: {
+      names: ["아부다비 왕실 관계자", "중동 Web3 CEO진"],
+      insight: "랜드마크 데뷔 에디션 — 중동 비트코인·디지털 자산 대화 본격 시작",
+    },
+    sponsorInsight: "아부다비 정부기관+ADGM — 중동 국가 차원 비트코인 채택 시그널",
   },
   {
     id: "solana-breakpoint-2026",
@@ -2401,6 +2566,11 @@ const eventData: EventData[] = [
         { name: "Breakpoint Community Day", host: "Solana Foundation", date: "2026-11-17", desc: "커뮤니티 데이" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Anatoly Yakovenko (Solana Labs CEO)", "Raj Gokal (COO)", "J.P. Morgan 블록체인 리드", "BlackRock 디지털 자산 총괄"],
+      insight: "Solana 플래그십에 J.P. Morgan·BlackRock 전통 금융 첫 대거 참여 — 기관의 Solana 전환점",
+    },
+    sponsorInsight: "J.P. Morgan·BlackRock 등 전통 금융이 Solana 생태계 첫 대거 투자 — Binance·OKX 동시 포진",
   },
   {
     id: "ethcc-9-2026",
@@ -2473,6 +2643,11 @@ const eventData: EventData[] = [
         { name: "ZK Research Day", host: "StarkWare + Scroll", date: "2026-03-31", desc: "ZK 연구 워크숍" },
       ],
     },
+    keynoteSpeakers: {
+      names: ["Vitalik Buterin", "Ethereum Foundation 연구진", "Lido·Aave 등 DeFi 창립자"],
+      insight: "유럽 최대 이더리움 행사 — 칸 Palais des Festivals 6,500+ 참석 기술+DeFi+거버넌스 종합",
+    },
+    sponsorInsight: "Ethereum Foundation+Lido+Aave+주요 L2 — 이더리움 생태계 전체 참여하는 유럽 최대 ETH 네트워킹",
   },
 ];
 
