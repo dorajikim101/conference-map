@@ -839,7 +839,7 @@ const eventData: EventData[] = [
     status: "completed",
     isDomestic: true,
     imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=300&fit=crop",
-    website: "https://cryptoinvestmentshow.com/",
+    website: "https://cis2060.io/",
     cost: { flight: 0, hotel: 0, transport: 60, meals: 100, ticket: 150, total: 310, note: "국내 행사. 항공/숙박 불필요" },
     summary: {
       features: ["한국 대표 디지털 자산 투자 컨퍼런스", "기관 포럼(Day 1) + 리테일 페스티벌(Day 2-3)", "200+ 연사, 50+ 스폰서 참여"],
@@ -986,7 +986,7 @@ const eventData: EventData[] = [
     imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=300&fit=crop",
     sideEventUrl: "https://www.seablockchainweek.org/side-events",
     sideEventSourceUrl: "https://luma.com/SEABW_Official",
-    website: "https://seablockchainweek.com/",
+    website: "https://www.seablockchainweek.org/",
     cost: { flight: 500, hotel: 450, transport: 80, meals: 150, ticket: 0, total: 1180, note: "일반 패스 무료! 항공+숙박만 부담" },
     summary: {
       features: ["동남아시아 최대 Web3·블록체인 위크", "규제·기관·RWA·AI·인프라 5개 트랙", "일반 패스 최초 무료 개방"],
@@ -1074,7 +1074,7 @@ const eventData: EventData[] = [
     status: "upcoming",
     imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/webx.sideevents",
-    website: "https://webx-crypto.com/",
+    website: "https://webx-asia.com/",
     cost: { flight: 350, hotel: 700, transport: 80, meals: 200, ticket: 300, total: 1630, note: "일반 패스 기준" },
     summary: {
       features: ["일본 최대 규모 Web3 국제 컨퍼런스", "CoinPost 기획·운영", "정치·금융·Web3 교차"],
