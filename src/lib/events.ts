@@ -128,7 +128,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 110 },
       { label: "2024", value: 155 },
-      { label: "2025", value: 180 }
+      { label: "2025", value: 180 },
+      { label: "2026", value: 180 }
     ],
     actions: ["행사 진행 중 - 라이브 피드 모니터링", "엔터프라이즈 트랙 세션 확인", "채굴 스폰서 부스 방문 계획"],
     companies: [
@@ -208,7 +209,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 90 },
       { label: "2024", value: 150 },
-      { label: "2025", value: 500 }
+      { label: "2025", value: 500 },
+      { label: "2026", value: 0 }
     ],
     actions: ["2027년 일정 모니터링", "중동 파트너 리스트 사전 확보", "대체 행사 검토"],
     companies: [
@@ -266,13 +268,13 @@ const eventData: EventData[] = [
       { label: "Solana Accelerate 3,000+ 빌더 참여", time: "2026-05-06", type: "생태계" },
     ],
     archive: {
-      year: "2026",
-      attendees: "20,000+",
-      sideEvents: 500,
-      sponsors: 250,
-      media: 180,
-      eventTitle: "Consensus Miami 2026",
-      notes: ["100개국 20,000+ 참석, 200+ Fortune 500 기업 대표 참여", "기관 참석자 35% — Morgan Stanley, JPMorgan 첫 스폰서", "AI·Agentic Commerce, 스테이블코인, RWA 토큰화가 핵심 테마", "500+ 사이드 이벤트, 500+ 연사, 6스테이지 3서밋"],
+      year: "2025",
+      eventTitle: "Consensus 2025",
+      attendees: "15,000+",
+      sideEvents: 250,
+      sponsors: 200,
+      media: 150,
+      notes: ["Consensus 2025 — 참석자 15,000+, 250+ 사이드 이벤트", "기관 참여 증가"],
     },
     kpis: [
       { label: "미팅 적합도", value: "매우 높음", detail: "전 분야" },
@@ -288,7 +290,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 160 },
       { label: "2024", value: 210 },
-      { label: "2025", value: 250 }
+      { label: "2025", value: 250 },
+      { label: "2026", value: 500 }
     ],
     actions: ["행사 종료 — 주요 미팅 결과 정리", "2027 Consensus Miami (5/4-6) 일정 확인", "기관 파트너십 후속 미팅 진행"],
     companies: [
@@ -380,7 +383,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 8 },
       { label: "2024", value: 12 },
-      { label: "2025", value: 15 }
+      { label: "2025", value: 15 },
+      { label: "2026", value: 15 }
     ],
     actions: ["초대장 수령 여부 확인", "기관 타겟 리스트 사전 공유", "중동 규제 브리핑 준비"],
     companies: [
@@ -457,7 +461,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 8 },
       { label: "2024", value: 10 },
-      { label: "2025", value: 12 }
+      { label: "2025", value: 12 },
+      { label: "2026", value: 15 }
     ],
     actions: ["기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
     companies: [
@@ -521,7 +526,7 @@ const eventData: EventData[] = [
       sponsors: 30,
       media: 15,
       eventTitle: "BUIDL Asia 2025",
-      notes: ["기술 중심 컨퍼런스로 한국 Web3 빌더 생태계 집약", "다양한 프로토콜 빌더 참여"],
+      notes: ["기술 중심 컨퍼런스로 한국 Web3 빌더 생태계 집약", "다양한 프로토콜 빌더 참여", "NEAR Illia Polosukhin 기조연설, Sofitel Seoul 개최"],
     },
     kpis: [
       { label: "미팅 적합도", value: "높음", detail: "빌더/기술" },
@@ -536,7 +541,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 7 }
+      { label: "2025", value: 7 },
+      { label: "2026", value: 5 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 빌더 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -616,7 +622,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 20 },
-      { label: "2025", value: 25 }
+      { label: "2025", value: 25 },
+      { label: "2026", value: 30 }
     ],
     actions: ["얼리버드 등록", "터키 시장 타겟 리스트 작성", "현지 파트너 사전 컨택"],
     companies: [
@@ -693,7 +700,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 28 },
-      { label: "2025", value: 35 }
+      { label: "2025", value: 35 },
+      { label: "2026", value: 45 }
     ],
     actions: ["얼리버드 25% 할인 등록", "캐나다 규제 브리핑 준비", "북미 타겟 파트너 사전 리스트"],
     companies: [
@@ -775,7 +783,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 0 },
-      { label: "2025", value: 60 }
+      { label: "2025", value: 60 },
+      { label: "2026", value: 80 }
     ],
     actions: ["GA 티켓 조기 구매", "아시아 파트너 사전 리스트", "홍콩 숙박 조기 예약"],
     companies: [
@@ -853,7 +862,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 95 },
-      { label: "2025", value: 780 }
+      { label: "2025", value: 780 },
+      { label: "2026", value: 900 }
     ],
     actions: ["얼리버드 티켓 구매", "기관 서밋 초대장 확인", "사이드 이벤트 호스팅 검토"],
     companies: [
@@ -915,7 +925,7 @@ const eventData: EventData[] = [
       sponsors: 50,
       media: 40,
       eventTitle: "CIS 2025 (Crypto Investment Show)",
-      notes: ["Korea BUIDL Week 기간 중 개최", "기관 투자 + 리테일 페스티벌 구성"],
+      notes: ["Korea BUIDL Week 기간 중 개최", "기관 투자 + 리테일 페스티벌 구성", "기관 포럼 매진, 한화투자증권 CSO 기조연설"],
     },
     kpis: [
       { label: "미팅 적합도", value: "높음", detail: "투자/기관" },
@@ -930,7 +940,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 }
+      { label: "2025", value: 8 },
+      { label: "2026", value: 10 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "만난 투자자 후속 미팅", "내년 일정 모니터링"],
     companies: [
@@ -1008,7 +1019,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 100 },
       { label: "2024", value: 150 },
-      { label: "2025", value: 200 }
+      { label: "2025", value: 200 },
+      { label: "2026", value: 200 }
     ],
     actions: ["행사 종료 — 참관 결과 정리", "홍콩 파트너 후속", "2027 일정 모니터링"],
     companies: [
@@ -1047,7 +1059,7 @@ const eventData: EventData[] = [
     tierScore: 79,
     tierReasons: ["동남아 최대 Web3 컨퍼런스", "규제·기관·AI 테마", "무료 일반 패스"],
     gradient: "from-emerald-100 via-white to-yellow-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=300&fit=crop",
     sideEventUrl: "https://www.seablockchainweek.org/side-events",
     sideEventSourceUrl: "https://luma.com/SEABW_Official",
@@ -1061,10 +1073,10 @@ const eventData: EventData[] = [
       expectations: ["동남아 규제 프레임워크 파악", "신흥 시장 파트너십", "RWA·AI 트렌드"],
     },
     feed: [
+      { label: "행사 종료 — 4,000+ 참석, 60+ 사이드 이벤트", time: "2026-05-24", type: "완료" },
+      { label: "Vitalik Buterin·Hashed CEO 기조연설", time: "2026-05-20", type: "연사" },
       { label: "일반 패스 무료 오픈", time: "3주 전", type: "비용" },
       { label: "Google·Coinbase 연사 확정", time: "1개월 전", type: "연사" },
-      { label: "5개 메인 트랙 발표", time: "2개월 전", type: "아젠다" },
-      { label: "Luma 사이드 이벤트 7개 공개 — RSVP 오픈", time: "2026-05-05", type: "사이드 이벤트" },
     ],
     archive: {
       year: "2025",
@@ -1077,8 +1089,8 @@ const eventData: EventData[] = [
     },
     kpis: [
       { label: "미팅 적합도", value: "높음", detail: "동남아/신흥" },
-      { label: "아카이브 성장", value: "+15%", detail: "참석자 YoY" },
-      { label: "업데이트 주기", value: "7일", detail: "30일 이내" },
+      { label: "아카이브 성장", value: "+50%", detail: "사이드이벤트 YoY" },
+      { label: "상태", value: "종료", detail: "5/18-24" },
     ],
     budget: [
       { label: "항공권", value: 500 },
@@ -1088,9 +1100,10 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 30 },
-      { label: "2025", value: 40 }
+      { label: "2025", value: 40 },
+      { label: "2026", value: 60 }
     ],
-    actions: ["무료 일반 패스 등록", "동남아 파트너 리스트 작성", "방콕 숙박 조기 예약", "사이드 이벤트 RSVP 마감 전 등록"],
+    actions: ["행사 종료 — 참관 결과 정리", "동남아 파트너 후속 미팅", "2027 SEABW 일정 모니터링"],
     companies: [
       { name: "0G (Zero Gravity)", tags: ["L1", "AI", "DA"], people: ["Team"], role: "⭐ AI 네이티브 L1 — 밸리데이터 모집 중", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전, 밸리데이터/스토리지 노드 모집" },
       { name: "GenLayer", tags: ["L1", "AI", "LLM Consensus"], people: ["Team"], role: "⭐ LLM 기반 컨센서스 L1 — 인센티브 테스트넷", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전, 밸리데이터 모집" },
@@ -1100,8 +1113,8 @@ const eventData: EventData[] = [
       { name: "Google", tags: ["Tech", "Cloud"], people: ["Iñaki Moreno Girona (Strategic Partnerships)"], role: "클라우드/인프라", layer: "Tech", tgeDone: true, tgeNote: "비토큰 기업" },
     ],
     sideEvents: {
-      count: 16,
-      label: "사이드 이벤트",
+      count: 60,
+      label: "사이드 이벤트 (60+ 공식 집계)",
       items: [
         { name: "AI DEMO DAY: BKK Builders Edition", host: "APE X CRYPTO, OnlyFounders", date: "2026-05-18", desc: "AI 데모 데이 빌더스 에디션 — 426+ RSVP", url: "https://luma.com/SEABW_Official" },
         { name: "The Alternative Asset Class: RWA Edition", host: "Binance TH Academy", date: "2026-05-18", desc: "RWA 대체 자산 에디션 @Conrad Bangkok — 92+ RSVP", url: "https://luma.com/SEABW_Official" },
@@ -1160,12 +1173,12 @@ const eventData: EventData[] = [
     ],
     archive: {
       year: "2025",
-      attendees: "20,000+",
-      sideEvents: 80,
-      sponsors: 120,
-      media: 60,
       eventTitle: "WebX 2025 Tokyo",
-      notes: ["일본 최대 Web3 컨퍼런스", "이시바 총리, CZ, Arthur Hayes 참석", "20,000+ 참석자"],
+      attendees: "14,115",
+      sideEvents: 170,
+      sponsors: 165,
+      media: 56,
+      notes: ["일본 최대 Web3 컨퍼런스", "이시바 총리, CZ, Arthur Hayes 참석", "14,115 참석자, 170+ 사이드 이벤트, 270+ 연사, 99개국"],
     },
     kpis: [
       { label: "미팅 적합도", value: "높음", detail: "일본/정책" },
@@ -1180,7 +1193,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 55 },
-      { label: "2025", value: 80 }
+      { label: "2025", value: 170 },
+      { label: "2026", value: 213 }
     ],
     actions: ["2026 날짜 발표 모니터링", "일본 파트너 사전 리스트", "항공권 조기 예약"],
     companies: [
@@ -1262,7 +1276,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 6 },
-      { label: "2025", value: 8 }
+      { label: "2025", value: 8 },
+      { label: "2026", value: 10 }
     ],
     actions: ["6/4-5 참석 등록", "10% 할인코드(OnlyBS) 확인", "비트코인 커뮤니티 네트워킹 준비"],
     companies: [
@@ -1333,7 +1348,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 420 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 10 }
+      { label: "2025", value: 10 },
+      { label: "2026", value: 13 }
     ],
     actions: ["티켓 구매 검토", "유럽 이더리움 파트너 리스트 작성"],
     companies: [
@@ -1404,7 +1420,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 35 },
-      { label: "2025", value: 50 }
+      { label: "2025", value: 50 },
+      { label: "2026", value: 65 }
     ],
     actions: ["티켓 조기 구매", "유럽 비트코인 파트너 리스트 작성", "프라하 숙박 예약"],
     companies: [
@@ -1472,7 +1489,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 400 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 15 }
+      { label: "2025", value: 15 },
+      { label: "2026", value: 19 }
     ],
     actions: ["티켓 구매 검토", "베를린 파트너 리스트 작성"],
     companies: [
@@ -1540,7 +1558,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 440 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 30 }
+      { label: "2025", value: 30 },
+      { label: "2026", value: 40 }
     ],
     actions: ["서밋 티켓 구매 검토", "네덜란드 기관 파트너 리스트 작성"],
     companies: [
@@ -1608,7 +1627,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 350 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 40 }
+      { label: "2025", value: 40 },
+      { label: "2026", value: 50 }
     ],
     actions: ["티켓 구매 검토", "일본 파트너 리스트 작성", "교토 숙박 예약"],
     companies: [
@@ -1676,7 +1696,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 300 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 20 }
+      { label: "2025", value: 20 },
+      { label: "2026", value: 25 }
     ],
     actions: ["항공편 비용 모니터링", "남미 파트너 리스트 작성"],
     companies: [
@@ -1744,7 +1765,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 230 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 15 }
+      { label: "2025", value: 15 },
+      { label: "2026", value: 19 }
     ],
     actions: ["얼리버드 티켓 검토", "발리 항공편 모니터링"],
     companies: [
@@ -1811,7 +1833,8 @@ const eventData: EventData[] = [
       { label: "현지비", value: 400 },
     ],
     sideEventTrend: [
-      { label: "2025", value: 5 }
+      { label: "2025", value: 5 },
+      { label: "2026", value: 6 }
     ],
     actions: ["해커톤 참가 신청 모니터링"],
     companies: [
@@ -1882,7 +1905,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 120 },
       { label: "2024", value: 170 },
-      { label: "2025", value: 1000 }
+      { label: "2025", value: 1000 },
+      { label: "2026", value: 1200 }
     ],
     actions: ["티켓 사전 구매 검토", "싱가포르 숙박 조기 예약", "기관/VC 타겟 리스트 작성"],
     companies: [
@@ -1960,7 +1984,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2022", value: 80 },
       { label: "2023", value: 100 },
-      { label: "2024", value: 150 }
+      { label: "2024", value: 150 },
+      { label: "2026", value: 180 }
     ],
     actions: ["티켓 사전 구매 검토", "인도 비자 확인", "뭄바이 숙박 조기 예약"],
     companies: [
@@ -2032,7 +2057,9 @@ const eventData: EventData[] = [
       { label: "티켓", value: 399 },
       { label: "현지비", value: 280 },
     ],
-    sideEventTrend: [],
+    sideEventTrend: [
+      { label: "2026", value: 5 }
+    ],
     actions: ["행사 종료 — 주요 미팅 결과 정리", "베트남 파트너십 후속 진행", "SEABW 방콕 (5/18) 연계 탐색"],
     companies: [
       { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Team"], role: "⭐ AI L1 — 동남아 진출", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
@@ -2102,7 +2129,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 }
+      { label: "2025", value: 8 },
+      { label: "2026", value: 10 }
     ],
     actions: ["티켓 사전 구매 — 프리미엄 가격", "파리 호텔 조기 예약", "StableDay 세션 참석 계획"],
     companies: [
@@ -2179,7 +2207,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 15 },
-      { label: "2025", value: 20 }
+      { label: "2025", value: 20 },
+      { label: "2026", value: 25 }
     ],
     actions: ["얼리버드 티켓 등록", "유럽 파트너 리스트 준비", "MiCA 규제 브리핑"],
     companies: [
@@ -2250,7 +2279,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 10 },
-      { label: "2025", value: 15 }
+      { label: "2025", value: 15 },
+      { label: "2026", value: 20 }
     ],
     actions: ["베뉴 확정 모니터링", "얼리버드 티켓 등록", "유럽 비트코인 파트너 리스트"],
     companies: [
@@ -2321,7 +2351,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 8 },
-      { label: "2025", value: 12 }
+      { label: "2025", value: 12 },
+      { label: "2026", value: 15 }
     ],
     actions: ["호주 비자 확인", "얼리버드 티켓 등록", "시드니 호텔 조기 예약"],
     companies: [
@@ -2396,7 +2427,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 20 },
-      { label: "2025", value: 30 }
+      { label: "2025", value: 30 },
+      { label: "2026", value: 40 }
     ],
     actions: ["슈퍼 얼리버드 등록", "두바이 호텔 사전 예약", "투자자 미팅 리스트 준비"],
     companies: [
@@ -2470,7 +2502,8 @@ const eventData: EventData[] = [
     ],
     sideEventTrend: [
       { label: "2024", value: 5 },
-      { label: "2025", value: 8 }
+      { label: "2025", value: 8 },
+      { label: "2026", value: 10 }
     ],
     actions: ["얼리버드 티켓 등록", "아부다비 호텔 사전 예약", "MENA 파트너 리스트 준비"],
     companies: [
@@ -2543,7 +2576,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 40 },
       { label: "2024", value: 60 },
-      { label: "2025", value: 80 }
+      { label: "2025", value: 80 },
+      { label: "2026", value: 100 }
     ],
     actions: ["티켓 사전 구매 — 24시간 한정 할인 확인", "런던 호텔 조기 예약", "Solana 밸리데이터 타겟 리스트 작성", "Hacker House 참가 검토"],
     companies: [
@@ -2604,13 +2638,13 @@ const eventData: EventData[] = [
       { label: "Vitalik 기조연설", time: "2026-03-30", type: "연사" },
     ],
     archive: {
-      year: "2026",
-      attendees: "6,500+",
-      sideEvents: 120,
-      sponsors: 100,
-      media: 50,
-      eventTitle: "EthCC[9] 2026",
-      notes: ["유럽 최대 이더리움 행사 — 칸 Palais des Festivals", "6,500+ 참석, 120+ 사이드 이벤트", "EthVC 스타트업 트랙 포함"],
+      year: "2025",
+      eventTitle: "EthCC[8] 2025",
+      attendees: "6,000+",
+      sideEvents: 100,
+      sponsors: 90,
+      media: 45,
+      notes: ["유럽 최대 이더리움 행사", "칸 Palais des Festivals", "EthVC 스타트업 트랙 포함"],
     },
     kpis: [
       { label: "미팅 적합도", value: "매우 높음", detail: "ETH/빌더" },
@@ -2626,7 +2660,8 @@ const eventData: EventData[] = [
     sideEventTrend: [
       { label: "2023", value: 60 },
       { label: "2024", value: 80 },
-      { label: "2025", value: 100 }
+      { label: "2025", value: 100 },
+      { label: "2026", value: 120 }
     ],
     actions: ["행사 종료 — 주요 미팅 결과 정리", "Ethereum 빌더 후속 미팅", "2027 EthCC[10] 일정 모니터링"],
     companies: [

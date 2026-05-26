@@ -4,7 +4,48 @@ import { useRef, useState } from "react";
 import type { EventData } from "@/lib/events";
 import { Building2, CalendarDays, Handshake, Users } from "lucide-react";
 
+const CITY_AIRPORT: Record<string, string> = {
+  "Las Vegas": "LAS",
+  "Dubai": "DXB",
+  "Miami": "MIA",
+  "Abu Dhabi": "AUH",
+  "Rotkreuz": "ZRH",
+  "Istanbul": "IST",
+  "Toronto": "YYZ",
+  "Hong Kong": "HKG",
+  "Bangkok": "BKK",
+  "Tokyo": "NRT",
+  "Milan": "MXP",
+  "Prague": "PRG",
+  "Berlin": "BER",
+  "Amsterdam": "AMS",
+  "Kyoto": "KIX",
+  "Rio de Janeiro": "GIG",
+  "Bali": "DPS",
+  "Rome": "FCO",
+  "Singapore": "SIN",
+  "Mumbai": "BOM",
+  "Ho Chi Minh City": "SGN",
+  "Paris": "CDG",
+  "Barcelona": "BCN",
+  "London": "LHR",
+  "Cannes": "NCE",
+  "Sydney": "SYD",
+};
+
 const BUDGET_COLORS = ["#3B82F6", "#22C55E", "#F59E0B", "#F472B6", "#94A3B8"];
+
+function buildFlightUrl(event: EventData): string | null {
+  if (event.isDomestic) return null;
+  const dest = CITY_AIRPORT[event.city];
+  if (!dest) return null;
+  const depDate = event.date;
+  const endDate = event.endDate || event.date;
+  const retDate = new Date(endDate);
+  retDate.setDate(retDate.getDate() + 1);
+  const retDateStr = retDate.toISOString().slice(0, 10);
+  return `https://www.google.com/travel/flights?q=flights+from+ICN+to+${dest}+on+${depDate}+through+${retDateStr}&curr=KRW`;
+}
 
 export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) {
   const latestValue = data[data.length - 1]?.value ?? 0;
@@ -76,7 +117,7 @@ export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) 
   );
 }
 
-export function BudgetPieChart({ data, total }: { data: EventData["budget"]; total: number }) {
+export function BudgetPieChart({ data, total, event }: { data: EventData["budget"]; total: number; event: EventData }) {
   const sum = data.reduce((acc, item) => acc + item.value, 0);
   let cursor = 0;
   const segments = data.map((item, index) => {
@@ -164,7 +205,27 @@ export function BudgetPieChart({ data, total }: { data: EventData["budget"]; tot
                 className={`grid grid-cols-[8px_1fr_auto] items-center gap-1.5 rounded px-1 py-0.5 text-[10px] transition-colors ${hovered === index ? "bg-blue-50" : ""}`}
               >
                 <span className="h-2 w-2 rounded-full" style={{ backgroundColor: BUDGET_COLORS[index % BUDGET_COLORS.length] }} />
-                <span className="truncate font-semibold text-slate-600">{item.label}</span>
+                <div className="flex items-center gap-1 truncate">
+                  <span className="truncate font-semibold text-slate-600">{item.label}</span>
+                  {item.label === "항공권" && !event.isDomestic && (() => {
+                    const url = buildFlightUrl(event);
+                    if (!url) return null;
+                    return (
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded text-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                        title="Google Flights에서 항공편 검색"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-3 w-3">
+                          <path d="M6 3h7v7M13 3L3 13" />
+                        </svg>
+                      </a>
+                    );
+                  })()}
+                </div>
                 <span className="font-bold text-slate-700">{percent}% (${item.value.toLocaleString()})</span>
               </div>
             );

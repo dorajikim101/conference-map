@@ -160,7 +160,7 @@ export function EventDetail({ event }: EventDetailProps) {
 
       <div className="mt-2 grid grid-cols-[1fr_1fr_1.05fr] gap-2">
         <SideEventChart data={event.sideEventTrend} />
-        <BudgetPieChart data={event.budget} total={event.cost.total} />
+        <BudgetPieChart data={event.budget} total={event.cost.total} event={event} />
         <KpiGrid data={event.kpis} event={event} />
       </div>
     </section>
