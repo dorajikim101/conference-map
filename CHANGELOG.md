@@ -2,6 +2,18 @@
 
 All notable Conference Map changes should be documented here.
 
+## [v1.1.4] - 2026-05-26
+
+### Fixed
+
+- Restored **SEABW 2026** side-event count to `26`, using the official SEABW week Luma calendar window (`2026-05-18` through `2026-05-24`) as the archive baseline.
+- Replaced the too-conservative `16` subset from `v1.1.3`.
+- Kept homepage `60+ Side Events` out of final archive count unless a post-event recap confirms it.
+
+### Verified
+
+- `npx tsc --noEmit`
+
 ## [v1.1.3] - 2026-05-26
 
 ### Fixed
