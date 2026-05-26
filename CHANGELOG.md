@@ -2,6 +2,18 @@
 
 All notable Conference Map changes should be documented here.
 
+## [v1.1.3] - 2026-05-26
+
+### Fixed
+
+- Re-corrected **SEABW 2026** side-event count to the conservative verified baseline: `16`.
+- Stopped using broader Luma API scrape totals as the archive count when they exceed the reviewed official/Luma list.
+- Clarified that homepage `60+ Side Events` should not be treated as a final archive count without a post-event report.
+
+### Verified
+
+- `npx tsc --noEmit`
+
 ## [v1.1.2] - 2026-05-26
 
 ### Fixed
