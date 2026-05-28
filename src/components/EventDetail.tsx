@@ -1,8 +1,9 @@
 "use client";
 
 import type { EventData } from "@/lib/events";
+import { getFlightSearchUrl } from "@/lib/events";
 import { Badge } from "./ui/badge";
-import { AlertTriangle, Building2, Diamond, ExternalLink, Globe, Mic2, Star, Target, ThumbsUp } from "lucide-react";
+import { AlertTriangle, Building2, Diamond, ExternalLink, Globe, Mic2, Plane, Star, Target, ThumbsUp } from "lucide-react";
 import { BudgetPieChart, KpiGrid, SideEventChart } from "./EventCharts";
 
 interface EventDetailProps {
@@ -157,6 +158,26 @@ export function EventDetail({ event }: EventDetailProps) {
           {event.cancelReason}
         </div>
       )}
+
+      {/* 항공권 검색 */}
+      {(() => {
+        const flightUrl = getFlightSearchUrl(event);
+        if (!flightUrl) return null;
+        return (
+          <div className="mt-2 flex items-center gap-2">
+            <a
+              href={flightUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-blue-50 px-3 py-1.5 text-[11px] font-bold text-blue-600 hover:border-blue-400 hover:bg-blue-100 transition-colors"
+            >
+              <Plane size={13} />
+              항공권 검색
+              <ExternalLink size={10} />
+            </a>
+          </div>
+        );
+      })()}
 
       <div className="mt-2 grid grid-cols-[1fr_1fr_1.05fr] gap-2">
         <SideEventChart data={event.sideEventTrend} />

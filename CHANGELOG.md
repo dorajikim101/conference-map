@@ -2,6 +2,29 @@
 
 All notable Conference Map changes should be documented here.
 
+## [v1.1.5] - 2026-05-28
+
+### Changed
+
+- Reworked the event timeline into two synchronized lanes: **S tier** on the left and **A/B tier** on the right.
+- Added compact A/B cards and a viewport-based “magnifying glass” behavior so visible A/B events expand while off-screen events collapse.
+- Updated close-date layout so events on different lanes stay separated by the actual day gap (for example, overlapping multi-day trips appear only a few pixels apart) while cards within the same lane still avoid overlap.
+- Added a red **TODAY** marker across the timeline.
+- Event selection now scrolls the selected event near the top of its lane for focused review.
+- Removed tier badges from event images because lane placement already communicates S/A/B tier.
+
+### Fixed
+
+- Fixed timeline desynchronization where the S lane could show August–October while the A/B lane showed May–June.
+- Fixed a regression where removing tier badges accidentally nested card content inside image containers.
+- Fixed scroll lock caused by repeated selection auto-scroll during A/B viewport expansion updates.
+
+### Verified
+
+- `npx tsc --noEmit`
+- `npm run build`
+- Vercel production deploy: https://conference-map.vercel.app
+
 ## [v1.1.4] - 2026-05-26
 
 ### Fixed

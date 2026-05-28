@@ -14,7 +14,7 @@ const CITY_AIRPORT: Record<string, string> = {
   "Toronto": "YYZ",
   "Hong Kong": "HKG",
   "Bangkok": "BKK",
-  "Tokyo": "NRT",
+  "Tokyo": "HND",
   "Milan": "MXP",
   "Prague": "PRG",
   "Berlin": "BER",
@@ -39,7 +39,10 @@ function buildFlightUrl(event: EventData): string | null {
   if (event.isDomestic) return null;
   const dest = CITY_AIRPORT[event.city];
   if (!dest) return null;
-  const depDate = event.date;
+  // 출발: 행사 시작 2일 전, 귀국: 행사 종료 다음 날
+  const startDate = new Date(event.date);
+  startDate.setDate(startDate.getDate() - 2);
+  const depDate = startDate.toISOString().slice(0, 10);
   const endDate = event.endDate || event.date;
   const retDate = new Date(endDate);
   retDate.setDate(retDate.getDate() + 1);
