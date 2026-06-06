@@ -57,41 +57,42 @@ export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) 
   const max = Math.max(...data.map((item) => item.value), 1);
 
   const chartW = 280;
-  const chartH = 80;
+  const chartH = 96;
   const padX = 30;
-  const padY = 12;
+  const padTop = 24;
+  const padBottom = 18;
   const innerW = chartW - padX * 2;
-  const innerH = chartH - padY * 2;
+  const innerH = chartH - padTop - padBottom;
 
   const points = data.map((item, i) => ({
     x: padX + (data.length > 1 ? (i / (data.length - 1)) * innerW : innerW / 2),
-    y: padY + innerH - (item.value / max) * innerH,
+    y: padTop + innerH - (item.value / max) * innerH,
     ...item,
   }));
 
   const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
-  const areaPath = `${linePath} L ${points[points.length - 1].x} ${padY + innerH} L ${points[0].x} ${padY + innerH} Z`;
+  const areaPath = `${linePath} L ${points[points.length - 1].x} ${padTop + innerH} L ${points[0].x} ${padTop + innerH} Z`;
 
   return (
     <div className="h-[190px] rounded-lg border border-slate-200 bg-white p-3">
-      <h4 className="mb-2 text-[13px] font-black text-blue-700">사이드 이벤트 성장 추이</h4>
-      <div className="flex justify-center">
-        <svg width={chartW} height={chartH} viewBox={`0 0 ${chartW} ${chartH}`} className="h-[80px] w-auto">
+      <h4 className="mb-1 text-[13px] font-black text-blue-700">사이드 이벤트 성장 추이</h4>
+      <div className="flex h-[104px] items-center justify-center">
+        <svg width={chartW} height={chartH} viewBox={`0 0 ${chartW} ${chartH}`} className="h-[96px] w-auto overflow-visible">
           {/* grid lines */}
           {[0.25, 0.5, 0.75].map((ratio) => (
             <line
               key={ratio}
               x1={padX}
-              y1={padY + innerH * (1 - ratio)}
+              y1={padTop + innerH * (1 - ratio)}
               x2={chartW - padX}
-              y2={padY + innerH * (1 - ratio)}
+              y2={padTop + innerH * (1 - ratio)}
               stroke="#e2e8f0"
               strokeWidth={0.5}
               strokeDasharray="3 3"
             />
           ))}
           {/* baseline */}
-          <line x1={padX} y1={padY + innerH} x2={chartW - padX} y2={padY + innerH} stroke="#cbd5e1" strokeWidth={0.5} />
+          <line x1={padX} y1={padTop + innerH} x2={chartW - padX} y2={padTop + innerH} stroke="#cbd5e1" strokeWidth={0.5} />
           {/* area fill */}
           <path d={areaPath} fill="url(#areaGrad)" opacity={0.15} />
           <defs>
@@ -107,12 +108,12 @@ export function SideEventChart({ data }: { data: EventData["sideEventTrend"] }) 
             <g key={p.label}>
               <circle cx={p.x} cy={p.y} r={3.5} fill="#3B82F6" stroke="#fff" strokeWidth={1.5} />
               <text x={p.x} y={p.y - 6} textAnchor="middle" className="text-[10px]" fill="#334155" fontWeight={700}>{p.value}</text>
-              <text x={p.x} y={padY + innerH + 12} textAnchor="middle" className="text-[10px]" fill="#64748b" fontWeight={600}>{p.label}</text>
+              <text x={p.x} y={padTop + innerH + 14} textAnchor="middle" className="text-[10px]" fill="#64748b" fontWeight={600}>{p.label}</text>
             </g>
           ))}
         </svg>
       </div>
-      <div className="mt-1 flex items-end gap-2">
+      <div className="mt-0 flex items-end gap-2">
         <span className="text-[20px] font-black text-emerald-600">▲ {growthRate}%</span>
         <span className="pb-1 text-[11px] font-semibold text-slate-500">전년 대비 성장률</span>
       </div>

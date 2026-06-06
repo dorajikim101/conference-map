@@ -276,7 +276,7 @@ export function EventList({ events, selectedId, onSelect }: EventListProps) {
   // ═══════════════════════════════════════════════════
   const pixelsPerDay = 8;
 
-  function dateToTimelineY(dateStr: string): number {
+  function dateToLinearY(dateStr: string): number {
     return dateToDay(dateStr) * pixelsPerDay;
   }
 
@@ -290,7 +290,7 @@ export function EventList({ events, selectedId, onSelect }: EventListProps) {
 
     for (const evt of evts) {
       const cardH = getHeight(evt);
-      const baseY = dateToTimelineY(evt.date);
+      const baseY = dateToLinearY(evt.date);
       const y = Math.max(baseY, lastBottom + minGap);
       lastBottom = y + cardH;
       result.push({ y, event: evt, cardH });
@@ -303,6 +303,35 @@ export function EventList({ events, selectedId, onSelect }: EventListProps) {
     () => layoutColumn(sEvents, () => sCardHeight),
     [sEvents, globalStart],
   );
+
+  // 왼쪽 S 라인이 실제로 펼쳐진 날짜 스케일을 기준으로
+  // 오른쪽 A/B와 월마커/TODAY도 같은 기간대에 맞춘다.
+  function dateToTimelineY(dateStr: string): number {
+    const day = dateToDay(dateStr);
+    const points = sPositions.map((p) => ({ day: dateToDay(p.event.date), y: p.y }));
+
+    if (points.length === 0) return dateToLinearY(dateStr);
+    if (day <= points[0].day) {
+      return points[0].y - (points[0].day - day) * pixelsPerDay;
+    }
+
+    const last = points[points.length - 1];
+    if (day >= last.day) {
+      return last.y + (day - last.day) * pixelsPerDay;
+    }
+
+    for (let i = 0; i < points.length - 1; i++) {
+      const a = points[i];
+      const b = points[i + 1];
+      if (day >= a.day && day <= b.day) {
+        const span = b.day - a.day || 1;
+        const t = (day - a.day) / span;
+        return a.y + t * (b.y - a.y);
+      }
+    }
+
+    return dateToLinearY(dateStr);
+  }
 
   // 뷰포트 안에 있는 A/B 카드 추적
   const [visibleABIds, setVisibleABIds] = useState<Set<string>>(new Set());
@@ -368,7 +397,7 @@ export function EventList({ events, selectedId, onSelect }: EventListProps) {
 
     for (const evt of abEvents) {
       const isExpanded = expandedSet.has(evt.id);
-      const baseY = dateToTimelineY(evt.date); // 공통 날짜 슬롯 위치
+      const baseY = dateToTimelineY(evt.date); // S 라인 기준 공통 날짜 위치
       const fullCardH = evt.tier === "B" ? bCardHeight : aCardHeight;
       const cardH = isExpanded ? fullCardH : miniCardHeight;
 
