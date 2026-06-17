@@ -421,7 +421,7 @@ const eventData: EventData[] = [
     tierScore: 72,
     tierReasons: ["스위스 크립토 밸리 기반", "기술 중심 고밀도", "프로토콜 엔지니어 집중"],
     gradient: "from-red-100 via-white to-neutral-100",
-    status: "live",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/CVC26",
     website: "https://cryptovalleyconference.com/",
@@ -434,6 +434,7 @@ const eventData: EventData[] = [
       expectations: ["프로토콜 레벨 기술 논의", "규제/컴플라이언스 인사이트", "유럽 시장 진출 참고"],
     },
     feed: [
+      { label: "행사 종료 — 6월 말 데이터/아카이브 확인 필요", time: "2026-06-17", type: "업데이트" },
       { label: "CVC 2026 개막 — Rotkreuz에서 2일간 진행", time: "2026-05-28", type: "라이브" },
       { label: "CFP(발표 제안) 마감 임박", time: "2주 전", type: "아젠다" },
       { label: "숙박 할인 코드 공개", time: "3주 전", type: "비용" },
@@ -465,7 +466,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 12 },
       { label: "2026", value: 15 }
     ],
-    actions: ["기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
+    actions: ["행사 종료 후 참석자/스폰서/사이드이벤트 실적 확인", "기술 트랙 세션 리뷰", "스위스 규제 업데이트 확인", "유럽 파트너 사전 컨택"],
     companies: [
       { name: "Ethereum Foundation", tags: ["Protocol", "Research"], people: ["Researcher"], role: "프로토콜 개발", layer: "L1", tgeDone: true, tgeNote: "ETH" },
       { name: "Sygnum Bank", tags: ["Banking", "Crypto"], people: ["Digital Assets Lead"], role: "기관 은행", layer: "Banking", tgeDone: true, tgeNote: "비토큰 기업" },
@@ -1170,7 +1171,7 @@ const eventData: EventData[] = [
     tierScore: 68,
     tierReasons: ["한국 비트코인 전문 컨퍼런스", "정책·금융·기술 교차", "비트코인 커뮤니티 집결"],
     gradient: "from-orange-100 via-white to-yellow-100",
-    status: "upcoming",
+    status: "completed",
     isDomestic: true,
     imageUrl: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=600&h=300&fit=crop",
     website: "https://bitcoin-seoul.kr/",
@@ -1183,6 +1184,7 @@ const eventData: EventData[] = [
       expectations: ["한국 비트코인 규제 동향", "커뮤니티 네트워킹", "채굴·에너지 인프라 논의"],
     },
     feed: [
+      { label: "행사 종료 — 서울 로컬 네트워크 후속 정리 필요", time: "2026-06-17", type: "업데이트" },
       { label: "서포터즈 30명 모집 마감 (5/11)", time: "2026-05-11", type: "모집" },
       { label: "2026 연사 라인업 곧 발표 예정", time: "2026-05-10", type: "연사" },
       { label: "전년 Preston Pysh·Dennis Porter 참석", time: "2025 참조", type: "연사" },
@@ -1212,7 +1214,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 8 },
       { label: "2026", value: 10 }
     ],
-    actions: ["6/4-5 참석 등록", "10% 할인코드(OnlyBS) 확인", "비트코인 커뮤니티 네트워킹 준비"],
+    actions: ["행사 종료 후 로컬 파트너/후속 미팅 정리", "6/4-5 참석 등록", "10% 할인코드(OnlyBS) 확인", "비트코인 커뮤니티 네트워킹 준비"],
     companies: [
       { name: "Sora Ventures", tags: ["VC", "Bitcoin"], people: ["Jason Fang (Partner)"], role: "투자", layer: "VC", tgeDone: true, tgeNote: "아시아 비트코인 VC" },
       { name: "Satoshi Action Fund", tags: ["Policy", "US"], people: ["Dennis Porter (CEO)"], role: "정책", layer: "Policy", tgeDone: false, tgeNote: "비트코인 정책 단체" },
@@ -1244,7 +1246,7 @@ const eventData: EventData[] = [
     tierScore: 69,
     tierReasons: ["이탈리아 최대 Ethereum/Web3 컨퍼런스", "2,000+ 참석자 예상", "100+ 연사"],
     gradient: "from-green-100 via-white to-red-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/ethmilan2026?k=c",
     website: "https://ethmilan.xyz/",
@@ -1257,6 +1259,7 @@ const eventData: EventData[] = [
       expectations: ["이탈리아 Web3 규제 동향", "유럽 이더리움 빌더 네트워킹", "DeFi·인프라 프로젝트 발굴"],
     },
     feed: [
+      { label: "행사 종료 — 아카이브 수치 재확인 필요", time: "2026-06-17", type: "업데이트" },
       { label: "Luma Crypto 허브 등재 확인", time: "2026-05-07", type: "정보" },
       { label: "티켓 판매 중", time: "현재", type: "비용" },
     ],
@@ -1284,7 +1287,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 10 },
       { label: "2026", value: 13 }
     ],
-    actions: ["티켓 구매 검토", "유럽 이더리움 파트너 리스트 작성"],
+    actions: ["행사 종료 후 참석자/사이드이벤트 실적 확인", "티켓 구매 검토", "유럽 이더리움 파트너 리스트 작성"],
     companies: [
       { name: "Ethereum Foundation", tags: ["L1", "Ethereum"], people: ["Vitalik Buterin (Co-Founder)"], role: "이더리움 코어", layer: "L1", tgeDone: true, tgeNote: "ETH" },
       { name: "0G (Zero Gravity)", tags: ["L1", "AI"], people: ["Michael Heinrich (CEO)"], role: "⭐ AI 네이티브 L1 — 밸리데이터 모집", isNew: true, layer: "L1", tgeDone: false, tgeNote: "TGE 전" },
@@ -1315,7 +1318,7 @@ const eventData: EventData[] = [
     tierScore: 82,
     tierReasons: ["유럽 최대 비트코인 이벤트", "250+ 연사", "100+ 기업 참여"],
     gradient: "from-orange-100 via-white to-red-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/btc-prague?k=c",
     website: "https://btcprague.com/",
@@ -1328,6 +1331,7 @@ const eventData: EventData[] = [
       expectations: ["유럽 비트코인 채택 동향", "채굴 인프라 파트너십", "동유럽 규제 인사이트"],
     },
     feed: [
+      { label: "행사 종료 — 비트코인 유럽 네트워크 후속 확인", time: "2026-06-17", type: "업데이트" },
       { label: "티켓 판매 중 — 가격 인상 예정", time: "현재", type: "비용" },
       { label: "Luma Crypto 허브 Launching Soon 등재", time: "2026-05-07", type: "정보" },
     ],
@@ -1356,7 +1360,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 50 },
       { label: "2026", value: 65 }
     ],
-    actions: ["티켓 조기 구매", "유럽 비트코인 파트너 리스트 작성", "프라하 숙박 예약"],
+    actions: ["행사 종료 후 스폰서/주요 발표 아카이브 업데이트", "티켓 조기 구매", "유럽 비트코인 파트너 리스트 작성", "프라하 숙박 예약"],
     companies: [
       { name: "Trezor", tags: ["Hardware", "Bitcoin"], people: ["Matej Žilák (CEO)"], role: "하드웨어 지갑 — 체코", isNew: true, layer: "Infra", tgeDone: true, tgeNote: "체코" },
       { name: "Braiins", tags: ["Mining", "Bitcoin"], people: ["Jan Čapek (CEO)"], role: "비트코인 채굴 — 체코", isNew: true, layer: "Mining", tgeDone: true, tgeNote: "체코 채굴" },
@@ -2023,7 +2027,7 @@ const eventData: EventData[] = [
     tierScore: 82,
     tierReasons: ["Web3의 다보스", "90% C-suite 참석", "루브르 궁전 프리미엄 베뉴"],
     gradient: "from-blue-100 via-white to-indigo-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=300&fit=crop",
     sideEventUrl: "https://luma.com/proofoftalk",
     website: "https://proofoftalk.io/",
@@ -2036,6 +2040,7 @@ const eventData: EventData[] = [
       expectations: ["기관 채택 전략 파악", "스테이블코인 밸류체인 인사이트", "C-suite 네트워킹"],
     },
     feed: [
+      { label: "행사 종료 — 정책/기관 네트워크 후속 정리 필요", time: "2026-06-17", type: "업데이트" },
       { label: "StableDay 프로그램 발표", time: "2주 전", type: "아젠다" },
       { label: "연사 라인업 완성", time: "1개월 전", type: "연사" },
       { label: "루브르 궁전 베뉴 확정", time: "3개월 전", type: "운영" },
@@ -2065,7 +2070,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 8 },
       { label: "2026", value: 10 }
     ],
-    actions: ["티켓 사전 구매 — 프리미엄 가격", "파리 호텔 조기 예약", "StableDay 세션 참석 계획"],
+    actions: ["행사 종료 후 기관 참석자/스폰서 실적 확인", "티켓 사전 구매 — 프리미엄 가격", "파리 호텔 조기 예약", "StableDay 세션 참석 계획"],
     companies: [
       { name: "Securitize", tags: ["RWA", "Tokenization"], people: ["CEO"], role: "토큰화", layer: "Infra", tgeDone: true, tgeNote: "DS Protocol" },
       { name: "Aave", tags: ["DeFi", "Lending"], people: ["Founder"], role: "DeFi 인프라", layer: "DeFi", tgeDone: true, tgeNote: "AAVE 토큰" },
@@ -2632,7 +2637,7 @@ const eventData: EventData[] = [
     tierScore: 81,
     tierReasons: ["Ripple 플래그십 연례 이벤트", "Swell + Apex 통합", "전통 금융×온체인 교차"],
     gradient: "from-blue-100 via-white to-cyan-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&h=300&fit=crop",
     website: "https://cryptonomads.org/e/Swell2026",
     cost: { flight: 1050, hotel: 1400, transport: 180, meals: 400, ticket: 599, total: 3629 },
@@ -2644,6 +2649,7 @@ const eventData: EventData[] = [
       expectations: ["전통 금융 온체인 전환 동향", "Ripple 파트너십 네트워킹", "CBDC·크로스보더 결제 트렌드"],
     },
     feed: [
+      { label: "행사 종료 — Ripple 생태계 발표 후속 확인", time: "2026-06-17", type: "업데이트" },
       { label: "Swell + Apex 통합 발표 — cryptonomads 등재", time: "2026-05-27", type: "공지" },
     ],
     archive: {
@@ -2670,7 +2676,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 15 },
       { label: "2026", value: 20 },
     ],
-    actions: ["일정 상세 모니터링", "Ripple 파트너 리스트 작성"],
+    actions: ["행사 종료 후 Ripple 파트너/발표 내용 정리", "일정 상세 모니터링", "Ripple 파트너 리스트 작성"],
     companies: [
       { name: "Ripple", tags: ["Payments", "XRP"], people: ["Brad Garlinghouse (CEO)"], role: "주최사", layer: "L1", tgeDone: true, tgeNote: "XRP" },
       { name: "Archblock", tags: ["RWA", "DeFi"], people: ["Team"], role: "RWA 인프라", layer: "DeFi", tgeDone: true, tgeNote: "TRU" },
@@ -2818,7 +2824,7 @@ const eventData: EventData[] = [
     tierScore: 82,
     tierReasons: ["터키 최대 크립토 위크", "863 사이드이벤트", "유라시아 교차점"],
     gradient: "from-red-100 via-white to-emerald-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&h=300&fit=crop",
     sideEventUrl: "https://cryptonomads.org/e/IstanbulBlockchainWeek2026",
     website: "https://istanbulblockchainweek.com/",
@@ -2831,6 +2837,7 @@ const eventData: EventData[] = [
       expectations: ["유라시아 크립토 시장 동향", "대량 네트워킹 기회", "신흥 시장 프로젝트 발굴"],
     },
     feed: [
+      { label: "행사 종료 — 터키/중동 네트워크 후속 확인", time: "2026-06-17", type: "업데이트" },
       { label: "863개 사이드이벤트 등록 — cryptonomads", time: "2026-05-27", type: "사이드이벤트" },
     ],
     archive: {
@@ -2857,7 +2864,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 500 },
       { label: "2026", value: 863 },
     ],
-    actions: ["사이드이벤트 큐레이션", "숙박 조기 예약"],
+    actions: ["행사 종료 후 지역 파트너/스폰서 데이터 확인", "사이드이벤트 큐레이션", "숙박 조기 예약"],
     companies: [],
     sideEvents: { count: 863, label: "사이드 이벤트", items: [] },
     keynoteSpeakers: { names: ["터키 크립토 리더진"], insight: "유라시아 교차점 — 863개 사이드이벤트로 세계 최고 밀도" },
@@ -2877,7 +2884,7 @@ const eventData: EventData[] = [
     tierScore: 80,
     tierReasons: ["유럽 최대 블록체인 위크", "Web3 Summit 포함", "9일간 개최"],
     gradient: "from-amber-100 via-white to-red-100",
-    status: "upcoming",
+    status: "live",
     imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=300&fit=crop",
     sideEventUrl: "https://cryptonomads.org/e/Web3Summit2026",
     website: "https://berlinblockchainweek.com/",
@@ -2890,6 +2897,7 @@ const eventData: EventData[] = [
       expectations: ["유럽 Web3 트렌드", "빌더 네트워킹", "오픈소스 프로젝트 발굴"],
     },
     feed: [
+      { label: "행사 진행 중 — 6/21까지 베를린 생태계 주간 모니터링", time: "2026-06-17", type: "라이브" },
       { label: "Web3 Summit 일정 확정 (6/18-19)", time: "2026-05-27", type: "일정" },
     ],
     archive: {
@@ -2916,7 +2924,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 80 },
       { label: "2026", value: 100 },
     ],
-    actions: ["Web3 Summit 티켓 확인", "숙박 조기 예약"],
+    actions: ["행사 진행 중 - 주요 사이드이벤트/해커하우스 모니터링", "Web3 Summit 티켓 확인", "숙박 조기 예약"],
     companies: [],
     sideEvents: { count: 0, label: "사이드 이벤트 — 상세 미공개", items: [] },
     keynoteSpeakers: { names: ["Web3 Foundation", "Polkadot/Chainlink 리더진"], insight: "유럽 Web3 커뮤니티 핵심 — Web3 Summit이 메인 이벤트" },
@@ -2997,7 +3005,7 @@ const eventData: EventData[] = [
     tierScore: 82,
     tierReasons: ["유럽 최대 핀테크 컨퍼런스", "54 사이드이벤트", "전통 금융+크립토 교차"],
     gradient: "from-orange-100 via-white to-blue-100",
-    status: "upcoming",
+    status: "completed",
     imageUrl: "https://images.unsplash.com/photo-1534234828563-025bd5734dae?w=600&h=300&fit=crop",
     website: "https://www.money20-20.com/europe",
     cost: { flight: 800, hotel: 1100, transport: 120, meals: 320, ticket: 1299, total: 3639 },
@@ -3009,6 +3017,7 @@ const eventData: EventData[] = [
       expectations: ["전통 금융의 크립토 채택", "유럽 핀테크 트렌드", "기관 파트너십"],
     },
     feed: [
+      { label: "행사 종료 — 핀테크/결제사 후속 미팅 정리 필요", time: "2026-06-17", type: "업데이트" },
       { label: "54개 사이드이벤트 등록 — cryptonomads", time: "2026-05-27", type: "사이드이벤트" },
     ],
     archive: {
@@ -3035,7 +3044,7 @@ const eventData: EventData[] = [
       { label: "2025", value: 30 },
       { label: "2026", value: 54 },
     ],
-    actions: ["티켓 구매 검토", "숙박 조기 예약"],
+    actions: ["행사 종료 후 결제/핀테크 파트너 후보 정리", "티켓 구매 검토", "숙박 조기 예약"],
     companies: [],
     sideEvents: { count: 54, label: "사이드 이벤트", items: [] },
     keynoteSpeakers: { names: ["유럽 은행 CEO진", "핀테크 리더"], insight: "유럽 최대 핀테크 행사 — 전통 금융과 크립토의 교차점" },
